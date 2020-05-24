@@ -10,7 +10,7 @@ locale                   : "DE"
 title                    : "PB"
 title_separator          : "-"
 name                     : &name "Pradeep Kr. Banerjee"
-description              : &description "MPI MiS"
+description              : &description "Postdoc at MPI MiS"
 url                      : https://e5150pro.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "e5150pro.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Pradeep Kr. Banerjee"
   avatar           : "profile.jpg"
-  bio              : "Postdoc at MPI MiS"
+  bio              : "MPI MiS"
   location         : "Leipzig, DE"
   employer         :
   pubmed           :  # example: "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "http://scholar.google.com/citations?user=cnSjMBwAAAAJ"
-  email            :
+  email            :  "pradeep at mis.mpg.de"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
