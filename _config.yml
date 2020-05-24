@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Pradeep Kr. Banerjee"
   avatar           : "profile.jpg"
-  bio              : "MPI MiS"
+  bio              : "Postdoc<br>MPI MiS<br><br>pradeep at mis.mpg.de"
   location         : "Leipzig, DE"
   employer         :
   pubmed           :  # example: "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "http://scholar.google.com/citations?user=cnSjMBwAAAAJ"
-  email            :  "pradeep at mis.mpg.de"
+  email            : 
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
