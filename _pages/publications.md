@@ -14,11 +14,15 @@ The *quick* brown fox, jumped **over** the lazy [dog](https://en.wikipedia.org/w
 ***bold-italic***
 [link](https://example.com)
 
+* Johannes Rauh, Pradeep Kr. Banerjee, Eckehard Olbrich, Jurgen Jost (2019)<br />
+**Unique Information and Secret Key Decompositions**<br />
+*Proceedings of the IEEE International Symposium on Information Theory (ISIT 2019)*<br />
+[PDF](https://arxiv.org/pdf/1901.08007.pdf) | [Abstract](https://ieeexplore.ieee.org/abstract/document/8849550/)
+
 * Pradeep Kr Banerjee, Johannes Rauh, Guido Montúfar (2018)<br />
 **Computing the unique information**<br />
 *Proceedings of the IEEE International Symposium on Information Theory (ISIT 2018)*<br />
 [PDF](https://arxiv.org/pdf/1709.07487.pdf) | [Abstract](https://ieeexplore.ieee.org/abstract/document/8437757)
-
 
 
 *View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
