@@ -8,6 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-I'm a Postdoc in the group of Guido Montufar at [MPI MiS](https://www.mis.mpg.de/montufar/index.html), where I focus on algorithmic regularization in deep learning.
+I'm a Postdoc in the group of Guido Mont{\'u}far at [MPI MiS](https://www.mis.mpg.de/montufar/index.html), where I focus on algorithmic regularization in deep learning.
 
 
