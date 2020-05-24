@@ -7,6 +7,13 @@ author_profile: true
 
 Here is a list of my publications. See also my [Google Scholar](http://scholar.google.de/citations?user=cnSjMBwAAAAJ&hl=en) profile page.
 
+The *quick* brown fox, jumped **over** the lazy [dog](https://en.wikipedia.org/wiki/Dog).
+
+*italic*
+**bold**
+***bold-italic***
+[link](https://example.com)
+
 
 *View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
 
