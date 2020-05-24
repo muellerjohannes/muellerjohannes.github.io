@@ -5,6 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
+My research interests lie in the areas of information theory, statistics, and machine learning.
 Here is a selected list of publications. See also my [Google Scholar](http://scholar.google.de/citations?user=cnSjMBwAAAAJ&hl=en) profile page.
 
 * Pradeep Kr. Banerjee, Guido Mont&uacute;far (2020)<br />
@@ -17,10 +18,10 @@ Here is a selected list of publications. See also my [Google Scholar](http://sch
 *Proceedings of the IEEE International Symposium on Information Theory*<br />
 [PDF](https://arxiv.org/pdf/1901.08007.pdf) | [ISIT 2019](https://ieeexplore.ieee.org/abstract/document/8849550/)
 
-* Pradeep Kr Banerjee, Johannes Rauh, and Guido Mont&uacute;far (2018)<br />
+* Pradeep Kr. Banerjee, Johannes Rauh, and Guido Mont&uacute;far (2018)<br />
 **Computing the Unique Information**<br />
 *Proceedings of the IEEE International Symposium on Information Theory*<br />
-[PDF](https://arxiv.org/pdf/1709.07487.pdf) | [ISIT 2018](https://ieeexplore.ieee.org/abstract/document/8437757)
+[PDF](https://arxiv.org/pdf/1709.07487.pdf) | [ISIT 2018](https://ieeexplore.ieee.org/abstract/document/8437757) | [Code](https://github.com/infodeco/computeUI)
 
 * Pradeep Kr. Banerjee, Eckehard Olbrich, J&uuml;rgen Jost, and Johannes Rauh (2018)<br />
 **Unique Informations and Deficiencies**<br />
