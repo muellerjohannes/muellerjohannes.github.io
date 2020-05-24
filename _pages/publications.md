@@ -16,7 +16,7 @@ The *quick* brown fox, jumped **over** the lazy [dog](https://en.wikipedia.org/w
 
 * Pradeep Kr Banerjee, Johannes Rauh, Guido Montúfar (2018)<br />
 **Computing the unique information**<br />
-*2018 IEEE International Symposium on Information Theory (ISIT)*<br />
+*Proceedings of the IEEE International Symposium on Information Theory (ISIT 2018)*<br />
 [PDF](https://arxiv.org/pdf/1709.07487.pdf)| [Abstract](https://ieeexplore.ieee.org/abstract/document/8437757)
 
 
