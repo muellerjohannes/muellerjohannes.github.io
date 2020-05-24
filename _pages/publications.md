@@ -29,11 +29,11 @@ Here is a selected list of publications. See also my [Google Scholar](http://sch
 
 * Johannes Rauh, Pradeep Kr. Banerjee, Eckehard Olbrich, J&uuml;rgen Jost, Nils Bertschinger, and David H. Wolpert (2017)<br />
 **Coarse-graining and the Blackwell Order**<br />
-[*Entropy* 2017](https://doi.org/10.3390/e19100527)
+[PDF](https://arxiv.org/pdf/1701.07602.pdf) | [Entropy 2017, 19(10), 527](https://doi.org/10.3390/e19100527)
 
 * Johannes Rauh, Pradeep Kr. Banerjee, Eckehard Olbrich, J&uuml;rgen Jost, and Nils Bertschinger (2017)<br />
 **On Extractable Shared Information**<br />
-[*Entropy* 2017](https://doi.org/10.3390/e19070328)
+[PDF](https://arxiv.org/pdf/1701.07805.pdf) | [Entropy 2017, 19(7), 328](https://doi.org/10.3390/e19070328)
 
 
 
