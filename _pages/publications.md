@@ -7,13 +7,6 @@ author_profile: true
 
 Here is a selected list of publications. See also my [Google Scholar](http://scholar.google.de/citations?user=cnSjMBwAAAAJ&hl=en) profile page.
 
-The *quick* brown fox, jumped **over** the lazy [dog](https://en.wikipedia.org/wiki/Dog).
-
-*italic*
-**bold**
-***bold-italic***
-[link](https://example.com)
-
 * Pradeep Kr. Banerjee, Guido Mont&uacute;far (2020)<br />
 **The Variational Deficiency Bottleneck**<br />
 *Proceedings of the International Joint Conference on Neural Networks (IJCNN) 2020*<br />
@@ -36,11 +29,11 @@ The *quick* brown fox, jumped **over** the lazy [dog](https://en.wikipedia.org/w
 
 * Johannes Rauh, Pradeep Kr. Banerjee, Eckehard Olbrich, J&uuml;rgen Jost, Nils Bertschinger, and David H. Wolpert (2017)<br />
 **Coarse-graining and the Blackwell Order**<br />
-[*Entropy 2017*](https://doi.org/10.3390/e19100527)
+[*Entropy* 2017](https://doi.org/10.3390/e19100527)
 
 * Johannes Rauh, Pradeep Kr. Banerjee, Eckehard Olbrich, J&uuml;rgen Jost, and Nils Bertschinger (2017)<br />
 **On Extractable Shared Information**<br />
-[*Entropy 2017*](https://doi.org/10.3390/e19070328)
+[*Entropy* 2017](https://doi.org/10.3390/e19070328)
 
 
 
