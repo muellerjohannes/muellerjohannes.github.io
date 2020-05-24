@@ -12,7 +12,7 @@ Here is a selected list of publications. See also my [Google Scholar](http://sch
 *Proceedings of the International Joint Conference on Neural Networks*<br />
 [PDF](https://arxiv.org/pdf/1810.11677.pdf) | IJCNN 2020 (to appear)
 
-* Johannes Rauh*, Pradeep Kr. Banerjee*, Eckehard Olbrich, and J&uuml;rgen Jost (2019)<br />
+* Johannes Rauh\*, Pradeep Kr. Banerjee\*, Eckehard Olbrich, and J&uuml;rgen Jost (2019)<br />
 **Unique Information and Secret Key Decompositions**<br />
 *Proceedings of the IEEE International Symposium on Information Theory*<br />
 [PDF](https://arxiv.org/pdf/1901.08007.pdf) | [ISIT 2019](https://ieeexplore.ieee.org/abstract/document/8849550/)
