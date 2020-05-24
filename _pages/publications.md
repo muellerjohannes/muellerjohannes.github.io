@@ -21,28 +21,26 @@ The *quick* brown fox, jumped **over** the lazy [dog](https://en.wikipedia.org/w
 
 * Johannes Rauh, Pradeep Kr. Banerjee, Eckehard Olbrich, and Jurgen Jost (2019)<br />
 **Unique Information and Secret Key Decompositions**<br />
-*Proceedings of the IEEE International Symposium on Information Theory (ISIT) 2019*<br />
-[PDF](https://arxiv.org/pdf/1901.08007.pdf) | [Abstract](https://ieeexplore.ieee.org/abstract/document/8849550/)
+*Proceedings of the IEEE International Symposium on Information Theory*<br />
+[PDF](https://arxiv.org/pdf/1901.08007.pdf) | [ISIT 2019](https://ieeexplore.ieee.org/abstract/document/8849550/)
 
 * Pradeep Kr Banerjee, Johannes Rauh, and Guido Montúfar (2018)<br />
 **Computing the Unique Information**<br />
-*Proceedings of the IEEE International Symposium on Information Theory (ISIT) 2018*<br />
-[PDF](https://arxiv.org/pdf/1709.07487.pdf) | [Abstract](https://ieeexplore.ieee.org/abstract/document/8437757)
+*Proceedings of the IEEE International Symposium on Information Theory*<br />
+[PDF](https://arxiv.org/pdf/1709.07487.pdf) | [ISIT 2018](https://ieeexplore.ieee.org/abstract/document/8437757)
 
 * Pradeep Kr. Banerjee, Eckehard Olbrich, Jurgen Jost, and Johannes Rauh (2018)<br />
 **Unique Informations and Deficiencies**<br />
-*Proceedings of the 56th Annual Allerton Conference on Communication, Control and Computing (2018)*<br />
-[PDF](https://arxiv.org/pdf/1807.05103.pdf) | [Abstract](https://ieeexplore.ieee.org/abstract/document/8635984)
+*Proceedings of the 56th Annual Allerton Conference on Communication, Control and Computing*<br />
+[PDF](https://arxiv.org/pdf/1807.05103.pdf) | [Allerton 2018](https://ieeexplore.ieee.org/abstract/document/8635984)
 
 * Johannes Rauh, Pradeep Kr. Banerjee, Eckehard Olbrich, Jurgen Jost, Nils Bertschinger, and David H. Wolpert (2017)<br />
 **Coarse-graining and the Blackwell Order**<br />
-*Entropy 19 (10), 527*<br />
-[Link](https://doi.org/10.3390/e19100527)
+[Entropy](https://doi.org/10.3390/e19100527)
 
 * Johannes Rauh, Pradeep Kr. Banerjee, Eckehard Olbrich, Jurgen Jost, and Nils Bertschinger (2017)<br />
 **On Extractable Shared Information**<br />
-*Entropy 19 (7), 328*<br />
-[Link](https://doi.org/10.3390/e19070328)
+[Entropy](https://doi.org/10.3390/e19070328)
 
 
 
