@@ -1,5 +1,10 @@
-GitHub Flavored Markdown
-================================
+---
+layout: archive
+permalink: /publications/
+author_profile: true
+---
+
+
 
 *View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
 
