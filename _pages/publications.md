@@ -1,9 +1,3 @@
----
-layout: archive
-permalink: /publications/
-author_profile: true
----
-
 GitHub Flavored Markdown
 ================================
 
