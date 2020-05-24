@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-Here is a list of my publications. See also my [Google Scholar](http://scholar.google.de/citations?user=cnSjMBwAAAAJ&hl=en) profile page.
+Here is a selected list of publications. See also my [Google Scholar](http://scholar.google.de/citations?user=cnSjMBwAAAAJ&hl=en) profile page.
 
 The *quick* brown fox, jumped **over** the lazy [dog](https://en.wikipedia.org/wiki/Dog).
 
@@ -13,6 +13,15 @@ The *quick* brown fox, jumped **over** the lazy [dog](https://en.wikipedia.org/w
 **bold**
 ***bold-italic***
 [link](https://example.com)
+
+* Pradeep Kr Banerjee, Johannes Rauh, Guido Montúfar (2018)
+
+**Computing the unique information**
+
+*2018 IEEE International Symposium on Information Theory (ISIT)*
+
+[PDF](https://arxiv.org/pdf/1709.07487.pdf)| [Abstract](https://ieeexplore.ieee.org/abstract/document/8437757)
+
 
 
 *View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
