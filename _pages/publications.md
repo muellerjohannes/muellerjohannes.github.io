@@ -14,15 +14,25 @@ The *quick* brown fox, jumped **over** the lazy [dog](https://en.wikipedia.org/w
 ***bold-italic***
 [link](https://example.com)
 
-* Johannes Rauh, Pradeep Kr. Banerjee, Eckehard Olbrich, Jurgen Jost (2019)<br />
+* Pradeep Kr. Banerjee, Guido Montúfar (2020)<br />
+**The Variational Deficiency Bottleneck**<br />
+*Proceedings of the International Joint Conference on Neural Networks (IJCNN) 2020*<br />
+[PDF](https://arxiv.org/pdf/1810.11677.pdf)
+
+* Johannes Rauh, Pradeep Kr. Banerjee, Eckehard Olbrich, and Jurgen Jost (2019)<br />
 **Unique Information and Secret Key Decompositions**<br />
-*Proceedings of the IEEE International Symposium on Information Theory (ISIT 2019)*<br />
+*Proceedings of the IEEE International Symposium on Information Theory (ISIT) 2019*<br />
 [PDF](https://arxiv.org/pdf/1901.08007.pdf) | [Abstract](https://ieeexplore.ieee.org/abstract/document/8849550/)
 
-* Pradeep Kr Banerjee, Johannes Rauh, Guido Montúfar (2018)<br />
-**Computing the unique information**<br />
-*Proceedings of the IEEE International Symposium on Information Theory (ISIT 2018)*<br />
+* Pradeep Kr Banerjee, Johannes Rauh, and Guido Montúfar (2018)<br />
+**Computing the Unique Information**<br />
+*Proceedings of the IEEE International Symposium on Information Theory (ISIT) 2018*<br />
 [PDF](https://arxiv.org/pdf/1709.07487.pdf) | [Abstract](https://ieeexplore.ieee.org/abstract/document/8437757)
+
+* Pradeep Kr. Banerjee, Eckehard Olbrich, Jurgen Jost, and Johannes Rauh (2018)<br />
+**Unique Informations and Deficiencies**<br />
+*Proceedings of the 56th Annual Allerton Conference on Communication, Control and Computing (2018)*<br />
+[PDF](https://arxiv.org/pdf/1807.05103.pdf) | [Abstract](https://ieeexplore.ieee.org/abstract/document/8635984)
 
 
 *View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
