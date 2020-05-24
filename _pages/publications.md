@@ -5,9 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-Here is a list of my publications. See also my Google Scholar profile page.
-
-
+Here is a list of my publications. See also my [Google Scholar](http://scholar.google.de/citations?user=cnSjMBwAAAAJ&hl=en) profile page.
 
 
 *View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
