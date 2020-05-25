@@ -5,7 +5,9 @@ permalink: /publications/
 author_profile: true
 ---
 
-My research interests lie in the area of mathematical machine learning in particular in the expressivity of neural networks and the conection to differential equations. Here is a selected list of publications. See also my [Google Scholar](https://scholar.google.de/citations?user=Wfww-P8AAAAJ&hl=en) profile page.
+My research interests lie in the area of mathematical machine learning in particular in the expressivity of neural networks and the conection to differential equations. Here is a list of publications, preprints, poster presentations and my thesis. See also my [Google Scholar](https://scholar.google.de/citations?user=Wfww-P8AAAAJ&hl=en) profile page.
+
+**Poster presentations**
 
 * Johannes Müller, Marius Zeinhofer (2020)<br />
 **Deep Ritz revisited**<br />
