@@ -12,4 +12,3 @@ I am a PhD student in mathematical machine learning at the [MPI MiS](https://www
 
 ---
 You can read more about my research [here](https://muellerjohannes.github.io/publications/).
-
