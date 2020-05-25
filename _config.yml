@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "DE"
-title                    : "PB"
+title                    : "JM"
 title_separator          : "-"
-name                     : &name "Pradeep Kr. Banerjee"
-description              : &description "Postdoc at MPI MiS"
-url                      : https://e5150pro.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Johannes Christoph Müller"
+description              : &description "PhD Student at IMPRS MiS"
+url                      : https://muellerjohannes.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "e5150pro.github.io"
+repository               : "muellerjohannes.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -75,20 +75,20 @@ social:
 analytics:
   provider               :  "google" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :   UA-167406544-1
+    tracking_id          :   
 
 
 # Site Author
 author:
-  name             : "Pradeep Kr. Banerjee"
+  name             : "Johannes Christoph Müller"
   avatar           : "profile.jpg"
-  bio              : "MPI MiS<br>pradeep at mis.mpg.de"
+  bio              : "MPI MiS<br>jmueller at mis.mpg.de"
   location         : "Leipzig, DE"
   employer         :
   pubmed           :  # example: "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://scholar.google.com/citations?user=cnSjMBwAAAAJ"
+  googlescholar    : "https://scholar.google.de/citations?user=Wfww-P8AAAAJ&hl=en"
   email            : 
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     :  "https://www.researchgate.net/profile/Johannes_Mueller"
   uri              :
   bitbucket        :
   codepen          :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/jobs/"
   orcid            : #"http://orcid.org/yourorcidurl"
   pinterest        :
   soundcloud       :
