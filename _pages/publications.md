@@ -5,36 +5,22 @@ permalink: /publications/
 author_profile: true
 ---
 
-My research interests lie in the areas of information theory, statistics, and machine learning.
-Here is a selected list of publications. See also my [Google Scholar](http://scholar.google.de/citations?user=cnSjMBwAAAAJ&hl=en) profile page.
+My research interests lie in the area of mathematical machine learning in particular in the expressivity of neural networks and the conection to differential equations. Here is a selected list of publications. See also my [Google Scholar](https://scholar.google.de/citations?user=Wfww-P8AAAAJ&hl=en) profile page.
 
-* Pradeep Kr. Banerjee, Guido Mont&uacute;far (2020)<br />
-**The Variational Deficiency Bottleneck**<br />
-*Proceedings of the International Joint Conference on Neural Networks*<br />
-[PDF](https://arxiv.org/pdf/1810.11677.pdf) | IJCNN 2020 (to appear)
+* Johannes Müller, Marius Zeinhofer (2020)<br />
+**Deep Ritz revisited**<br />
+*ICLR workshop on Integration of Deep Neural Models and Differential Equations*<br />
+[fulltext available](https://arxiv.org/abs/1912.03937) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
 
-* Johannes Rauh\*, Pradeep Kr. Banerjee\*, Eckehard Olbrich, and J&uuml;rgen Jost (2019)<br />
-**Unique Information and Secret Key Decompositions**<br />
-*Proceedings of the IEEE International Symposium on Information Theory*<br />
-[PDF](https://arxiv.org/pdf/1901.08007.pdf) | [ISIT 2019](https://ieeexplore.ieee.org/abstract/document/8849550/)
+* Johannes Müller (2019)<br />
+**On the space-time expressivity of  residual  networks**<br />
+*ICLR workshop on Integration of Deep Neural Models and Differential Equations*<br />
+[fulltext available](https://arxiv.org/abs/1910.09599) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
 
-* Pradeep Kr. Banerjee, Johannes Rauh, and Guido Mont&uacute;far (2018)<br />
-**Computing the Unique Information**<br />
-*Proceedings of the IEEE International Symposium on Information Theory*<br />
-[PDF](https://arxiv.org/pdf/1709.07487.pdf) | [ISIT 2018](https://ieeexplore.ieee.org/abstract/document/8437757) | [Code](https://github.com/infodeco/computeUI)
-
-* Pradeep Kr. Banerjee, Eckehard Olbrich, J&uuml;rgen Jost, and Johannes Rauh (2018)<br />
-**Unique Informations and Deficiencies**<br />
-*Proceedings of the 56th Annual Allerton Conference on Communication, Control and Computing*<br />
-[PDF](https://arxiv.org/pdf/1807.05103.pdf) | [Allerton 2018](https://ieeexplore.ieee.org/abstract/document/8635984)
-
-* Johannes Rauh, Pradeep Kr. Banerjee, Eckehard Olbrich, J&uuml;rgen Jost, Nils Bertschinger, and David H. Wolpert (2017)<br />
-**Coarse-graining and the Blackwell Order**<br />
-[PDF](https://arxiv.org/pdf/1701.07602.pdf) | [Entropy 2017, 19(10), 527](https://doi.org/10.3390/e19100527)
-
-* Johannes Rauh, Pradeep Kr. Banerjee, Eckehard Olbrich, J&uuml;rgen Jost, and Nils Bertschinger (2017)<br />
-**On Extractable Shared Information**<br />
-[PDF](https://arxiv.org/pdf/1701.07805.pdf) | [Entropy 2017, 19(7), 328](https://doi.org/10.3390/e19070328)
+* Johannes Müller (2019)<br />
+**Universal flow approximation with deep residual networks**<br />
+*Thesis for the degree of Master of Science  Mathematics under the supervision of [Philipp Harms](https://www.philippharms.com/)*<br />
+[fulltext available](https://freidok.uni-freiburg.de/data/151788) | [Freidok Plus](https://freidok.uni-freiburg.de/)
 
 
 
