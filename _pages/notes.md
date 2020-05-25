@@ -9,6 +9,8 @@ Whenever I learn about something I try to put it into my own words in order to u
 
 **Expressivity of Neural Networks:**
 
+**Reproducing kernel Hilbert spaces:**
+
 **Parameter estimation for discrete determinantal processes:**
 
 **Random fields:**
