@@ -8,8 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-I am a Postdoc in the group of [Guido Mont&uacute;far](https://www.math.ucla.edu/~montufar/) at [MPI MiS](https://www.mis.mpg.de/montufar/index.html), where I focus on algorithmic regularization in deep learning. I received my PhD from [Leipzig University (Faculty of Mathematics and Computer Science)](https://www.fmi.uni-leipzig.de/cms/en/startseite/) in 2020, under the supervision of [J&uuml;rgen Jost](https://www.mis.mpg.de/de/jjost/juergen-jost.html). Before joining MPI, I obtained my Masters and Bachelors degree from the Indian Institute of Technology (IIT) Kharagpur. 
+I am a PhD student in mathematical machine learning at the [MPI MiS](https://www.mis.mpg.de/) where I am supported by the [IMPRS MiS](https://www.imprs-mis.mpg.de/). I am jointly supervised by [Nihat Ay](https://www.mis.mpg.de/ay/homepages/nay/) and [Guido Mont&uacute;far](https://www.math.ucla.edu/~montufar/) and am focusing on connections between deep learning and differential equations. Prior to that I received a Masters and Bachelors degree in Mathematics from the University of Freiburg as well as a Masters degree in Interdisciplinary Mathematics from the  Uiversity of Warwick. 
 
 ---
-You can read more about my research [here](https://e5150pro.github.io/publications/).
+You can read more about my research [here](https://muellerjohannes.github.io/publications/).
 
