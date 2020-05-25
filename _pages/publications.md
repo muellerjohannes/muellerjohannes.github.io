@@ -21,6 +21,6 @@ My research interests lie at the intersection of machine learning and applied ma
 
 **Thesis**
 
-During my MSc studies at the University  of Warwick I was supervised by [Nikos Zygouras](https://warwick.ac.uk/fac/sci/maths/people/staff/zygouras/) and [Theo Damoulas](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/damoulas) and completed my  thesis on the parameter estimation of determinantal point processes. You can find the PDF [here](/files/MSc-thesis.pdf ). 
+* During my MSc studies at the University  of Warwick I was supervised by [Nikos Zygouras](https://warwick.ac.uk/fac/sci/maths/people/staff/zygouras/) and [Theo Damoulas](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/damoulas) and completed my  thesis on the parameter estimation of determinantal point processes. You can find the PDF [here](/files/MSc-thesis.pdf ). 
  
-At the University of  Freiburg, I studied the approximation capabilities of deep residual networks under the supervision of [Philipp Harms](https://www.philippharms.com/) and  the thesis is available [here](https://freidok.uni-freiburg.de/data/151788).
+* At the University of  Freiburg, I studied the approximation capabilities of deep residual networks under the supervision of [Philipp Harms](https://www.philippharms.com/) and  the thesis is available [here](https://freidok.uni-freiburg.de/data/151788).
