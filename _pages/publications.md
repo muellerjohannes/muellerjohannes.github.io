@@ -12,7 +12,7 @@ My research interests lie in the area of mathematical machine learning in partic
 *ICLR workshop on Integration of Deep Neural Models and Differential Equations*<br />
 [fulltext available](https://arxiv.org/abs/1912.03937) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
 
-* Johannes Müller (2019)<br />
+* Johannes Müller (2020)<br />
 **On the space-time expressivity of  residual  networks**<br />
 *ICLR workshop on Integration of Deep Neural Models and Differential Equations*<br />
 [fulltext available](https://arxiv.org/abs/1910.09599) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
