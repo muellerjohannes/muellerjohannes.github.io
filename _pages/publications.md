@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-My research interests lie at the intersection of machine learning and applied mathematics. This includes the study of the representational capacity of neural networks, their connection to differential equations which are manifold as well as many other exciting topics. Here is a list of publications, preprints, poster presentations and my thesis. See also my [Google Scholar](https://scholar.google.de/citations?user=Wfww-P8AAAAJ&hl=en) profile page.
+My research interests lie at the intersection of machine learning and applied mathematics. This includes the study of the representational capacity of neural networks, their various connections to differential equations as well as many other exciting topics. Here is a list of publications, preprints, poster presentations and my thesis. See also my [Google Scholar](https://scholar.google.de/citations?user=Wfww-P8AAAAJ&hl=en) profile page.
 
 **Poster presentations**
 
