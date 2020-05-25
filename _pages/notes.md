@@ -15,4 +15,7 @@ Whenever I learn about something I try to put it into my own words in order to u
 
 **Random fields:**
 
+**Measures as dual spaces:**
+
 **Characterisation of Hilbert spaces:**
+
