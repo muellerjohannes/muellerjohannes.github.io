@@ -18,5 +18,5 @@ Often when learning something new I try to put it into my own words in order to 
 
 **Measures as dual spaces:**
 
-[**Characterisation of Hilbert spaces:**](/files/Hilbert-spaces.pdf) One can explicitely characterise Hilbert spaces and show that they are ismetrically isomorphic to $L^2$ spaces with respect to the counting measure. Using this approach one can show the representation theorem of Riesz just like in linear algebra.
+[**Characterisation of Hilbert spaces:**](/files/Hilbert-spaces.pdf) One can explicitely characterise Hilbert spaces and show that they are ismetrically isomorphic to $L^2$ spaces with respect to the counting measure. Using this approach one can show the representation theorem of Riesz just like in linear algebra; see also [those](http://home.mathematik.uni-freiburg.de/soergel/Skripten/ANALYSIS.pdf) lecture notes by Wolfgang Soergel.
 
