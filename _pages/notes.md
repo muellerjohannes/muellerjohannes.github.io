@@ -5,7 +5,7 @@ permalink: /notes/
 author_profile: true
 ---
 
-Whenever I learn about something I try to put it into my own words in order to understand it better. Here are some random examples, feel free to have a look, but be careful of typos and more  serious mistakes and please do let me know if you find any of those!
+Often when learning something new I try to put it into my own words in order to understand it better. Here are some random examples. Feel free to have a look, however since those are not proofread treat them carefully and please let me which mistakes you find!
 
 **Expressivity of Neural Networks:** Coming soon...
 
