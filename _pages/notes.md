@@ -12,9 +12,9 @@ Often when learning something new I try to put it into my own words in order to 
 **Reproducing kernel Hilbert spaces:** Coming soon...
 
 
-**Parameter estimation for discrete determinantal processes:**
+**Parameter estimation for discrete determinantal processes:** Coming soon...
 
-**Random fields:**
+[**Random fields:**](/files/random-fields.pdf) I compiled those notes in the preparation for an oral exam at the University of Warwick.
 
 [**Measures as dual spaces:**](/files/measures-scr-style.pdf) Finitely additive measures naturally induce linear forms on measurable functions. Even more, they form exactly the dual space of bounded measurable functions. Further, the $sigma$ additivity of a measure is equivalent to theorems of monotone and dominated convergence.
 
