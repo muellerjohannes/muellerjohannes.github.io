@@ -14,4 +14,4 @@ Here is a short CV:
 * 2019: MSc in Mathematics, University of Freiburg
 * Since 2020: PhD student at the IMPRS MiS, Leipzig
 
-If you want an extended version you can find it [here](/files/cv) and if your lucky it is still up to date! :)
+If you want an extended version you can find it [here](/files/CV) and if your lucky it is still up to date! :)
