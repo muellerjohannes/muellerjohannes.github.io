@@ -20,4 +20,4 @@ Often when learning something new I try to put it into my own words in order to 
 
 [**Characterisation of Hilbert spaces:**](/files/Hilbert-spaces.pdf) One can explicitely characterise Hilbert spaces and show that they are ismetrically isomorphic to $L^2$ spaces with respect to the counting measure. Using this approach one can show the representation theorem of Riesz just like in linear algebra; see also [those](http://home.mathematik.uni-freiburg.de/soergel/Skripten/ANALYSIS.pdf) lecture notes by Wolfgang Soergel.
 
-[**Set topology for functional analysis**](/files/topology-crashcourse.pdf) This is a little list of elementary set topology that where useful to me when solving exercise sheets in functional analysis.
+[**Set topology for functional analysis:**](/files/topology-crashcourse.pdf) This is a little list of elementary set topology that where useful to me when solving exercise sheets in functional analysis.
