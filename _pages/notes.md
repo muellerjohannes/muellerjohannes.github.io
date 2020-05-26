@@ -18,5 +18,5 @@ Whenever I learn about something I try to put it into my own words in order to u
 
 **Measures as dual spaces:**
 
-[**Characterisation of Hilbert spaces:**](files/Hilbert-spaces.pdf)
+[**Characterisation of Hilbert spaces:**](/files/Hilbert-spaces.pdf)
 
