@@ -5,4 +5,4 @@ permalink: /random_stuff/
 author_profile: true
 ---
 
-Here are some things I do, when I am not stuck thinking about mathematics.
+If nothing's here today, you might check tomorrow again ;)
