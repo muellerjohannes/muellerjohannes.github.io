@@ -17,7 +17,7 @@ Often when learning something new I try to put it into my own words in order to 
 
 [**Random fields:**](/files/random-fields.pdf) I compiled those notes in the preparation for an oral exam at the University of Warwick.
 
-[**Measures as dual spaces:**](/files/measures-scr-style.pdf) Finitely additive measures naturally induce linear forms on measurable functions. Even more, they form exactly the dual space of bounded measurable functions. Further, the $\sigma$ additivity of a measure is equivalent to theorems of monotone and dominated convergence.
+[**Measures as dual spaces:**](/files/measures-scr-style.pdf) Finitely additive measures naturally induce linear forms on measurable functions. Even more, they form exactly the dual space of bounded measurable functions. Further, the $\sigma$-additivity of a measure is equivalent to theorems of monotone and dominated convergence.
 
 [**Characterisation of Hilbert spaces:**](/files/Hilbert-spaces.pdf) One can explicitely characterise Hilbert spaces and show that they are ismetrically isomorphic to $L^2$ spaces with respect to the counting measure. Using this approach one can show the representation theorem of Riesz just like in linear algebra; see also [those](http://home.mathematik.uni-freiburg.de/soergel/Skripten/ANALYSIS.pdf) lecture notes by Wolfgang Soergel.
 
