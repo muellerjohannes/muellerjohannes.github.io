@@ -11,6 +11,7 @@ Often when learning something new I try to put it into my own words in order to 
 
 **Reproducing kernel Hilbert spaces:** Coming soon...
 
+[**ODEs in Fréchet spaces:**](/files/ODEs-in-Frechet-spaces.pdf) Other than in Banach spaces ODEs are not well posed for Lipschitz continuous vector fields. We discuss that the Picard-Lindelöf theorem breaks down because Bochner's inequality doe  not hold in metric vector spaces. In fact we see that the inequality is equivalent to the statement that the space is in fact a Banach space. The counterexample is adapted from [here](https://arxiv.org/pdf/1807.11290.pdf).
 
 **Parameter estimation for discrete determinantal processes:** Coming soon...
 
