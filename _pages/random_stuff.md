@@ -5,4 +5,4 @@ permalink: /random_stuff/
 author_profile: true
 ---
 
-If nothing's here today, you can check tomorrow again ;)
+Coming soon, so make sure to check again ;)
