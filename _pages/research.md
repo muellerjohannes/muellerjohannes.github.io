@@ -5,7 +5,10 @@ permalink: /research/
 author_profile: true
 ---
 
-My research interests lie at the intersection of machine learning and applied mathematics. This includes the study of the representational capacity of neural networks and their connections to differential equations. Further, I am interested the geometry of optimal control problems and structural properties of optimal policies. Here is a list of publications, preprints, poster presentations and my Master theses.
+My research interests lie at the intersection of machine learning and applied mathematics. In particular this includes the following topics:
+* Representational capacity of neural networks
+* Connections between neural networks and differential equations
+* Geometry of optimal control problems, in particular structural properties of optimal policies.
 
 **Poster presentations**
 
