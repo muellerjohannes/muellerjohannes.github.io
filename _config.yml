@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Johannes Müller"
   avatar           : "profile-2.jpg"
-  bio              : "IMPRS MiS<br>jmueller[at]mis.mpg.de"
+  bio              : "PhD student at IMPRS MiS<br>Focusing on mathematical machine learning"
   location         : "Leipzig, DE"
   employer         :
   pubmed           :  # example: "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.de/citations?user=Wfww-P8AAAAJ&hl=en"
-  email            : 
+  email            : "jmueller[at]mis.mpg.de"
   researchgate     :  "https://www.researchgate.net/profile/Johannes_Mueller"
   uri              :
   bitbucket        :
