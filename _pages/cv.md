@@ -13,5 +13,3 @@ Here is a short CV:
 * 2016: BSc in Mathematics, [University of Freiburg](http://www.uni-freiburg.de/)
 
 A more detailed version of my CV is available on request.
-
-# If you want an extended version you can find it [here](/files/CV.pdf) and if your lucky it is still up to date! :)
