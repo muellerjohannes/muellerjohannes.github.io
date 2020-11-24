@@ -8,7 +8,7 @@ author_profile: true
 My research interests lie at the intersection of machine learning and applied mathematics. In particular this includes the following topics:
 * Representational capacity of neural networks
 * Connections between neural networks and differential equations
-* Geometry of optimal control problems, in particular structural properties of optimal policies.
+* Geometry of optimal control problems, in particular structural properties of optimal policies
 
 **Poster presentations**
 
