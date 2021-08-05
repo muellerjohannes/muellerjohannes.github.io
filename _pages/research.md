@@ -12,30 +12,32 @@ My research interests lie at the intersection of machine learning and applied ma
 
 **Preprints**
 
-* Johannes Müller, Marius Zeinhofer (2021): **Notes on Exact Boundary Values in Residual Minimisation**<br />
+* Johannes Müller, Marius Zeinhofer (2021):<br />
+**Notes on Exact Boundary Values in Residual Minimisation**<br />
 [fulltext available](https://arxiv.org/pdf/2105.02550.pdf)
 
-* Johannes Müller, Marius Zeinhofer (2021): **Error Estimates for the variational training of neural newtorks with boundary penalty**<br />
+* Johannes Müller, Marius Zeinhofer (2021):<br />
+**Error Estimates for the variational training of neural newtorks with boundary penalty**<br />
 [fulltext available](https://arxiv.org/pdf/2103.01007.pdf)
 
 **Poster presentations**
 
-* Johannes Müller joint work with Guido Montúfar (2021):
+* Johannes Müller joint work with Guido Montúfar (2021):<br />
 **The geometry of discounted stationary distributions of Markov decision processes**<br />
 Workshop on *Mathematics of deep learning* at the Sir Isaac Newton Institute, Cambridge, UK<br />
 [poster available](/files/poster_geometry_stationary_distributions.pdf) | [Workshop on Mathematics of deep learning](https://www.newton.ac.uk/event/mdl/)
 
-* Johannes Müller joint work with Guido Montúfar (2021):
+* Johannes Müller joint work with Guido Montúfar (2021):<br />
 **The geometry of discounted stationary distributions of Markov decision processes**<br />
 *Conference on Mathematics of Machine Learning* at the Zentrum für interdisziplinäre Forschung, Bielefeld, Germany<br />
 [poster available](/files/poster_geometry_stationary_distributions.pdf) | [Conference on Mathematics of Machine Learning](https://www.mis.mpg.de/calendar/conferences/2021/mml2021.html)
 
-* Johannes Müller, Marius Zeinhofer (2020):
+* Johannes Müller, Marius Zeinhofer (2020):<br />
 **Deep Ritz revisited**<br />
 *ICLR workshop on Integration of Deep Neural Models and Differential Equations*, held virtually<br />
 [fulltext available](https://arxiv.org/abs/1912.03937) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
 
-* Johannes Müller (2020):
+* Johannes Müller (2020):<br />
 **On the space-time expressivity of  residual  networks**<br />
 *ICLR workshop on Integration of Deep Neural Models and Differential Equations*, held virtually<br />
 [fulltext available](https://arxiv.org/abs/1910.09599) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
