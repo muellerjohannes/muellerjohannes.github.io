@@ -10,20 +10,35 @@ My research interests lie at the intersection of machine learning and applied ma
 * Connections between neural networks and differential equations
 * Geometry of optimal control problems, in particular structural properties of optimal policies
 
+**Preprints**
+
+* Johannes Müller, Marius Zeinhofer
+* Johannes Müller, Marius Zeinhofer
+
 **Poster presentations**
 
-* Johannes Müller, Marius Zeinhofer (2020)<br />
+* Johannes Müller joint work with Guido Montúfar (2021):
+**The geometry of discounted stationary distributions of Markov decision processes**<br />
+Workshop on *Mathematics of deep learning* at the Sir Isaac Newton Institute, Cambridge, UK<br />
+[poster available](/files/poster_geometry_stationary_distributions.pdf) | [Workshop on Mathematics of deep learning](https://www.newton.ac.uk/event/mdl/)
+
+* Johannes Müller joint work with Guido Montúfar (2021):
+**The geometry of discounted stationary distributions of Markov decision processes**<br />
+*Conference on Mathematics of Machine Learning* at the Zentrum für interdisziplinäre Forschung, Bielefeld, Germany<br />
+[poster available](/files/poster_geometry_stationary_distributions.pdf) | [Conference on Mathematics of Machine Learning](https://www.mis.mpg.de/calendar/conferences/2021/mml2021.html)
+
+* Johannes Müller, Marius Zeinhofer (2020):
 **Deep Ritz revisited**<br />
-*ICLR workshop on Integration of Deep Neural Models and Differential Equations*<br />
+*ICLR workshop on Integration of Deep Neural Models and Differential Equations*, held virtually<br />
 [fulltext available](https://arxiv.org/abs/1912.03937) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
 
-* Johannes Müller (2020)<br />
+* Johannes Müller (2020):
 **On the space-time expressivity of  residual  networks**<br />
-*ICLR workshop on Integration of Deep Neural Models and Differential Equations*<br />
+*ICLR workshop on Integration of Deep Neural Models and Differential Equations*, held virtually<br />
 [fulltext available](https://arxiv.org/abs/1910.09599) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
 
 **Thesis**
 
-* During my MSc studies at the University  of Warwick I was supervised by [Nikos Zygouras](https://warwick.ac.uk/fac/sci/maths/people/staff/zygouras/) and [Theo Damoulas](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/damoulas) and completed my  thesis on the parameter estimation of determinantal point processes. You can find the PDF [here](/files/MSc-thesis.pdf ). 
+* During my MSc studies at the University  of Warwick I was supervised by [Nikos Zygouras](https://warwick.ac.uk/fac/sci/maths/people/staff/zygouras/) and [Theo Damoulas](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/damoulas) and completed my  thesis on the parameter estimation of determinantal point processes. You can find the PDF [here](/files/MSc-thesis.pdf). 
  
 * At the University of  Freiburg, I studied the approximation capabilities of deep residual networks under the supervision of [Philipp Harms](https://www.philippharms.com/) and  the thesis is available [here](https://freidok.uni-freiburg.de/data/151788).
