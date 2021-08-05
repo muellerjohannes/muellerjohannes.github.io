@@ -12,8 +12,11 @@ My research interests lie at the intersection of machine learning and applied ma
 
 **Preprints**
 
-* Johannes Müller, Marius Zeinhofer
-* Johannes Müller, Marius Zeinhofer
+* Johannes Müller, Marius Zeinhofer (2021): **Notes on Exact Boundary Values in Residual Minimisation**<br />
+[fulltext available](https://arxiv.org/pdf/2105.02550.pdf)
+
+* Johannes Müller, Marius Zeinhofer (2021): **Error Estimates for the variational training of neural newtorks with boundary penalty**<br />
+[fulltext available](https://arxiv.org/pdf/2103.01007.pdf)
 
 **Poster presentations**
 
