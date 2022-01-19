@@ -13,19 +13,19 @@ My research interests lie at the intersection of machine learning and applied ma
 **Preprints**
 
 * Patrick Dondl, Johannes Müller, Marius Zeinhofer (2021):
-**Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**
+**Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**,
 [fulltext available](https://arxiv.org/pdf/2111.05637) 
 
 * Johannes Müller, Guido Montúfar (2021):
-**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**
+**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**,
 [fulltext available](https://arxiv.org/abs/2110.07409) 
 
 * Johannes Müller, Marius Zeinhofer (2021):
-**Notes on Exact Boundary Values in Residual Minimisation**
+**Notes on Exact Boundary Values in Residual Minimisation**,
 [fulltext available](https://arxiv.org/pdf/2105.02550)
 
 * Johannes Müller, Marius Zeinhofer (2021):
-**Error Estimates for the variational training of neural newtorks with boundary penalty**
+**Error Estimates for the variational training of neural newtorks with boundary penalty**,
 [fulltext available](https://arxiv.org/pdf/2103.01007)
 
 **Poster presentations**
