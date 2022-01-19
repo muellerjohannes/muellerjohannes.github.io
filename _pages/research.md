@@ -36,7 +36,7 @@ Workshop on [Deep learning and partial differential equations](https://www.newto
 [poster not available]()
 
 * Johannes Müller joint work with Guido Montúfar (2021):
-**The Geometry of Memoryless Stochastic Policy Optimization in Infinite- Horizon Partially Observable Markov Decision Processes**,
+**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon Partially Observable Markov Decision Processes**,
 [Geometry & Learning from Data](http://www.birs.ca/events/2021/5-day-workshops/21w5239), BIRS workshop hosted by Casa Matem ́atica Oaxaca (CMO), held online, 
 [poster available](/files/poster_geometry_stationary_distributions-2.pdf)
 
