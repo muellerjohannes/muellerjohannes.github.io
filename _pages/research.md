@@ -32,6 +32,16 @@ My research interests lie at the intersection of machine learning and applied ma
 
 * Johannes Müller joint work with Guido Montúfar (2021):<br />
 **The geometry of discounted stationary distributions of Markov decision processes**<br />
+Workshop on *Deep learning and partial differential equations* at the Sir Isaac Newton Institute, Cambridge, UK<br />
+[poster not available]() | [Deep learning and partial differential equations](https://www.newton.ac.uk/event/mdlw03/)
+
+* Johannes Müller joint work with Guido Montúfar (2021):<br />
+**The Geometry of Memoryless Stochastic Policy Optimization in Infinite- Horizon Partially Observable Markov Decision Processes**<br />
+*Geometry & Learning from Data*, BIRS workshop hosted by Casa Matem ́atica Oaxaca (CMO), held online<br />
+[poster available](/files/poster_geometry_stationary_distributions-2.pdf) | [Geometry & Learning from Data](http://www.birs.ca/events/2021/5-day-workshops/21w5239)
+
+* Johannes Müller joint work with Guido Montúfar (2021):<br />
+**The geometry of discounted stationary distributions of Markov decision processes**<br />
 Workshop on *Mathematics of deep learning* at the Sir Isaac Newton Institute, Cambridge, UK<br />
 [poster available](/files/poster_geometry_stationary_distributions.pdf) | [Workshop on Mathematics of deep learning](https://www.newton.ac.uk/event/mdl/)
 
@@ -49,6 +59,10 @@ Workshop on *Mathematics of deep learning* at the Sir Isaac Newton Institute, Ca
 **On the space-time expressivity of  residual  networks**<br />
 *ICLR workshop on Integration of Deep Neural Models and Differential Equations*, held virtually<br />
 [fulltext available](https://arxiv.org/abs/1910.09599) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
+
+**Meetings**
+
+
 
 **Thesis**
 
