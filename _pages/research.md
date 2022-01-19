@@ -8,17 +8,25 @@ author_profile: true
 My research interests lie at the intersection of machine learning and applied mathematics. In particular this includes the following topics:
 * Representational capacity of neural networks
 * Connections between neural networks and differential equations
-* Geometry of optimal control problems, in particular structural properties of optimal policies
+* Geometry of optimal control problems
 
 **Preprints**
 
+* Patrick Dondl, Johannes Müller, Marius Zeinhofer (2021):<br />
+**Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**<br />
+[fulltext available](https://arxiv.org/pdf/2111.05637) 
+
+* Johannes Müller, Guido Montúfar (2021):<br />
+**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**<br />
+[fulltext available](https://arxiv.org/abs/2110.07409) 
+
 * Johannes Müller, Marius Zeinhofer (2021):<br />
 **Notes on Exact Boundary Values in Residual Minimisation**<br />
-[fulltext available](https://arxiv.org/pdf/2105.02550.pdf)
+[fulltext available](https://arxiv.org/pdf/2105.02550)
 
 * Johannes Müller, Marius Zeinhofer (2021):<br />
 **Error Estimates for the variational training of neural newtorks with boundary penalty**<br />
-[fulltext available](https://arxiv.org/pdf/2103.01007.pdf)
+[fulltext available](https://arxiv.org/pdf/2103.01007)
 
 **Poster presentations**
 
