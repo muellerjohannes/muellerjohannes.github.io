@@ -30,8 +30,8 @@ My research interests lie at the intersection of machine learning and applied ma
 
 **Poster presentations**
 
-* Johannes Müller joint work with Guido Montúfar (2021):<br />
-**The geometry of discounted stationary distributions of Markov decision processes**<br />
+* Johannes Müller joint work with Marius Zeinhofer (2021):<br />
+**A Posteriori Estimates and Convergence Guarantees for Neural Network Based PDE solvers**<br />
 Workshop on *Deep learning and partial differential equations* at the Sir Isaac Newton Institute, Cambridge, UK<br />
 [poster not available]() | [Deep learning and partial differential equations](https://www.newton.ac.uk/event/mdlw03/)
 
