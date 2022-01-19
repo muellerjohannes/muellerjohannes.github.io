@@ -31,32 +31,32 @@ My research interests lie at the intersection of machine learning and applied ma
 **Poster presentations**
 
 * Johannes Müller joint work with Marius Zeinhofer (2021):
-**A Posteriori Estimates and Convergence Guarantees for Neural Network Based PDE solvers**<br />
+**A Posteriori Estimates and Convergence Guarantees for Neural Network Based PDE solvers**,
 Workshop on *Deep learning and partial differential equations* at the Sir Isaac Newton Institute, Cambridge, UK<br />
 [poster not available]() | [Deep learning and partial differential equations](https://www.newton.ac.uk/event/mdlw03/)
 
 * Johannes Müller joint work with Guido Montúfar (2021):
-**The Geometry of Memoryless Stochastic Policy Optimization in Infinite- Horizon Partially Observable Markov Decision Processes**<br />
+**The Geometry of Memoryless Stochastic Policy Optimization in Infinite- Horizon Partially Observable Markov Decision Processes**,
 *Geometry & Learning from Data*, BIRS workshop hosted by Casa Matem ́atica Oaxaca (CMO), held online<br />
 [poster available](/files/poster_geometry_stationary_distributions-2.pdf) | [Geometry & Learning from Data](http://www.birs.ca/events/2021/5-day-workshops/21w5239)
 
 * Johannes Müller joint work with Guido Montúfar (2021):
-**The geometry of discounted stationary distributions of Markov decision processes**<br />
+**The geometry of discounted stationary distributions of Markov decision processes**,
 Workshop on *Mathematics of deep learning* at the Sir Isaac Newton Institute, Cambridge, UK<br />
 [poster available](/files/poster_geometry_stationary_distributions.pdf) | [Workshop on Mathematics of deep learning](https://www.newton.ac.uk/event/mdl/)
 
 * Johannes Müller joint work with Guido Montúfar (2021):
-**The geometry of discounted stationary distributions of Markov decision processes**<br />
+**The geometry of discounted stationary distributions of Markov decision processes**,
 *Conference on Mathematics of Machine Learning* at the Zentrum für interdisziplinäre Forschung, Bielefeld, Germany<br />
 [poster available](/files/poster_geometry_stationary_distributions.pdf) | [Conference on Mathematics of Machine Learning](https://www.mis.mpg.de/calendar/conferences/2021/mml2021.html)
 
 * Johannes Müller, Marius Zeinhofer (2020):
-**Deep Ritz revisited**<br />
+**Deep Ritz revisited**,
 *ICLR workshop on Integration of Deep Neural Models and Differential Equations*, held virtually<br />
 [fulltext available](https://arxiv.org/abs/1912.03937) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
 
 * Johannes Müller (2020):
-**On the space-time expressivity of  residual  networks**<br />
+**On the space-time expressivity of  residual  networks**,
 *ICLR workshop on Integration of Deep Neural Models and Differential Equations*, held virtually<br />
 [fulltext available](https://arxiv.org/abs/1910.09599) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
 
