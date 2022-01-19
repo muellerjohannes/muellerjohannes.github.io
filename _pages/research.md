@@ -16,46 +16,46 @@ My research interests lie at the intersection of machine learning and applied ma
 **Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**
 [fulltext available](https://arxiv.org/pdf/2111.05637) 
 
-* Johannes Müller, Guido Montúfar (2021):<br />
-**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**<br />
+* Johannes Müller, Guido Montúfar (2021):
+**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**
 [fulltext available](https://arxiv.org/abs/2110.07409) 
 
-* Johannes Müller, Marius Zeinhofer (2021):<br />
-**Notes on Exact Boundary Values in Residual Minimisation**<br />
+* Johannes Müller, Marius Zeinhofer (2021):
+**Notes on Exact Boundary Values in Residual Minimisation**
 [fulltext available](https://arxiv.org/pdf/2105.02550)
 
-* Johannes Müller, Marius Zeinhofer (2021):<br />
-**Error Estimates for the variational training of neural newtorks with boundary penalty**<br />
+* Johannes Müller, Marius Zeinhofer (2021):
+**Error Estimates for the variational training of neural newtorks with boundary penalty**
 [fulltext available](https://arxiv.org/pdf/2103.01007)
 
 **Poster presentations**
 
-* Johannes Müller joint work with Marius Zeinhofer (2021):<br />
+* Johannes Müller joint work with Marius Zeinhofer (2021):
 **A Posteriori Estimates and Convergence Guarantees for Neural Network Based PDE solvers**<br />
 Workshop on *Deep learning and partial differential equations* at the Sir Isaac Newton Institute, Cambridge, UK<br />
 [poster not available]() | [Deep learning and partial differential equations](https://www.newton.ac.uk/event/mdlw03/)
 
-* Johannes Müller joint work with Guido Montúfar (2021):<br />
+* Johannes Müller joint work with Guido Montúfar (2021):
 **The Geometry of Memoryless Stochastic Policy Optimization in Infinite- Horizon Partially Observable Markov Decision Processes**<br />
 *Geometry & Learning from Data*, BIRS workshop hosted by Casa Matem ́atica Oaxaca (CMO), held online<br />
 [poster available](/files/poster_geometry_stationary_distributions-2.pdf) | [Geometry & Learning from Data](http://www.birs.ca/events/2021/5-day-workshops/21w5239)
 
-* Johannes Müller joint work with Guido Montúfar (2021):<br />
+* Johannes Müller joint work with Guido Montúfar (2021):
 **The geometry of discounted stationary distributions of Markov decision processes**<br />
 Workshop on *Mathematics of deep learning* at the Sir Isaac Newton Institute, Cambridge, UK<br />
 [poster available](/files/poster_geometry_stationary_distributions.pdf) | [Workshop on Mathematics of deep learning](https://www.newton.ac.uk/event/mdl/)
 
-* Johannes Müller joint work with Guido Montúfar (2021):<br />
+* Johannes Müller joint work with Guido Montúfar (2021):
 **The geometry of discounted stationary distributions of Markov decision processes**<br />
 *Conference on Mathematics of Machine Learning* at the Zentrum für interdisziplinäre Forschung, Bielefeld, Germany<br />
 [poster available](/files/poster_geometry_stationary_distributions.pdf) | [Conference on Mathematics of Machine Learning](https://www.mis.mpg.de/calendar/conferences/2021/mml2021.html)
 
-* Johannes Müller, Marius Zeinhofer (2020):<br />
+* Johannes Müller, Marius Zeinhofer (2020):
 **Deep Ritz revisited**<br />
 *ICLR workshop on Integration of Deep Neural Models and Differential Equations*, held virtually<br />
 [fulltext available](https://arxiv.org/abs/1912.03937) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
 
-* Johannes Müller (2020):<br />
+* Johannes Müller (2020):
 **On the space-time expressivity of  residual  networks**<br />
 *ICLR workshop on Integration of Deep Neural Models and Differential Equations*, held virtually<br />
 [fulltext available](https://arxiv.org/abs/1910.09599) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
