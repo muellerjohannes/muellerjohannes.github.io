@@ -14,7 +14,7 @@ My research interests lie at the intersection of machine learning and applied ma
 
 * Patrick Dondl, Johannes Müller, Marius Zeinhofer (2021):
 **Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**
-[fulltext available](https://arxiv.org/pdf/2111.05637) 
+**[fulltext available]**(https://arxiv.org/pdf/2111.05637) 
 
 * Johannes Müller, Guido Montúfar (2021):
 **The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**
