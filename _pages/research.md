@@ -32,8 +32,8 @@ My research interests lie at the intersection of machine learning and applied ma
 
 * Johannes Müller joint work with Marius Zeinhofer (2021):
 **A Posteriori Estimates and Convergence Guarantees for Neural Network Based PDE solvers**,
-Workshop on *Deep learning and partial differential equations* at the Sir Isaac Newton Institute, Cambridge, UK<br />
-[poster not available]() | [Deep learning and partial differential equations](https://www.newton.ac.uk/event/mdlw03/)
+Workshop on [Deep learning and partial differential equations](https://www.newton.ac.uk/event/mdlw03/) at the Sir Isaac Newton Institute, Cambridge, UK, 
+[poster not available]()
 
 * Johannes Müller joint work with Guido Montúfar (2021):
 **The Geometry of Memoryless Stochastic Policy Optimization in Infinite- Horizon Partially Observable Markov Decision Processes**,
