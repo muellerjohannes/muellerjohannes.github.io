@@ -63,16 +63,15 @@ Workshop on *Mathematics of deep learning* at the Sir Isaac Newton Institute, Ca
 **Meetings and conferences**
 
 * November 2021: Deep learning and partial differential equations, Workshop at the Sir Isaac Newton Institute, held online
-
 * October 2021: Geometry & Learning from Data, BIRS workshop hosted by Casa Matem ́atica Oaxaca (CMO), held online
-
 * August 2021: Theory of deep learning, Workshop at the Sir Isaac Newton Institute, held online
-
 * August 2021: Conference on Mathematics of Machine Learning, Center for Interdisciplinary Research (ZiF), Bielefeld University, Germany
-
 * January 2021: Developments in the Mathematical Sciences 2020/2021, MPI MiS, Germany
+* April 2020: International Conference on Learning Representations (ICLR), held virtually 
 
 **Talks**
+
+* April 2020: Deep Ritz revisited at Math Machine Learning seminar MPI MIS + UCLA
 
 **Thesis**
 
