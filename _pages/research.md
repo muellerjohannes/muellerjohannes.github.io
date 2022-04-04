@@ -10,15 +10,17 @@ My research interests lie at the intersection of machine learning and applied ma
 * Representational capacity of neural networks
 * Connections between neural networks and differential equations
 
+**Publications**
+
+* Johannes Müller, Guido Montúfar (ICLR 2022):
+**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**,
+[fulltext available](https://arxiv.org/abs/2110.07409) 
+
 **Preprints**
 
 * Patrick Dondl, Johannes Müller, Marius Zeinhofer (2021):
 **Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**,
 [fulltext available](https://arxiv.org/pdf/2111.05637) 
-
-* Johannes Müller, Guido Montúfar (2021):
-**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**,
-[fulltext available](https://arxiv.org/abs/2110.07409) 
 
 * Johannes Müller, Marius Zeinhofer (2021):
 **Notes on Exact Boundary Values in Residual Minimisation**,
@@ -71,6 +73,9 @@ Workshop on [Workshop on Mathematics of deep learning](https://www.newton.ac.uk/
 
 **Talks**
 
+* Invited talk at the Minisyposium  "Algebraic Geometry and Machine Learning" at the SIAM Conference on Mathematics of Data Science (MDS22), Town and Country Resort | San Diego, California, USA
+* July 2022: 5th Multi-disciplinary Conference on Reinforcement Learning and Decision Making (RLDM), Brown University, Providence, Rhode Island, USA
+* May 2022: Algebraic Statistics 2022, University of Hawai'i at Manoa, Honolulu, HI, USA
 * April 2020: Deep Ritz revisited at Math Machine Learning seminar MPI MIS + UCLA
 
 **Thesis**
