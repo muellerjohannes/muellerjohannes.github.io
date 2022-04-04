@@ -73,7 +73,7 @@ Workshop on [Workshop on Mathematics of deep learning](https://www.newton.ac.uk/
 
 **Talks**
 
-* Invited talk at the Minisyposium  "Algebraic Geometry and Machine Learning" at the SIAM Conference on Mathematics of Data Science (MDS22), Town and Country Resort | San Diego, California, USA
+* Invited talk at the Minisyposium  "Algebraic Geometry and Machine Learning" at the SIAM Conference on Mathematics of Data Science (MDS22), Town and Country Resort, San Diego, California, USA
 * July 2022: 5th Multi-disciplinary Conference on Reinforcement Learning and Decision Making (RLDM), Brown University, Providence, Rhode Island, USA
 * May 2022: Algebraic Statistics 2022, University of Hawai'i at Manoa, Honolulu, HI, USA
 * April 2020: Deep Ritz revisited at Math Machine Learning seminar MPI MIS + UCLA
