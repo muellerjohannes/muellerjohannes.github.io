@@ -8,7 +8,7 @@ author_profile: true
 
 ## Talks
 
-* Invited talk at the Minisyposium  "Algebraic Geometry and Machine Learning" at the SIAM Conference on Mathematics of Data Science (MDS22), Town and Country Resort, San Diego, California, USA
+* Invited talk at the Minisyposium  "Algebraic Geometry and Machine Learning" at the [SIAM Conference on Mathematics of Data Science (MDS22)](https://www.siam.org/conferences/cm/conference/mds22), Town and Country Resort, San Diego, California, USA
 * May 2022: Algebraic Statistics 2022, University of Hawai'i at Manoa, Honolulu, HI, USA
 * April 2020: Deep Ritz revisited at Math Machine Learning seminar MPI MIS + UCLA
 
