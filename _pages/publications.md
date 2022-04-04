@@ -23,7 +23,7 @@ author_profile: true
 **Error Estimates for the variational training of neural newtorks with boundary penalty**,
 [fulltext available](https://arxiv.org/pdf/2103.01007)
 
-**Extended Abstracts
+**Extended Abstracts**
 
 * Johannes Müller joint work with Marius Zeinhofer (2021):
 **A Posteriori Estimates and Convergence Guarantees for Neural Network Based PDE solvers**,
