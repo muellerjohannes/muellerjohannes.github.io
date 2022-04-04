@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Johannes Müller"
-  avatar           : "/images/johannes-mueller-4.jpg"
+  avatar           : "johannes-mueller-4.jpg"
   bio              : "PhD student at IMPRS MiS<br>Focusing on mathematical machine learning"
   location         : "Leipzig, DE"
   employer         :
