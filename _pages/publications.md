@@ -9,7 +9,7 @@ author_profile: true
 
 * Johannes Müller, Guido Montúfar:
 **The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**, to appear at the Tenth International Conference on Learning Representations (ICLR 2022),
-[fulltext available](https://arxiv.org/abs/2110.07409) 
+Preprint [[arXiv:2110.07409https://www.mis.mpg.de/montufar/seminars/math-ml-seminar.html]](https://arxiv.org/abs/2110.07409) 
 
 ## Preprints
 
