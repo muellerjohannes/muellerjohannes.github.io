@@ -7,15 +7,19 @@ author_profile: true
 
 ## Publications
 
+
+
+* Jesse van Oostrum, Johannes Müller, Nihat Ay:
+**Invariance properties of the natural gradient
+in overparametrised systems**, Information Geometry, [fulltext available](https://link.springer.com/article/10.1007/s41884-022-00067-9) 
+
 * Johannes Müller, Guido Montúfar:
-**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**, to appear at the Tenth International Conference on Learning Representations (ICLR 2022),
-Preprint [[arXiv:2110.07409]](https://arxiv.org/abs/2110.07409) 
+**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**, Tenth International Conference on Learning Representations (ICLR 2022), Preprint [[arXiv:2110.07409]](https://arxiv.org/abs/2110.07409) 
 
 ## Preprints
 
 * Patrick Dondl, Johannes Müller, Marius Zeinhofer (2021):
-**Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**,
-[fulltext available](https://arxiv.org/pdf/2111.05637) 
+**Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**, [fulltext available](https://arxiv.org/pdf/2111.05637) 
 
 * Johannes Müller, Marius Zeinhofer (2021):
 **Notes on Exact Boundary Values in Residual Minimisation**,
@@ -28,7 +32,7 @@ Preprint [[arXiv:2110.07409]](https://arxiv.org/abs/2110.07409)
 ## Extended Abstracts
 
 * Johannes Müller, Guido Montúfar (2022): **Solving infinite-horizon POMDPs with memoryless stochastic policies in state-action space**,  [5th Multi-disciplinary Conference on Reinforcement Learning and Decision Making (RLDM 2022)](https://rldm.org/), 
-[fulltext soon available]()
+[fulltext available](https://arxiv.org/abs/2205.14098)
 
 * Johannes Müller, Marius Zeinhofer (2020):
 **Deep Ritz revisited**,
