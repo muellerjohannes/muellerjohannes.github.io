@@ -12,6 +12,7 @@ author_profile: true
 * September 2022: SIAM Conference on Mathematics of Data Science (MDS22), Town and Country Resort, San Diego, CA
 * June 2022: 5th Multidisciplinary Conference on Reinforcement Learning and Decision Making (RLDM 2022), Brown University, Providence, RI
 * May 2022: Algebraic Statistics 2022, University of Hawai'i at Manoa, Honolul, HI 
+* April 2022: Tenth International Conference on Learning Representations (ICLR 2022)
 * November 2021: Deep learning and partial differential equations, Workshop at the Sir Isaac Newton Institute, held online
 * October 2021: Geometry & Learning from Data, BIRS workshop hosted by Casa Matem ́atica Oaxaca (CMO), held online
 * August 2021: Theory of deep learning, Workshop at the Sir Isaac Newton Institute, held online
