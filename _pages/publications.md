@@ -24,6 +24,8 @@ in overparametrised systems**, Information Geometry, [fulltext available](https:
 1. Johannes Müller, Guido Montúfar:
 **The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**, Tenth International Conference on Learning Representations (ICLR 2022), [fulltext available](https://openreview.net/forum?id=A05I5IvrdL-) 
 
+{: reversed="reversed"}
+
 ## Preprints
 
 In the pipeline :)
