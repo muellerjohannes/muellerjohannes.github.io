@@ -10,6 +10,7 @@ author_profile: true
 ## Conferences and meetings
 
 * September 2022: SIAM Conference on Mathematics of Data Science (MDS22), Town and Country Resort, San Diego, CA
+* August 2022: Workshop on Algebraic Geometry, Combinatorics, and Machine Learning, Max Planck Institute for Mathematics in the Sciences, Leipzig, Germany
 * June 2022: 5th Multidisciplinary Conference on Reinforcement Learning and Decision Making (RLDM 2022), Brown University, Providence, RI
 * May 2022: Algebraic Statistics 2022, University of Hawai'i at Manoa, Honolul, HI 
 * April 2022: Tenth International Conference on Learning Representations (ICLR 2022)
