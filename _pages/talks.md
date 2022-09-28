@@ -8,7 +8,8 @@ author_profile: true
 
 ## Talks
 
-* Septemeber 2022: Minisyposium  *Algebraic Geometry and Machine Learning* at the [SIAM Conference on Mathematics of Data Science (MDS22)](https://www.siam.org/conferences/cm/conference/mds22), Town and Country Resort, San Diego, California, USA
+* September 2022: Minisyposium  *Algebraic Geometry and Machine Learning* at the [SIAM Conference on Mathematics of Data Science (MDS22)](https://www.siam.org/conferences/cm/conference/mds22), Town and Country Resort, San Diego, California, USA
+* August 2022: [Workshop on Algebraic Geometry, Combinatorics, and Machine Learning](https://www.mis.mpg.de/calendar/conferences/2022/caml.html), Max Planck Institute for Mathematics in the Sciences, Leipzig, Germany
 * May 2022: [Algebraic Statistics 2022](https://sites.google.com/iit.edu/as2022), University of Hawai'i at Manoa, Honolulu, HI, USA
 * April 2020: [Math Machine Learning seminar MPI MIS + UCLA](https://www.mis.mpg.de/montufar/seminars/math-ml-seminar.html)
 
