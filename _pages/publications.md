@@ -14,12 +14,12 @@ author_profile: true
 in overparametrised systems**, Information Geometry, [fulltext available](https://link.springer.com/article/10.1007/s41884-022-00067-9) 
 
 * Johannes Müller, Guido Montúfar:
-**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**, Tenth International Conference on Learning Representations (ICLR 2022), Preprint [[arXiv:2110.07409]](https://arxiv.org/abs/2110.07409) 
-
-## Preprints
+**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**, Tenth International Conference on Learning Representations (ICLR 2022), [fulltext available](https://openreview.net/forum?id=A05I5IvrdL-) 
 
 * Patrick Dondl, Johannes Müller, Marius Zeinhofer (2021):
-**Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**, [fulltext available](https://arxiv.org/pdf/2111.05637) 
+**Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**, Advances in Continuous and Discrete Models, [fulltext available](https://advancesindifferenceequations.springeropen.com/articles/10.1186/s13662-022-03722-8) 
+
+## Preprints
 
 * Johannes Müller, Marius Zeinhofer (2021):
 **Notes on Exact Boundary Values in Residual Minimisation**,
