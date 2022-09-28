@@ -8,7 +8,7 @@ author_profile: true
 
 ## Talks
 
-* Invited talk at the Minisyposium  *Algebraic Geometry and Machine Learning* at the [SIAM Conference on Mathematics of Data Science (MDS22)](https://www.siam.org/conferences/cm/conference/mds22), Town and Country Resort, San Diego, California, USA
+* Septemeber 2022: Minisyposium  *Algebraic Geometry and Machine Learning* at the [SIAM Conference on Mathematics of Data Science (MDS22)](https://www.siam.org/conferences/cm/conference/mds22), Town and Country Resort, San Diego, California, USA
 * May 2022: [Algebraic Statistics 2022](https://sites.google.com/iit.edu/as2022), University of Hawai'i at Manoa, Honolulu, HI, USA
 * April 2020: [Math Machine Learning seminar MPI MIS + UCLA](https://www.mis.mpg.de/montufar/seminars/math-ml-seminar.html)
 
@@ -16,8 +16,7 @@ author_profile: true
 
 * Johannes Müller joint work with Marius Zeinhofer (2021):
 **A Posteriori Estimates and Convergence Guarantees for Neural Network Based PDE solvers**,
-Workshop on [Deep learning and partial differential equations](https://www.newton.ac.uk/event/mdlw03/) at the Sir Isaac Newton Institute, Cambridge, UK, 
-[poster not available]()
+Workshop on [Deep learning and partial differential equations](https://www.newton.ac.uk/event/mdlw03/) at the Sir Isaac Newton Institute, Cambridge, UK
 
 * Johannes Müller joint work with Guido Montúfar (2021):
 **The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon Partially Observable Markov Decision Processes**,
