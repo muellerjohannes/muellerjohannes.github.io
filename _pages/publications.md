@@ -7,24 +7,22 @@ author_profile: true
 
 ## Publications
 
-5. Johannes Müller, Marius Zeinhofer:
+* Johannes Müller, Marius Zeinhofer (2022):
 **Error Estimates for the variational training of neural newtorks with boundary penalty**, Third Conference on Mathematical and Scientific Machine Learning (MSML22), [fulltext available](https://proceedings.mlr.press/v190/muller22a.html)
 
-4. Johannes Müller, Marius Zeinhofer:
+* Johannes Müller, Marius Zeinhofer (2022):
 **Notes on Exact Boundary Values in Residual Minimisation**, Third Conference on Mathematical and Scientific Machine Learning (MSML22),
 [fulltext available](https://msml22.github.io/msml22papers/exact_boundary.pdf)
 
-3. Patrick Dondl, Johannes Müller, Marius Zeinhofer:
+* Patrick Dondl, Johannes Müller, Marius Zeinhofer (2022):
 **Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**, Advances in Continuous and Discrete Models, [fulltext available](https://advancesindifferenceequations.springeropen.com/articles/10.1186/s13662-022-03722-8) 
 
-2. Jesse van Oostrum, Johannes Müller, Nihat Ay:
+* Jesse van Oostrum, Johannes Müller, Nihat Ay (2022):
 **Invariance properties of the natural gradient
 in overparametrised systems**, Information Geometry, [fulltext available](https://link.springer.com/article/10.1007/s41884-022-00067-9) 
 
-1. Johannes Müller, Guido Montúfar:
+* Johannes Müller, Guido Montúfar (2021):
 **The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**, Tenth International Conference on Learning Representations (ICLR 2022), [fulltext available](https://openreview.net/forum?id=A05I5IvrdL-) 
-
-{: reversed="reversed"}
 
 ## Preprints
 
