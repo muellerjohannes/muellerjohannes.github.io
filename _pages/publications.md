@@ -16,18 +16,19 @@ in overparametrised systems**, Information Geometry, [fulltext available](https:
 * Johannes Müller, Guido Montúfar:
 **The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**, Tenth International Conference on Learning Representations (ICLR 2022), [fulltext available](https://openreview.net/forum?id=A05I5IvrdL-) 
 
-* Patrick Dondl, Johannes Müller, Marius Zeinhofer (2021):
+* Patrick Dondl, Johannes Müller, Marius Zeinhofer (2022):
 **Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**, Advances in Continuous and Discrete Models, [fulltext available](https://advancesindifferenceequations.springeropen.com/articles/10.1186/s13662-022-03722-8) 
+
+* Johannes Müller, Marius Zeinhofer (2022):
+**Notes on Exact Boundary Values in Residual Minimisation**, Third Conference on Mathematical and Scientific Machine Learning (MSML22),
+[fulltext available](https://msml22.github.io/msml22papers/exact_boundary.pdf)
+
+* Johannes Müller, Marius Zeinhofer (2022):
+**Error Estimates for the variational training of neural newtorks with boundary penalty**, Third Conference on Mathematical and Scientific Machine Learning (MSML22), [fulltext available](https://proceedings.mlr.press/v190/muller22a.html)
 
 ## Preprints
 
-* Johannes Müller, Marius Zeinhofer (2021):
-**Notes on Exact Boundary Values in Residual Minimisation**,
-[fulltext available](https://arxiv.org/pdf/2105.02550)
-
-* Johannes Müller, Marius Zeinhofer (2021):
-**Error Estimates for the variational training of neural newtorks with boundary penalty**,
-[fulltext available](https://arxiv.org/pdf/2103.01007)
+In the pipeline :)
 
 ## Extended Abstracts
 
