@@ -8,8 +8,8 @@ author_profile: true
 
 ## Talks
 * January 2023: *Geometry of sequential decision problems*, Optimization and Data Science Seminar, University of California, San Diego, online
-* November 2022: *Geometry of Markov decision processes*, Annual meeting of the Priority Programme *Theoretical Foundations of Deep Learning (SPP 2298)*, Evangelische Akademie Tutzing, Germany
-* October 2022: *Geometry of natural policy gradient methods*, Applied math colloquium, University of California, Los Angeles, USA
+* November 2022: *Geometry of Markov decision processes*, Annual meeting of the Priority Programme [*Theoretical Foundations of Deep Learning (SPP 2298)*](https://www.foundationsofdl.de/), Evangelische Akademie Tutzing, Germany
+* October 2022: *Geometry of natural policy gradient methods*, [Applied Math Colloquium](https://secure.math.ucla.edu/seminars/show_quarter.php?type=Applied%20Colloquium), University of California, Los Angeles, USA
 * September 2022: Minisyposium  *Algebraic Geometry and Machine Learning* at the [SIAM Conference on Mathematics of Data Science (MDS22)](https://www.siam.org/conferences/cm/conference/mds22), Town and Country Resort, San Diego, California, USA
 * August 2022: [Workshop on Algebraic Geometry, Combinatorics, and Machine Learning](https://www.mis.mpg.de/calendar/conferences/2022/caml.html), Max Planck Institute for Mathematics in the Sciences, Leipzig, Germany
 * May 2022: [Algebraic Statistics 2022](https://sites.google.com/iit.edu/as2022), University of Hawai'i at Manoa, Honolulu, HI, USA
