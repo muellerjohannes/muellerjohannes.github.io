@@ -5,47 +5,36 @@ permalink: /publications/
 author_profile: true
 ---
 
+
+
+
+
 ## Publications
 
-* Johannes Müller, Marius Zeinhofer (2022):
-**Error Estimates for the variational training of neural newtorks with boundary penalty**, Third Conference on Mathematical and Scientific Machine Learning (MSML22), [fulltext available](https://proceedings.mlr.press/v190/muller22a.html)
+**5\. Error Estimates for the variational training of neural newtorks with boundary penalty**, with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning (MSML22), [fulltext available](https://proceedings.mlr.press/v190/muller22a.html)
 
-* Johannes Müller, Marius Zeinhofer (2022):
-**Notes on Exact Boundary Values in Residual Minimisation**, Third Conference on Mathematical and Scientific Machine Learning (MSML22),
-[fulltext available](https://msml22.github.io/msml22papers/exact_boundary.pdf)
+**4\. Notes on Exact Boundary Values in Residual Minimisation**, with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning (MSML22), [fulltext available](https://msml22.github.io/msml22papers/exact_boundary.pdf)
 
-* Patrick Dondl, Johannes Müller, Marius Zeinhofer (2022):
-**Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**, Advances in Continuous and Discrete Models, [fulltext available](https://advancesindifferenceequations.springeropen.com/articles/10.1186/s13662-022-03722-8) 
+**3\. Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**, with Patrick Dondl and Marius Zeinhofer, Advances in Continuous and Discrete Models, [fulltext available](https://advancesindifferenceequations.springeropen.com/articles/10.1186/s13662-022-03722-8) 
 
-* Jesse van Oostrum, Johannes Müller, Nihat Ay (2022):
-**Invariance properties of the natural gradient
-in overparametrised systems**, Information Geometry, [fulltext available](https://link.springer.com/article/10.1007/s41884-022-00067-9) 
+**2\. Invariance properties of the natural gradient in overparametrised systems**, With Jesse van Oostrum and Nihat Ay, Information Geometry, [fulltext available](https://link.springer.com/article/10.1007/s41884-022-00067-9) 
 
-* Johannes Müller, Guido Montúfar (2021):
-**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**, Tenth International Conference on Learning Representations (ICLR 2022), [fulltext available](https://openreview.net/forum?id=A05I5IvrdL-) 
+**1\. The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**, with Guido Montúfar, Tenth International Conference on Learning Representations (ICLR 2022), [fulltext available](https://openreview.net/forum?id=A05I5IvrdL-) 
 
 ## Preprints
 
-* Johannes Müller, Guido Montúfar (2022):
-**Geometry and convergence of natural policy gradient methods**, [fulltext available](https://arxiv.org/abs/2211.02105)
+* **Geometry and convergence of natural policy gradient methods**, with Guido Montúfar, [fulltext available](https://arxiv.org/abs/2211.02105)
 
-* Mareike Dressler, Marina Garotte-Lopéz, Guido Montúfar, Johannes Müller, Kemal Rose (2022):
-**Algebraic optimization of sequential decision problems**, [fulltext available](https://arxiv.org/abs/2211.09439)
+* **Algebraic optimization of sequential decision problems**, with Mareike Dressler, Marina Garotte-Lopéz, Guido Montúfar and Kemal Rose, [fulltext available](https://arxiv.org/abs/2211.09439)
 
 ## Extended Abstracts
 
-* Johannes Müller, Guido Montúfar (2022): **Solving infinite-horizon POMDPs with memoryless stochastic policies in state-action space**,  [5th Multi-disciplinary Conference on Reinforcement Learning and Decision Making (RLDM 2022)](https://rldm.org/), 
+* **Solving infinite-horizon POMDPs with memoryless stochastic policies in state-action space**, with Guido Montúfar, [5th Multi-disciplinary Conference on Reinforcement Learning and Decision Making (RLDM 2022)](https://rldm.org/), 
 [fulltext available](https://arxiv.org/abs/2205.14098)
 
-* Johannes Müller, Marius Zeinhofer (2020):
-**Deep Ritz revisited**,
-[ICLR workshop on Integration of Deep Neural Models and Differential Equations](http://iclr2020deepdiffeq.rice.edu/), 
-[fulltext available](https://arxiv.org/abs/1912.03937)
+* **Deep Ritz revisited**, with Marius Zeinhofer, [ICLR workshop on Integration of Deep Neural Models and Differential Equations](http://iclr2020deepdiffeq.rice.edu/), [fulltext available](https://arxiv.org/abs/1912.03937)
 
-* Johannes Müller (2020):
-**On the space-time expressivity of  residual  networks**,
-[ICLR workshop on Integration of Deep Neural Models and Differential Equations](http://iclr2020deepdiffeq.rice.edu/),
-[fulltext available](https://arxiv.org/abs/1910.09599) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
+* **On the space-time expressivity of  residual  networks**, [ICLR workshop on Integration of Deep Neural Models and Differential Equations](http://iclr2020deepdiffeq.rice.edu/), [fulltext available](https://arxiv.org/abs/1910.09599) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
 
 ## Thesis
 
