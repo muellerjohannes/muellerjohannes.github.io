@@ -34,7 +34,7 @@ author_profile: true
 
 * **Deep Ritz revisited**, with Marius Zeinhofer, [ICLR workshop on Integration of Deep Neural Models and Differential Equations](http://iclr2020deepdiffeq.rice.edu/), [fulltext available](https://arxiv.org/abs/1912.03937)
 
-* **On the space-time expressivity of  residual  networks**, [ICLR workshop on Integration of Deep Neural Models and Differential Equations](http://iclr2020deepdiffeq.rice.edu/), [fulltext available](https://arxiv.org/abs/1910.09599) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
+* **On the space-time expressivity of  residual  networks**, [ICLR workshop on Integration of Deep Neural Models and Differential Equations](http://iclr2020deepdiffeq.rice.edu/), [fulltext available](https://arxiv.org/abs/1910.09599)
 
 ## Thesis
 
