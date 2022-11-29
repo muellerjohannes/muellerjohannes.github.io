@@ -11,15 +11,15 @@ author_profile: true
 
 ## Publications
 
-**5\. Error Estimates for the variational training of neural newtorks with boundary penalty**, with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning (MSML22), [fulltext available](https://proceedings.mlr.press/v190/muller22a.html)
+**5\. Error Estimates for the variational training of neural newtorks with boundary penalty**, with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning, Proceedings of Machine Learning Research, Volume 190, 2022, [fulltext available](https://proceedings.mlr.press/v190/muller22a.html)
 
-**4\. Notes on Exact Boundary Values in Residual Minimisation**, with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning (MSML22), [fulltext available](https://msml22.github.io/msml22papers/exact_boundary.pdf)
+**4\. Notes on Exact Boundary Values in Residual Minimisation**, with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning, Proceedings of Machine Learning Research, Volume 190, 2022, [fulltext available](https://msml22.github.io/msml22papers/exact_boundary.pdf)
 
-**3\. Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**, with Patrick Dondl and Marius Zeinhofer, Advances in Continuous and Discrete Models, [fulltext available](https://advancesindifferenceequations.springeropen.com/articles/10.1186/s13662-022-03722-8) 
+**3\. Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**, with Patrick Dondl and Marius Zeinhofer, Advances in Continuous and Discrete Models, SpringerOpen, 2022, [fulltext available](https://advancesindifferenceequations.springeropen.com/articles/10.1186/s13662-022-03722-8) 
 
-**2\. Invariance properties of the natural gradient in overparametrised systems**, With Jesse van Oostrum and Nihat Ay, Information Geometry, [fulltext available](https://link.springer.com/article/10.1007/s41884-022-00067-9) 
+**2\. Invariance properties of the natural gradient in overparametrised systems**, With Jesse van Oostrum and Nihat Ay, Information Geometry, Springer, 2022, [fulltext available](https://link.springer.com/article/10.1007/s41884-022-00067-9) 
 
-**1\. The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**, with Guido Montúfar, Tenth International Conference on Learning Representations (ICLR 2022), [fulltext available](https://openreview.net/forum?id=A05I5IvrdL-) 
+**1\. The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**, with Guido Montúfar, Tenth International Conference on Learning Representations, 2022, [fulltext available](https://openreview.net/forum?id=A05I5IvrdL-) 
 
 ## Preprints
 
