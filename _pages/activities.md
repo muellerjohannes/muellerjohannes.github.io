@@ -8,7 +8,7 @@ author_profile: true
 
 
 ## Conferences and meetings
-
+* November 2022: Annual meeting of the DFG Priority Programme *Theoretical Foundations of Deep Learning (SPP 2298)*, Evangelische Akademie Tutzing, Germany
 * September 2022: SIAM Conference on Mathematics of Data Science (MDS22), Town and Country Resort, San Diego, CA
 * August 2022: Workshop on Algebraic Geometry, Combinatorics, and Machine Learning, Max Planck Institute for Mathematics in the Sciences, Leipzig, Germany
 * June 2022: 5th Multidisciplinary Conference on Reinforcement Learning and Decision Making (RLDM 2022), Brown University, Providence, RI
