@@ -26,7 +26,10 @@ in overparametrised systems**, Information Geometry, [fulltext available](https:
 
 ## Preprints
 
-In the pipeline :)
+*Johannes Müller, Guido Montúfar (2022):
+**Geometry and convergence of natural policy gradient methods**, [fulltext available](https://arxiv.org/abs/2211.02105)
+*Mareike Dressler, Marina Garotte-Lopéz, Guido Montúfar, Johannes Müller, Kemal Rose (2022):
+**Algebraic optimization of sequential decision problems**, [fulltext available](https://arxiv.org/abs/2211.09439)
 
 ## Extended Abstracts
 
