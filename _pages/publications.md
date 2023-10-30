@@ -11,6 +11,12 @@ author_profile: true
 
 ## Publications
 
+**8\. Geometry and convergence of natural policy gradient methods**, with Guido Montúfar, Information Geometry, 2023, [fulltext available](https://muellerjohannes.github.io/)
+
+**7\. Achieving High Accuracy with PINNs via Energy Natural Gradients**, with Marius Zeinhofer, International Conference on Machine Learning, 2023, [fulltext available](https://proceedings.mlr.press/v202/muller23b.html)
+
+**6\. Algebraic Optimization of Sequential Decision Problems**, with Mareike Dressler, Marina Garotte-Lopéz, Guido Montúfar and Kemal Rose, Journal of Symbolic Computation, Volume 121, 2022, [preprint available](https://arxiv.org/abs/2211.09439)
+
 **5\. Error Estimates for the variational training of neural newtorks with boundary penalty**, with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning, Proceedings of Machine Learning Research, Volume 190, 2022, [fulltext available](https://proceedings.mlr.press/v190/muller22a.html)
 
 **4\. Notes on Exact Boundary Values in Residual Minimisation**, with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning, Proceedings of Machine Learning Research, Volume 190, 2022, [fulltext available](https://msml22.github.io/msml22papers/exact_boundary.pdf)
