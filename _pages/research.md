@@ -10,6 +10,8 @@ My research interests lie at the intersection of machine learning and applied ma
 * Representational capacity of neural networks
 * Connections between neural networks and differential equations
 
-**Geometry of (Partially Observable) Markov Decision Processes**
+**Geometry of Partially Observable Markov Decision Processes**
+
+**Geometry of Natural Policy Gradient Methods**
 
 **Energy Natural Gradients for Physics Informed Neural Networks**
