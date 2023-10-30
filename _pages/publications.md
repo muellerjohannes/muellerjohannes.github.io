@@ -29,10 +29,6 @@ author_profile: true
 
 ## Preprints
 
-* **Geometry and convergence of natural policy gradient methods**, with Guido Montúfar, [fulltext available](https://arxiv.org/abs/2211.02105)
-
-* **Algebraic optimization of sequential decision problems**, with Mareike Dressler, Marina Garotte-Lopéz, Guido Montúfar and Kemal Rose, [fulltext available](https://arxiv.org/abs/2211.09439)
-
 ## Extended Abstracts
 
 * **Solving infinite-horizon POMDPs with memoryless stochastic policies in state-action space**, with Guido Montúfar, [5th Multi-disciplinary Conference on Reinforcement Learning and Decision Making (RLDM 2022)](https://rldm.org/), 
