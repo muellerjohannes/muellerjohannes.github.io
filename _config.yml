@@ -10,7 +10,7 @@ locale                   : "DE"
 title                    : "JM"
 title_separator          : "-"
 name                     : &name "Johannes Müller"
-description              : &description "PhD student at IMPRS MiS"
+description              : &description "Scientific Staff at RWTH Aachen"
 url                      : https://muellerjohannes.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "muellerjohannes.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Johannes Müller"
   avatar           : "small.png"
-  bio              : "PhD student at IMPRS MiS<br>Focusing on mathematical machine learning"
+  bio              : "Scientific Staff at RWTH Aachen<br>Working on the mathematical foundations of learning"
   location         : "Leipzig, DE"
   employer         :
   pubmed           :  # example: "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.de/citations?user=Wfww-P8AAAAJ&hl=en"
-  email            : "jmueller@mis.mpg.de"
+  email            : "mueller@mathc.rwth-aachen.de"
   researchgate     :  "https://www.researchgate.net/profile/Johannes_Mueller"
   uri              :
   bitbucket        :
