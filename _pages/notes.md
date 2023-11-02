@@ -5,6 +5,8 @@ permalink: /notes/
 author_profile: true
 ---
 
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+
 Often when learning something new I try to put it into my own words in order to understand it better. Here are some random examples. Feel free to have a look, however since those are not proofread treat them carefully and please let me know any small and big mistakes you find!
 
 **Expressivity of Neural Networks:** Coming soon...
