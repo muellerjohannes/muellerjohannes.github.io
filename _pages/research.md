@@ -47,7 +47,9 @@ $$
 G(\theta)_{ij} \coloneqq \int _\Omega \Delta \partial _{\theta_i} u _\theta \Delta \partial _{\theta_j} u _\theta \mathrm dx + \int _{\partial\Omega} \partial _{\theta_i} u _\theta \partial _{\theta_j} u _\theta \mathrm ds.
 $$
 
-
+$$
+u_{\theta'} =  u_\theta + \Delta_t \cdot (u^\ast-u_\theta) + O(\Delta_t^2)
+$$
 
 
 
