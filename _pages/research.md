@@ -22,9 +22,6 @@ For example, for the Poisson equation
 
 $$ -\Delta u = f \quad \text{in } \Omega $$
 
-```math
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \\
-a^2+b^2=c^2
-```
+$$\begin{aligned} 2x - 4 &= 6 \\ 2x &= 10 \\ x &= 5 \end{aligned}$$
 
 as a prototypical PDE
