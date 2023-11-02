@@ -30,5 +30,7 @@ with Dirichlet boundary condition on a smooth domain $\Omega\subseteq\mathbb R^d
 The idea of PINNs and the DGM is to consider a function $u_\theta\colon\mathbb R^d\to\mathbb R$ computed by a neural network with parameters $\theta$ and to minimize the residual which leads to the following objective function 
 
 $$
-L(\theta) \coloneqq \frac12\int_\Omega (\Delta u_\theta + f)^2 \mathrm dx + \frac12\int_{\partial\Omega} (u-g) \mathrm ds.
+L(\theta) \coloneqq \int_\Omega (\Delta u_\theta + f)^2 \mathrm dx + \lambda\int_{\partial\Omega} (u-g)^2 \mathrm ds.
 $$
+
+Now, one employs some optimization procedure to minimize $L$ as $L(\theta) = 0$ ensures that $u_\theta$ solves the PDE. 
