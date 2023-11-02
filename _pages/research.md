@@ -14,6 +14,7 @@ My research interests lie at the intersection of machine learning and applied ma
 Markov decision processes 
 
 ### Geometry of Natural Policy Gradient Methods
+asdf
 
 ### Energy Natural Gradients for Physics Informed Neural Networks
 
