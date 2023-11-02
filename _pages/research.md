@@ -22,4 +22,8 @@ For example, for the Poisson equation
 
 $$ -\Delta u = f \quad \text{in } \Omega $$
 
+\begin{align}
+  -\Delta u = f \quad \text{in } \Omega
+\end{align}
+
 as a prototypical PDE
