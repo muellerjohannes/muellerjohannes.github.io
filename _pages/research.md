@@ -20,6 +20,7 @@ Neural network-based PDE solvers receive quickly growing attention within the sc
 One of the most popular approaches is the one of *Physics Informed Neural Networks (PINNs)* or *Deep Galerkin Method* which relies on minimizing the residual of the PDE.
 For example, for the Poisson equation 
 
-$$ \begin{align} -\Delta u & = f \quad \text{in } \Omega \\ u = g \quad\text{on } \partial\Omega \end{align} $$
+$$ \begin{align} -\Delta u & = f \quad \text{in } \Omega 
+\\ u & = g \quad\text{on } \partial\Omega \end{align} $$
 
 with Dirichlet boundary values on a smooth domain $\Omega\subseteq\mathbb R^d$.
