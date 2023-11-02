@@ -34,7 +34,8 @@ L(\theta) \coloneqq \int_\Omega (\Delta u_\theta + f)^2 \mathrm dx + \lambda\int
 $$
 
 Now, one employs some optimization procedure to minimize $L$ as $L(\theta) = 0$ ensures that $u_\theta$ solves the PDE. 
-In fact, one can show that $\lVert u_\theta - u^\ast\rVert_{H^{1/2}(\Omega)} \le c \sqrt{L(\theta)}$ and if $u_\theta = g$ on $\partial\Omega$ then $\lVert u_\theta - u^\ast\rVert_{H^{2}(\Omega)} \le c \sqrt{L(\theta)}$, where $u^\ast$ denotes the solution of the Poisson equation, see~[M. and Zeinhofer](https://proceedings.mlr.press/v190/muller22b.html). 
+In fact, one can show that $\lVert u_\theta - u^\ast\rVert_{H^{1/2}(\Omega)} \le c \sqrt{L(\theta)}$ and if $u_\theta = g$ on $\partial\Omega$ then even $\lVert u_\theta - u^\ast\rVert_{H^{2}(\Omega)} \le c \sqrt{L(\theta)}$, where $u^\ast$ denotes the solution of the Poisson equation, see~[M. and Zeinhofer](https://proceedings.mlr.press/v190/muller22b.html). 
 This ensures that successful optimization of $L$ implies approximation of the solution of the PDE. 
 
-However, the biggest pitfall of PINNs is that they are known for being hard to optimize. 
+However, the biggest pitfall of PINNs is that they are known for being hard to optimize and common techniques for neural network training like (stochastic) gradient descent and Adam are well documented to saturate and fail to produce good approximations. 
+
