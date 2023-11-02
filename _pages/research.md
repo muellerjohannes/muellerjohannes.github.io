@@ -15,7 +15,7 @@ Markov decision processes
 
 **Geometry of Natural Policy Gradient Methods**
 
-# Energy Natural Gradients for Physics Informed Neural Networks
+## Energy Natural Gradients for Physics Informed Neural Networks
 
 Neural network-based PDE solvers receive quickly growing attention within the scientific machine learning and applied mathematics communities. 
 One of the most popular approaches is the one of *Physics Informed Neural Networks (PINNs)* or *Deep Galerkin Method (DGM)* which relies on minimizing the residual of the PDE.
