@@ -44,7 +44,7 @@ The current consensus is that amongst the traditional iterative solvers applied 
 However, it still fails to achieve the best approximation possible with the given network at hand. 
 
 $$
-G(\theta)_{ij} \coloneqq \int_\Omega
+G(\theta)
 $$
 
 
