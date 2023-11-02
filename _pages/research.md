@@ -38,4 +38,21 @@ In fact, one can show that $\lVert u_\theta - u^\ast\rVert_{H^{1/2}(\Omega)} \le
 This ensures that successful optimization of $L$ implies approximation of the solution of the PDE. 
 
 However, the biggest pitfall of PINNs is that they are known for being hard to optimize and common techniques for neural network training like (stochastic) gradient descent and Adam are well documented to saturate and fail to produce good approximations. 
+The current consensus is that amongst the traditional iterative solvers applied $L$ the quasi-Newton L-BFGS yields the best results. 
+However, it still fails to achieve the best approximation possible with the given network at hand. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
