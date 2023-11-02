@@ -48,7 +48,6 @@ $$
 G(\theta)_{ij} \coloneqq \int _\Omega \Delta \partial _{\theta_i} u _\theta \Delta \partial _{\theta_j} u _\theta \mathrm dx + \int _{\partial\Omega} \partial _{\theta_i} u _\theta \partial _{\theta_j} u _\theta \mathrm ds.
 $$
 
-
 asdfasdf
 
 $$
