@@ -58,7 +58,7 @@ $$
 asdfasdf
 
 $$
-u_{\theta'} =  u_\theta + \Delta_t \cdot (u^\ast-u_\theta) + O(\Delta_t^2)
+u_{\theta+\Delta_tv} =  u_\theta + \Delta_t \cdot \Pi_{T_\theta\mathcal F_\Theta}(u^\ast-u_\theta) + O(\Delta_t^2)
 $$
 
 
