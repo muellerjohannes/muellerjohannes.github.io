@@ -43,7 +43,9 @@ However, the biggest pitfall of PINNs is that they are known for being hard to o
 The current consensus is that amongst the traditional iterative solvers applied $L$ the quasi-Newton L-BFGS yields the best results. 
 However, it still fails to achieve the best approximation possible with the given network at hand. 
 
-
+$$
+G(\theta)_{ij} \coloneqq \int_\Omega
+$$
 
 
 
