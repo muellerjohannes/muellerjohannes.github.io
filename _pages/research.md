@@ -12,7 +12,11 @@ My research interests lie at the intersection of machine learning and applied ma
 * Connections between neural networks and differential equations
 
 ### Geometry of Partially Observable Markov Decision Processes
-Markov decision processes 
+
+* what is a POMDP?
+* What is a state-action distribution?
+* Linear programming formulation of MDPs
+* polynomial programming formulation of POMDPs
 
 ### Geometry of Natural Policy Gradient Methods
 
