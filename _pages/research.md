@@ -38,9 +38,11 @@ where $d_\theta\in\Delta_{\mathcal S\times\mathcal A}$ denotes the state-action 
 * this yields nice convergence results
 
 **Theorem (Linear convergence of Kakade's NPG)**
-*Let $(d_t)_{t\ge0}$ denote the solution of the natural policy gradient flow and assume that there is unique maximizer $d^\star$ of the reward. It holds that*
+*Let* $(d_t)_{t\ge0}$ *denote the solution of the natural policy gradient flow and assume that there is unique maximizer $d^\star$ of the reward. It holds that*
 
-
+$$
+    \theta_{k+1} = \theta_k + G(\theta_k)^+ \nabla R(\theta_k).
+$$
 
 
 
