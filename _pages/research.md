@@ -41,7 +41,7 @@ where $d_\theta\in\Delta_{\mathcal S\times\mathcal A}$ denotes the state-action 
 *Let* $(d_t)_{t\ge0}$ *denote the solution of the natural policy gradient flow and assume that there is unique maximizer* $d^\star$ *of the reward. Then for all* $c_1\in(0, \Delta)$ *there is* $c_2>0$ *such that*
 
 $$
-    \sum_{s} \rho^\ast(s) D_{\operatorname{KL}}(\pi^\ast(\cdot|s), \pi_t(\cdot|s)) \le c_2 e^{-c_1t}
+    \sum_{s} \rho^\ast(s) D_{\text{KL}}(\pi^\ast(\cdot|s), \pi_t(\cdot|s)) \le c_2 e^{-c_1t}
 $$
 
 *and*
