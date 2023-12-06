@@ -47,7 +47,7 @@ $$
 *and*
 
 $$
-    R^\ast - \mathfrak R(d_t) \le \frac{2c_2\lvert\mS\rvert\lvert\A\rvert \cdot \lVert r \rVert_\infty}{(1-\gamma)\min_{s}\rho^\ast(s)} \cdot e^{-c_1t},
+    R^\ast - \mathfrak R(d_t) \le \frac{2c_2\lvert\mathcal S\rvert\lvert\mathcal A\rvert \cdot \lVert r \rVert_\infty}{(1-\gamma)\min_{s}\rho^\ast(s)} \cdot e^{-c_1t},
 $$
 
 where 
