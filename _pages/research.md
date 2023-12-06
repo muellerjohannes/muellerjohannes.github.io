@@ -53,7 +53,7 @@ $$
 where 
 
 $$
- \Delta = \min `\{ \frac{R^\ast -  \mathfrak R(d)}{\lVert d^\ast - d \rVert_{\text{TV}}} : d\in N(d^\ast) \}` = \min \{ \frac{r^\top(d^\ast - d)}{\lVert d^\ast - d \rVert_{\text{TV}}} : d\in N(d^\ast) \} > 0,
+ \Delta = \min \\{ \frac{R^\ast -  \mathfrak R(d)}{\lVert d^\ast - d \rVert_{\text{TV}}} : d\in N(d^\ast) \\} = \min \{ \frac{r^\top(d^\ast - d)}{\lVert d^\ast - d \rVert_{\text{TV}}} : d\in N(d^\ast) \} > 0,
 $$
 
 and $N(d^\ast)$ denotes the neighboring vertices of $d^\ast$ in the state-action polytope $\mathcal D$. 
