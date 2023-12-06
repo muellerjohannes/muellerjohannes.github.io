@@ -59,6 +59,9 @@ $$
 and $N(d^\ast)$ denotes the neighboring vertices of $d^\ast$ in the state-action polytope $\mathcal D$. 
 
 
+* Plateaus:
+* Designing plateau free methods: 
+
 ### Energy Natural Gradients for Physics Informed Neural Networks
 
 Neural network-based PDE solvers receive quickly growing attention within the scientific machine learning and applied mathematics communities. 
@@ -102,7 +105,11 @@ $$
 u_{\theta+\Delta_tv} =  u_\theta + \Delta_t \cdot \Pi_{T_\theta\mathcal F_\Theta}(u^\ast-u_\theta) + O(\Delta_t^2)
 $$
 
-
+* Plots of push forwards
+* Videos
+* Plots showing that we obtain high accuracy
+* Equivalence to GN in the residuals
+* Future work: scaling things up; convergence theory
 
 
 
