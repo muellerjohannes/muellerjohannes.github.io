@@ -24,7 +24,9 @@ $$
     \theta_{k+1} = \theta_k + G(\theta_k)^+ \nabla R(\theta_k).
 $$
 
-Here $G(\theta_k)^+$ denotes an arbitrary pseudo-inverse of the Gramian matrix $G(\theta_k)$ with entries given by $G(\theta)_{ij} = g_{d_\theta}(\partial_{\theta_i} d_\theta, \partial_{\theta_j} d_\theta)$, where $d_\theta\in\Delta_{\mathcal S\times\mathcal A}$ denotes the state-action distribution of the policy $\pi_\theta$ and $g$ is a Riemannian metric on the interior of the polytope of state-action distributions $D$. 
+Here $G(\theta_k)^+$ denotes an arbitrary pseudo-inverse of the Gramian matrix $G(\theta_k)$ with entries given by 
+$G(\theta)_{ij} = g_{d_\theta}(\partial_{\theta_i} d_\theta, \partial_{\theta_j} d_\theta)$, 
+where $d_\theta\in\Delta_{\mathcal S\times\mathcal A}$ denotes the state-action distribution of the policy $\pi_\theta$ and $g$ is a Riemannian metric on the interior of the polytope of state-action distributions $D$. 
 
 ### Energy Natural Gradients for Physics Informed Neural Networks
 
