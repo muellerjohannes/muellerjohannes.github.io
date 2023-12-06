@@ -18,14 +18,14 @@ Markov decision processes
 
 Natural policy gradient (NPG) methods are amongst the most successful reinforcement learning techniques and have received vastly growing attention from the theoretical reinforcement learning and control communities~\cite{?}.
 Policy gradient methods in general aim to update the parameter $\theta$ of a stochastic policy $\pi_\theta\in\Delta_\mathcal A^\mathcal S$ to maximize the discounted reward 
-First proposed by Kakade~\cite{?}, the parameter update of natural policy gradient methods takes the general form 
+First proposed by Sham M. Kakade, the parameter update of natural policy gradient methods takes the general form 
 
 $$
     \theta_{k+1} = \theta_k + G(\theta_k)^+ \nabla R(\theta_k).
 $$
 
 Here $G(\theta_k)^+$ denotes an arbitrary pseudo-inverse of the Gramian matrix $G(\theta_k)$ with entries given by 
-$G(\theta)_{ij} = g_{d_\theta}(\partial_{\theta_i} d_\theta, \partial_{\theta_j} d_\theta)$, 
+$G(\theta)_ {ij} = g_{d_\theta}(\partial_{\theta_i} d_\theta, \partial_{\theta_j} d_\theta)$, 
 where $d_\theta\in\Delta_{\mathcal S\times\mathcal A}$ denotes the state-action distribution of the policy $\pi_\theta$ and $g$ is a Riemannian metric on the interior of the polytope of state-action distributions $D$. 
 
 ### Energy Natural Gradients for Physics Informed Neural Networks
