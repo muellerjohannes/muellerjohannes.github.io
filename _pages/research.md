@@ -38,13 +38,24 @@ where $d_\theta\in\Delta_{\mathcal S\times\mathcal A}$ denotes the state-action 
 * this yields nice convergence results
 
 **Theorem (Linear convergence of Kakade's NPG)**
-*Let* $(d_t)_{t\ge0}$ *denote the solution of the natural policy gradient flow and assume that there is unique maximizer $d^\star$ of the reward. It holds that*
+*Let* $(d_t)_{t\ge0}$ *denote the solution of the natural policy gradient flow and assume that there is unique maximizer* $d^\star$ *of the reward. Then for all* $c_1\in(0, \Delta)$ *there is* $c_2>0$ *such that*
 
 $$
-    \theta_{k+1} = \theta_k + G(\theta_k)^+ \nabla R(\theta_k).
+    \sum_{s} \rho^\ast(s) D_{\operatorname{KL}}(\pi^\ast(\cdot|s), \pi_t(\cdot|s)) \le c_2 e^{-c_1t}
 $$
 
+*and*
 
+$$
+    R^\ast - \mathfrak R(d_t) \le \frac{2c_2\lvert\mS\rvert\lvert\A\rvert \cdot \lVert r \rVert_\infty}{(1-\gamma)\min_{s}\rho^\ast(s)} \cdot e^{-c_1t},
+$$
+
+where 
+
+$$
+ \Delta_{\operatorname{M}} & = \min \left\{ \frac{R^\ast -  \mathfrak R(d)}{\lVert d^\ast - d \rVert_{\operatorname{TV}}} : d\in N(d^\ast) \right\} = \min \left\{ \frac{r^\top(d^\ast - d)}{\lVert d^\ast - d \rVert_{\operatorname{TV}}} : d\in N(d^\ast) \right\} > 0,
+$$
+and $N(d^\ast)$ denotes the neighboring vertices of $d^\ast$ in the state-action polytope $\mathcal D$. 
 
 
 ### Energy Natural Gradients for Physics Informed Neural Networks
