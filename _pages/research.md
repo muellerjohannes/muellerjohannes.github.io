@@ -47,13 +47,13 @@ $$
 *and*
 
 $$
-    R^\ast - \mathfrak R(d_t) \le \frac{2c_2\lvert\mathcal S\rvert\lvert\mathcal A\rvert \cdot \lVert r \rVert_\infty}{(1-\gamma)\min_{s}\rho^\ast(s)} \cdot e^{-c_1t},
+    R^\ast - \mathfrak R(d_t) \le \frac{2c_2\lvert\mathcal S\rvert\lvert\mathcal A\rvert \cdot \lVert r \rVert_\infty}{(1-\gamma)\min_{s}   \rho^\ast(s)} \cdot e^{-c_1t},
 $$
 
 where 
 
 $$
- \Delta_{\operatorname{M}} & = \min \left\{ \frac{R^\ast -  \mathfrak R(d)}{\lVert d^\ast - d \rVert_{\operatorname{TV}}} : d\in N(d^\ast) \right\} = \min \left\{ \frac{r^\top(d^\ast - d)}{\lVert d^\ast - d \rVert_{\operatorname{TV}}} : d\in N(d^\ast) \right\} > 0,
+ \Delta & = \min \left\{ \frac{R^\ast -  \mathfrak R(d)}{\lVert d^\ast - d \rVert_{\operatorname{TV}}} : d\in N(d^\ast) \right\} = \min \left\{ \frac{r^\top(d^\ast - d)}{\lVert d^\ast - d \rVert_{\operatorname{TV}}} : d\in N(d^\ast) \right\} > 0,
 $$
 and $N(d^\ast)$ denotes the neighboring vertices of $d^\ast$ in the state-action polytope $\mathcal D$. 
 
