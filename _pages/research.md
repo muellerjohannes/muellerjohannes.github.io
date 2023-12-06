@@ -18,16 +18,10 @@ Markov decision processes
 
 Natural policy gradient (NPG) methods are amongst the most successful reinforcement learning techniques and have received vastly growing attention from the theoretical reinforcement learning and control communities~\cite{?}.
 Policy gradient methods in general aim to update the parameter $\theta$ of a stochastic policy $\pi_\theta\in\Delta_\mathcal A^\mathcal S$ to maximize the discounted reward 
-%\begin{equation}
-    $R(\theta) = R(\pi_\theta)$. 
-    %= (1-\gamma)\mathbb E\left[ \sum_{t\in\mathbb N} \gamma^t r(S_t, A_t)\right],
-%\end{equation}
-%where $\gamma\in[0, 1)$ denote the discount factor and $(S_t, A_t)_{t\in\mathbb N}$ denotes the Markov process obtained when following the policy $\pi_\theta$. 
-%where $S_t$ and $A_t$ denote the (random) state and action at time $t$, where $S_0$ is distributed according to $\mu\in\Delta_\mathcal S$.
 First proposed by Kakade~\cite{?}, the parameter update of natural policy gradient methods takes the general form 
-\begin{equation}
+$$
     \theta_{k+1} = \theta_k + G(\theta_k)^+ \nabla R(\theta_k).
-\end{equation}
+$$
 Here $G(\theta_k)^+$ denotes an arbitrary pseudo-inverse of the Gramian matrix $G(\theta_k)$ with entries given by $G(\theta)_{ij} = g_{d_\theta}(\partial_{\theta_i} d_\theta, \partial_{\theta_j} d_\theta)$, where $d_\theta\in\Delta_{\mathcal S\times\mathcal A}$ denotes the state-action distribution of the policy $\pi_\theta$ and $g$ is a Riemannian metric on the interior of the polytope of state-action distributions $D$. 
 
 ### Energy Natural Gradients for Physics Informed Neural Networks
