@@ -32,6 +32,19 @@ Here $G(\theta)^+$ denotes an arbitrary pseudo-inverse of the Gramian matrix $G(
 $G(\theta)_ {ij} = g_{d_\theta}(\partial_{\theta_i} d_\theta, \partial_{\theta_j} d_\theta)$, 
 where $d_\theta\in\Delta_{\mathcal S\times\mathcal A}$ denotes the state-action distribution of the policy $\pi_\theta$ and $g$ is a Riemannian metric on the interior of the polytope of state-action distributions $D$. 
 
+* complications of convergence analysis in the parameters and policies
+* however, we can work with the underlying linear programmging formulation
+* there, the corresponding state-acion distributions follow a Riemannian gradient flow with respect to the Hessian geometry induced by the conditional entropy
+* this yields nice convergence results
+
+**Theorem (Linear convergence of Kakade's NPG)**
+*Let $(d_t)_{t\ge0}$ denote the solution of the natural policy gradient flow and assume that there is unique maximizer $d^\star$ of the reward. It holds that*
+
+
+
+
+
+
 ### Energy Natural Gradients for Physics Informed Neural Networks
 
 Neural network-based PDE solvers receive quickly growing attention within the scientific machine learning and applied mathematics communities. 
