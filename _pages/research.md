@@ -17,6 +17,7 @@ My research interests lie at the intersection of machine learning and applied ma
 * What is a state-action distribution?
 * Linear programming formulation of MDPs
 * polynomial programming formulation of POMDPs
+* Crying baby example 
 
 ### Geometry of Natural Policy Gradient Methods
 
