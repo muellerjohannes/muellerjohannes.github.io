@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I have recently submitted my PhD thesis under the name [*Geometry of Optimization in Markov Decision Processes and Neural Network Based PDE Solvers*](../files/thesis-jm.pdf) at the University of Leipzig and have joined Junior Professorship for Mathematics of Machine Learning, RWTH Aachen University held by [Semih Çaycı](https://www.mathc.rwth-aachen.de/~cayci/home/). 
+I have recently submitted my PhD thesis under the name [*Geometry of Optimization in Markov Decision Processes and Neural Network Based PDE Solvers*](../files/thesis-jm.pdf) at the University of Leipzig and have joined the Junior Professorship for Mathematics of Machine Learning, RWTH Aachen University held by [Semih Çaycı](https://www.mathc.rwth-aachen.de/~cayci/home/). 
 
 
 Before that, I was a PhD student at the [International Max Planck Research School "Mathematics in the Sciences" ](https://www.imprs-mis.mpg.de/) in Leipzig where I was jointly supervised by [Nihat Ay](https://www.dsf.tuhh.de/index.php/team/nihatay/) and [Guido Montúfar](https://www.math.ucla.edu/~montufar/).
