@@ -82,8 +82,8 @@ analytics:
 author:
   name             : "Johannes Müller"
   avatar           : "JM.png"
-  bio              : "He/him<br>Scientific Staff at RWTH Aachen<br>Working on the mathematical foundations of learning"
-  location         : "Aachen, DE"
+  bio              : "He/him<br>RWTH Aachen University<br>Working on the mathematical foundations of learning"
+  location         : 
   employer         :
   pubmed           :  # example: "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.de/citations?user=Wfww-P8AAAAJ&hl=en"
