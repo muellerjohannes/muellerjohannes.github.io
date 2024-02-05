@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "Johannes Müller"
   avatar           : "JM.png"
-  bio              : "He/him<br>RWTH Aachen University<br>Working on the mathematical foundations of learning"
+  bio              : "He/him<br>Working on the mathematical foundations of learning"
   location         : 
-  employer         :
+  employer         : "RWTH Aachen University"
   pubmed           :  # example: "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.de/citations?user=Wfww-P8AAAAJ&hl=en"
   email            : "mueller@mathc.rwth-aachen.de"
