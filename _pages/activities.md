@@ -8,6 +8,7 @@ author_profile: true
 
 
 ## Conferences and meetings
+* June 2024: Mathematical and Scientific Machine Learning, Rome, Italy
 * June 2024: Geometric Deep Learning workshop, University of Cambridge, UK
 * February 2024: Symposium on Sparsity and Singular Structures 2024, RWTH Aachen University, Germany
 * January 2023: Mini-Workshop on Reinforcement Learning, University of Mannheim, Germany
