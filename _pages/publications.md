@@ -11,7 +11,7 @@ author_profile: true
 
 ## Publications
 
-**8\.** [**Geometry and convergence of natural policy gradient methods**](https://link.springer.com/article/10.1007/s41884-023-00106-z)\ 
+**8\.** [**Geometry and convergence of natural policy gradient methods**](https://link.springer.com/article/10.1007/s41884-023-00106-z) \ 
 Joint work with Guido Montúfar, Information Geometry, 2024
 
 **7\. Achieving High Accuracy with PINNs via Energy Natural Gradients**, with Marius Zeinhofer, International Conference on Machine Learning, 2023, [fulltext available](https://proceedings.mlr.press/v202/muller23b.html)
