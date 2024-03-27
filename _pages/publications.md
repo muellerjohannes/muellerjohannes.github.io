@@ -14,9 +14,11 @@ author_profile: true
 **8\.** [**Geometry and convergence of natural policy gradient methods**](https://link.springer.com/article/10.1007/s41884-023-00106-z) <br> 
 Joint work with Guido Montúfar, Information Geometry, 2024
 
-**7\. Achieving High Accuracy with PINNs via Energy Natural Gradients**, with Marius Zeinhofer, International Conference on Machine Learning, 2023, [fulltext available](https://proceedings.mlr.press/v202/muller23b.html)
+**7\.** [**Achieving High Accuracy with PINNs via Energy Natural Gradients**](https://proceedings.mlr.press/v202/muller23b.html) <br>
+Joint work with Marius Zeinhofer, International Conference on Machine Learning, 2023
 
-**6\. Algebraic Optimization of Sequential Decision Problems**, with Mareike Dressler, Marina Garotte-Lopéz, Guido Montúfar and Kemal Rose, Journal of Symbolic Computation, Volume 121, 2022, [preprint available](https://arxiv.org/abs/2211.09439)
+**6\.** [**Algebraic Optimization of Sequential Decision Problems**](https://www.sciencedirect.com/science/article/abs/pii/S074771712300055X) <br> 
+Joint work with Mareike Dressler, Marina Garotte-Lopéz, Guido Montúfar, and Kemal Rose, Journal of Symbolic Computation, Volume 121, 2022, [preprint available](https://arxiv.org/abs/2211.09439)
 
 **5\. Error Estimates for the variational training of neural newtorks with boundary penalty**, with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning, Proceedings of Machine Learning Research, Volume 190, 2022, [fulltext available](https://proceedings.mlr.press/v190/muller22a.html)
 
