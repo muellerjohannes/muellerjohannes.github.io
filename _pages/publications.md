@@ -21,10 +21,10 @@ Joint work with Marius Zeinhofer, International Conference on Machine Learning, 
 Joint work with Mareike Dressler, Marina Garotte-Lopéz, Guido Montúfar, and Kemal Rose, Journal of Symbolic Computation, Volume 121, 2022, 
 
 **5\.** [**Error Estimates for the variational training of neural newtorks with boundary penalty**](https://proceedings.mlr.press/v190/muller22a.html) <br> 
-Joint work with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning, Proceedings of Machine Learning Research, Volume 190, 2022
+Joint work with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning, 2022
 
 **4\.** [**Notes on Exact Boundary Values in Residual Minimisation**](https://msml22.github.io/msml22papers/exact_boundary.pdf) <br>
-Joint work with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning, Proceedings of Machine Learning Research, Volume 190, 2022
+Joint work with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning, 2022
 
 **3\.** [**Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**](https://advancesindifferenceequations.springeropen.com/articles/10.1186/s13662-022-03722-8)<br>
 Joint work with Patrick Dondl and Marius Zeinhofer, Advances in Continuous and Discrete Models, SpringerOpen, 2022
