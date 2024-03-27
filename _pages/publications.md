@@ -27,10 +27,10 @@ Joint work with Marius Zeinhofer, Third Conference on Mathematical and Scientifi
 Joint work with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning, 2022
 
 **3\.** [**Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems**](https://advancesindifferenceequations.springeropen.com/articles/10.1186/s13662-022-03722-8)<br>
-Joint work with Patrick Dondl and Marius Zeinhofer, Advances in Continuous and Discrete Models, SpringerOpen, 2022
+Joint work with Patrick Dondl and Marius Zeinhofer, Advances in Continuous and Discrete Models, 2022
 
 **2\.** [**Invariance properties of the natural gradient in overparametrised systems**](https://link.springer.com/article/10.1007/s41884-022-00067-9)<br>
-Joint work with Jesse van Oostrum and Nihat Ay, Information Geometry, Springer, 2022 
+Joint work with Jesse van Oostrum and Nihat Ay, Information Geometry, 2022 
 
 **1\.** [**The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs**](https://openreview.net/forum?id=A05I5IvrdL-) <br>
 Joint work with Guido Montúfar, Tenth International Conference on Learning Representations, 2022
