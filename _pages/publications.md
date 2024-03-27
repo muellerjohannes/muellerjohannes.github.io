@@ -29,6 +29,8 @@ author_profile: true
 
 ## Preprints
 
+**Optimization in SciML – A Function Space Perspective**, with Marius Zeinhofer, [link to the preprint](https://arxiv.org/pdf/2402.07318.pdf)
+
 ## Extended Abstracts
 
 * **Solving infinite-horizon POMDPs with memoryless stochastic policies in state-action space**, with Guido Montúfar, [5th Multi-disciplinary Conference on Reinforcement Learning and Decision Making (RLDM 2022)](https://rldm.org/), 
