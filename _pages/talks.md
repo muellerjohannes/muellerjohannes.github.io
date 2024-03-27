@@ -21,8 +21,14 @@ author_profile: true
 
 ## Poster presentations
 
-* **A Posteriori Estimates and Convergence Guarantees for Neural Network Based PDE solvers**,
-Workshop on [Deep learning and partial differential equations](https://www.newton.ac.uk/event/mdlw03/) at the Sir Isaac Newton Institute, Cambridge, UK
+* January 2024: **Fisher-Rao Gradient Flows of Linear Programs and State-Action Natural Policy Gradients**,
+[Symposium on Sparsity and Singular Structures 2024](https://sfb1481.rwth-aachen.de/symposium24), RWTH Aachen University
+
+* February 2024: **Geometry and Convergence of Natural Policy Gradient Methods**,
+[Symposium on Sparsity and Singular Structures 2024](https://sfb1481.rwth-aachen.de/symposium24), RWTH Aachen University
+
+* January 2024: **Geometry and Convergence of Natural Policy Gradient Methods**,
+[Mini-Workshop on Reinforcement Learning](https://www.wim.uni-mannheim.de/doering/conferences/rl-2024#c352048), University of Mannheim
 
 * June 2022: **Solving infinite-horizon POMDPs with memoryless stochastic policies in state-action space**,
 [Multidisciplinary Conference on Reinforcement Learning and Decision Making](https://rldm.org/), Brown University
