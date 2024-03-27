@@ -5,7 +5,20 @@ permalink: /activities/
 author_profile: true
 ---
 
+## Reviewing Services
 
+* International Conference on Machine Learning
+* International Conference on Learning Representations
+* Science Advances 
+* Engineering Applications of Artificial Intelligence
+* SIAM Journal on Mathematical Analysis
+* IEEE Transactions on Automatic Control
+* Transactions on Machine Learning Research
+
+## Non scientific services
+
+* 2021-2023: Member of the **Promovierendeninitiative** (Nationwide council of PhD scholarship holders)
+* 2021/2022: External PhD representative of the MPI MIS
 
 ## Conferences and meetings
 * June 2024: Mathematical and Scientific Machine Learning, Rome, Italy
@@ -32,19 +45,3 @@ author_profile: true
 * February 2018: German Probability and Statistics Days, Freiburg im Breisgau, Germany
 * November 2017: Systems out of equilibrium: Maths meets Physics, University of Warwick, UK
 * November 2017: Graduate student meeting and annual meeting of the London Mathematical Society, London, UK
-
-## Reviewing Services
-
-* International Conference on Machine Learning
-* International Conference on Learning Representations
-* Science Advances 
-* Engineering Applications of Artificial Intelligence
-* SIAM Journal on Mathematical Analysis
-* IEEE Transactions on Automatic Control
-* Transactions on Machine Learning Research
-
-## Non scientific services
-
-* 2021-2023: Member of the **Promovierendeninitiative** (Nationwide council of PhD scholarship holders)
-* 2021/2022: External PhD representative of the MPI MIS
-
