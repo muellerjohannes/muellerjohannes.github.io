@@ -7,10 +7,10 @@ author_profile: true
 
 
 ## Talks
-* June 2024: *Geometry and Convergence of Natural Policy Gradient Methods*, Seminar on Learning Theory and Statistical Optimization, University of Oxford* June 2024: *Geometry of Optimization in Scientific Machine Learning and Reinforcement Learning*, Invited talk, Geometric Deep Learning workshop, University of Cambridge
-* January 2024: *Natural Gradients for Scientific Machine Learning*, Post Graduate Seminar, Chair of Mathematics of Information Processing, RWTH Aachen
-* April 2023: *Theoretical Analysis of Boundary Penalties for NN-based PDE Solvers*, Machine Learning + X Seminars 2023, Brown University, Providence, online
-* February 2023: *Geometry of Sequential Decision Problems*, Optimization and Data Science Seminar, University of California, San Diego, online
+* June 2024: *Geometry and Convergence of Natural Policy Gradient Methods*, [Seminar on Learning Theory and Statistical Optimization](https://github.com/oxcsml/ML_bazaar/wiki/Learning-Theory-and-Statistical-Optimization), University of Oxford* June 2024: *Geometry of Optimization in Scientific Machine Learning and Reinforcement Learning*, Invited talk, [Geometric Deep Learning workshop](https://maths4dl.ac.uk/newsevents/geometric-deep-learning-workshop-university-of-cambridge-10-12-june-2024), University of Cambridge
+* January 2024: *Natural Gradients for Scientific Machine Learning*, [Post Graduate Seminar](https://www.mathc.rwth-aachen.de/news/passed_talks/), Chair of Mathematics of Information Processing, RWTH Aachen
+* April 2023: *Theoretical Analysis of Boundary Penalties for NN-based PDE Solvers*, [Machine Learning + X Seminars 2023](https://sites.brown.edu/crunch-group/seminars/machine-learning-x-seminars/machine-learning-x-seminars-2023/), Brown University, Providence, online
+* February 2023: *Geometry of Sequential Decision Problems*, [Optimization and Data Science Seminar](https://mathweb.ucsd.edu/~njw/Teaching/OptimSeminar/OptSeminar_sp23.html), University of California, San Diego, online
 * November 2022: *Geometry of Markov decision processes*, Annual meeting of the Priority Programme [*Theoretical Foundations of Deep Learning (SPP 2298)*](https://www.foundationsofdl.de/), Evangelische Akademie Tutzing, Germany
 * October 2022: *Geometry of Natural Policy Gradient Methods*, [Applied Math Colloquium](https://secure.math.ucla.edu/seminars/show_quarter.php?type=Applied%20Colloquium), University of California, Los Angeles, USA
 * September 2022: Minisyposium  *Algebraic Geometry and Machine Learning* at the [SIAM Conference on Mathematics of Data Science (MDS22)](https://www.siam.org/conferences/cm/conference/mds22), Town and Country Resort, San Diego, California, USA
