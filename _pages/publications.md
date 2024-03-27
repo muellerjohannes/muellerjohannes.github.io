@@ -18,7 +18,7 @@ Joint work with Guido Montúfar, Information Geometry, 2024
 Joint work with Marius Zeinhofer, International Conference on Machine Learning, 2023
 
 **6\.** [**Algebraic Optimization of Sequential Decision Problems**](https://www.sciencedirect.com/science/article/abs/pii/S074771712300055X) <br> 
-Joint work with Mareike Dressler, Marina Garotte-Lopéz, Guido Montúfar, and Kemal Rose, Journal of Symbolic Computation, Volume 121, 2022, [preprint available](https://arxiv.org/abs/2211.09439)
+Joint work with Mareike Dressler, Marina Garotte-Lopéz, Guido Montúfar, and Kemal Rose, Journal of Symbolic Computation, Volume 121, 2022, [preprint openly available](https://arxiv.org/abs/2211.09439)
 
 **5\.** [**Error Estimates for the variational training of neural newtorks with boundary penalty**](https://proceedings.mlr.press/v190/muller22a.html) <br> 
 Joint work with Marius Zeinhofer, Third Conference on Mathematical and Scientific Machine Learning, Proceedings of Machine Learning Research, Volume 190, 2022
@@ -37,7 +37,8 @@ Joint work with Guido Montúfar, Tenth International Conference on Learning Repr
 
 ## Preprints
 
-**Optimization in SciML – A Function Space Perspective**, with Marius Zeinhofer, [link to the preprint](https://arxiv.org/pdf/2402.07318.pdf)
+* [**Optimization in SciML – A Function Space Perspective**](https://arxiv.org/pdf/2402.07318.pdf)<br>
+Joint work with Marius Zeinhofer
 
 ## Extended Abstracts
 
