@@ -33,12 +33,18 @@ author_profile: true
 * November 2017: Systems out of equilibrium: Maths meets Physics, University of Warwick, UK
 * November 2017: Graduate student meeting and annual meeting of the London Mathematical Society, London, UK
 
-## Services
+## Reviewing Services
 
-* Reviewing for **ICML 2021**
-* Reviewing for **SIAM Journal for Mathematicsl Analysis (SIMA)**
-* Reviewing for **IEEE Transactions on Automatic Control**
-* Reviewer for **TMLR**
+* International Conference on Machine Learning
+* International Conference on Learning Representations
+* Science Advances 
+* Engineering Applications of Artificial Intelligence
+* SIAM Journal on Mathematical Analysis
+* IEEE Transactions on Automatic Control
+* Transactions on Machine Learning Research
+
+## Non scientific services
+
 * 04/2021-04/2022: External PhD representative of the MPI MIS
 * 12/2021-11/2023: Member of the **Promovierendeninitiative** (Nationwide council of PhD scholarship holders)
 
