@@ -45,6 +45,6 @@ author_profile: true
 
 ## Non scientific services
 
-* 12/2021-11/2023: Member of the **Promovierendeninitiative** (Nationwide council of PhD scholarship holders)
-* 04/2021-04/2022: External PhD representative of the MPI MIS
+* 2021-2023: Member of the **Promovierendeninitiative** (Nationwide council of PhD scholarship holders)
+* 2021/2022: External PhD representative of the MPI MIS
 
