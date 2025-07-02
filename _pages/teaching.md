@@ -15,10 +15,12 @@ author_profile: true
 
 ### Master thesis
 
-* Jonas Nießen
-* Reza Zolnouri 
+* Reza Zolnouri, Master thesis in Mathematics 2024, *The Role of the Geometry in Policy Mirror Descent*, Next position: PhD Student at RWTH Aachen University
+
+* Jonas Nießen, Master thesis in Mathematics 2024, *Optimization guarantees for Physics-Informed Neural Networks*, Next position: PhD Student at RWTH Aachen University
+
 
 ### Research interns 
 
-* Friedrich Wicke
+*  Friedrich Wicke, Undergraduate intern in Mathematics, 2022 *State-Action Geometry of Multi-Agent Problems*, Next position: Master Student at ETH Zurich
 
