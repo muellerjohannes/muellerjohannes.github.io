@@ -6,14 +6,15 @@ main:
   - title: "Publications"
     url: /publications/
     
-  - title: "Talks"
-    url: /talks/
+  # - title: "Talks"
+  #  url: /talks/
     
   - title: "Activities"
     url: /activities/
   
   - title: "CV"
     url: /cv/
+  
   # - title: "Notes"
   #  url: /notes/
   # - title: "Random stuff"
