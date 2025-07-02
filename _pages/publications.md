@@ -90,11 +90,8 @@ Joint work with Guido Montúfar
 
 ## 🎓 Theses
 
-- **PhD thesis:** *Geometry of Optimization in Markov Decision Processes and Neural Network-Based PDE Solvers* supervised by [Nihat Ay](https://www.tuhh.de/dsf/team/prof-dr-nihat-ay) and [Guido Montúfar](https://personal-homepages.mis.mpg.de/montufar/)
-  [Download PDF](/files/thesis-jm.pdf)
+- **PhD thesis:** *Geometry of Optimization in Markov Decision Processes and Neural Network-Based PDE Solvers* supervised by [Nihat Ay](https://www.tuhh.de/dsf/team/prof-dr-nihat-ay) and [Guido Montúfar](https://personal-homepages.mis.mpg.de/montufar/), [Download PDF](/files/thesis-jm.pdf)
 
-- **MSc thesis (University of Warwick):** *Parameter Estimation of Determinantal Point Processes*, supervised by [Nikos Zygouras](https://warwick.ac.uk/fac/sci/maths/people/staff/zygouras/) and [Theo Damoulas](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/damoulas)  
-  [Download PDF](/files/MSc-thesis.pdf)
+- **MSc thesis (University of Warwick):** *Parameter Estimation of Determinantal Point Processes*, supervised by [Nikos Zygouras](https://warwick.ac.uk/fac/sci/maths/people/staff/zygouras/) and [Theo Damoulas](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/damoulas), [Download PDF](/files/MSc-thesis.pdf)
 
-- **MSc thesis (University of Freiburg):** *Universal flow approximation with deep residual networks*, supervised by [Philipp Harms](https://www.philippharms.com/)  
-  [Download PDF](https://freidok.uni-freiburg.de/data/151788)
+- **MSc thesis (University of Freiburg):** *Universal flow approximation with deep residual networks*, supervised by [Philipp Harms](https://www.philippharms.com/), [Download PDF](https://freidok.uni-freiburg.de/data/151788)
