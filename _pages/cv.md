@@ -1,11 +1,11 @@
 ---
 layout: archive
-title: "CV"
+title: ""
 permalink: /cv/
 author_profile: true
 ---
 
-Here is a short CV:
+Here is my academic path: 
 
 * Since 2025: Postdoctoral Researcher, Institut für Mathematik, Technische Universität Berlin
 * 2023-2024: Scientific employee at the Junior Professorship for Mathematics of Machine Learning, RWTH Aachen University held by [Semih Çaycı](https://www.mathc.rwth-aachen.de/~cayci/home/)
