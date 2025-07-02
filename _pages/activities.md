@@ -5,26 +5,9 @@ permalink: /activities/
 author_profile: true
 ---
 
-## Reviewing Services
-
-* Science Advances 
-* SIAM Journal on Mathematical Analysis
-* Neural Networks
-* Information Geometry
-* Neural Information Processing Systems (NeurIPS)
-* International Conference on Machine Learning (ICML)
-* International Conference on Learning Representations (ICLR)
-* Transactions on Machine Learning Research (TMLR)
-* IEEE Transactions on Automatic Control
-* Transactions on Machine Learning Research
-* Engineering Applications of Artificial Intelligence
-
-## Non scientific services
-
-* 2021-2023: Member of the *Promovierendeninitiative* (Nationwide council of PhD scholarship holders)
-* 2021/2022: External PhD representative of the MPI MIS
-
 ## Talks
+* September 2025: *Functional Optimization in Scientific Machine Learning*, [Conference on Mathematics of Machine Learning 2025](https://www.tuhh.de/dsf/mml), TU Hamburg-Harburg 
+* February 2025: *Geometry of Natural Policy Gradient Methods and Entropy Regularization in Reinforcement Learning*, Seminar für Angewandte Matheamtik, ETH Zurich
 * June 2024: *Geometry and Convergence of Natural Policy Gradient Methods*, [Seminar on Learning Theory and Statistical Optimization](https://github.com/oxcsml/ML_bazaar/wiki/Learning-Theory-and-Statistical-Optimization), University of Oxford
 * June 2024: *Geometry of Optimization in Scientific Machine Learning and Reinforcement Learning*, Invited talk, [Geometric Deep Learning workshop](https://maths4dl.ac.uk/newsevents/geometric-deep-learning-workshop-university-of-cambridge-10-12-june-2024), University of Cambridge
 * January 2024: *Natural Gradients for Scientific Machine Learning*, [Post Graduate Seminar](https://www.mathc.rwth-aachen.de/news/passed_talks/), Chair of Mathematics of Information Processing, RWTH Aachen
@@ -39,7 +22,19 @@ author_profile: true
 
 ## Poster presentations
 
-* January 2024: **Fisher-Rao Gradient Flows of Linear Programs and State-Action Natural Policy Gradients**,
+* March 2025: **Kronecker-Factored Approximate Curvature for Physics-Informed Neural Networks**,
+[Annual Meeting of EMS activity group on Scientific Machine Learning](https://www.mate.polimi.it/events/EMS-TAG-SciML-25/index.php?cn-reloaded=1), Politecnico di Milano
+
+* February 2025: **Essentially Sharp Estimates on the Entropy Regularization Error in Discounted Markov Decision Processes**,
+[Workshop on Reinforcement Learning 2025](https://www.wim.uni-mannheim.de/doering/conferences/rl-2025/), Mannheim
+
+* July 2024: **Essentially Sharp Estimates on the Entropy Regularization Error in Discounted Markov Decision Processes**,
+[ICML 2024 Workshop: Foundations of Reinforcement Learning and Control – Connections and Perspectives](https://rl-control-theory.github.io/), Wien
+
+* July 2024: **Kronecker-Factored Approximate Curvature for Physics-Informed Neural Networks**,
+ICML 2024, Wien
+
+* February 2024: **Fisher-Rao Gradient Flows of Linear Programs and State-Action Natural Policy Gradients**,
 [Symposium on Sparsity and Singular Structures 2024](https://sfb1481.rwth-aachen.de/symposium24), RWTH Aachen University
 
 * February 2024: **Geometry and Convergence of Natural Policy Gradient Methods**,
@@ -103,3 +98,26 @@ Workshop on [Workshop on Mathematics of deep learning](https://www.newton.ac.uk/
 * February 2018: German Probability and Statistics Days, Freiburg im Breisgau, Germany
 * November 2017: Systems out of equilibrium: Maths meets Physics, University of Warwick, UK
 * November 2017: Graduate student meeting and annual meeting of the London Mathematical Society, London, UK
+
+## Reviewing Services
+
+* Science Advances 
+* SIAM Journal on Mathematical Analysis
+* Neural Networks
+* Information Geometry
+* Neural Information Processing Systems (NeurIPS)
+* International Conference on Machine Learning (ICML)
+* International Conference on Learning Representations (ICLR)
+* Transactions on Machine Learning Research (TMLR)
+* IEEE Transactions on Automatic Control
+* Transactions on Machine Learning Research
+* Engineering Applications of Artificial Intelligence
+
+## Organization
+* September 2025: Mini-Symposium on *Geometric Optimization Methods for Scientific Machine Learning*, *Geometric Optimization Methods for Scientific Machine Learning* at [ENUMATH 2025](https://enumath2025.eu/), Heidelberg
+* August 2022: Workshop *Algebraic Geometry, Combinatorics and Machine Learning*, Max-Planck Institut für Mathematik in den Naturwissenschaften, Leipzig
+
+## Non scientific services
+
+* 2021-2023: Member of the *Promovierendeninitiative* (Nationwide council of PhD scholarship holders)
+* 2021/2022: External PhD representative of the MPI MIS
