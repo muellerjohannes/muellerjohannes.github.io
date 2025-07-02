@@ -7,17 +7,21 @@ author_profile: true
 
 ## Reviewing Services
 
-* International Conference on Machine Learning
-* International Conference on Learning Representations
 * Science Advances 
-* Engineering Applications of Artificial Intelligence
 * SIAM Journal on Mathematical Analysis
+* Neural Networks
+* Information Geometry
+* Neural Information Processing Systems (NeurIPS)
+* International Conference on Machine Learning (ICML)
+* International Conference on Learning Representations (ICLR)
+* Transactions on Machine Learning Research (TMLR)
 * IEEE Transactions on Automatic Control
 * Transactions on Machine Learning Research
+* Engineering Applications of Artificial Intelligence
 
 ## Non scientific services
 
-* 2021-2023: Member of the **Promovierendeninitiative** (Nationwide council of PhD scholarship holders)
+* 2021-2023: Member of the *Promovierendeninitiative* (Nationwide council of PhD scholarship holders)
 * 2021/2022: External PhD representative of the MPI MIS
 
 ## Talks
