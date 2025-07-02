@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-You can find all of my works on [arXiv](http://arxiv.org/a/muller_j_3).
+You can find all of my works as preprints on [arXiv](http://arxiv.org/a/muller_j_3).
 
 ---
 
@@ -29,7 +29,7 @@ You can find all of my works on [arXiv](http://arxiv.org/a/muller_j_3).
 
 **11.** [**Fisher–Rao Gradient Flows of Linear Programs and State-Action Natural Policy Gradients**](https://doi.org/10.1137/24M1653422)  
 Joint work with Semih Çaycı and Guido Montúfar  
-*SIAM Journal on Optimization, 2024* · [Preprint](https://arxiv.org/abs/2403.19448)
+*SIAM Journal on Optimization, 2024* 
 
 **10.** [**Kronecker-Factored Approximate Curvature for Physics-Informed Neural Networks**](https://proceedings.neurips.cc/paper_files/paper/2024/file/3d27d607586984908900eaa8ce19c96c-Paper-Conference.pdf)  
 Joint work with Felix Dangel and Marius Zeinhofer  
@@ -49,7 +49,7 @@ Joint work with Marius Zeinhofer
 
 **6.** [**Algebraic Optimization of Sequential Decision Problems**](https://www.sciencedirect.com/science/article/abs/pii/S074771712300055X)
 Joint work with Mareike Dressler, Marina Garotte-Lopéz, Guido Montúfar, and Kemal Rose  
-*Journal of Symbolic Computation, Volume 121, 2022* · [Preprint](https://arxiv.org/abs/2211.09439)  
+*Journal of Symbolic Computation, Volume 121, 2022* 
 
 **5.** [**Error Estimates for the Variational Training of Neural Networks with Boundary Penalty**](https://proceedings.mlr.press/v190/muller22a.html)  
 Joint work with Marius Zeinhofer  
