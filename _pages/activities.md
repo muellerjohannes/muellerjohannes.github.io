@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: default
 title: ""
 permalink: /activities/
 author_profile: true
