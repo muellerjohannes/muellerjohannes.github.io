@@ -13,19 +13,20 @@ layout: compress
   </head>
 
   <body>
-    <div class="site-wrapper">
-      {% include browser-upgrade.html %}
-      {% include masthead.html %}
 
-      {{ content }}
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
 
-      <div class="page__footer">
-        <footer>
-          {% include footer/custom.html %}
-          {% include footer.html %}
-        </footer>
-      </div>
+    {{ content }}
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
     </div>
+
     {% include scripts.html %}
+
   </body>
 </html>
