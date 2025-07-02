@@ -399,19 +399,3 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
-
-/* Make the footer smaller */
-.page__footer {
-  padding: 0.5em 0;
-  font-size: 0.9em;
-}
-
-.page__footer ul.social-icons {
-  margin: 0;
-  padding: 0;
-}
-
-.page__footer li {
-  margin: 0 0.5em 0 0;
-  display: inline-block;
-}
