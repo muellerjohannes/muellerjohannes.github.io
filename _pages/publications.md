@@ -11,17 +11,20 @@ You can find all of my works as preprints on [arXiv](http://arxiv.org/a/muller_j
 
 ## Preprints
 
+- [**Functional Neural Wavefunction Optimization**](https://www.arxiv.org/abs/2507.10835)  
+  Joint work with Victor Armegioiu, Juan Carrasquilla, Siddhartha Mishra, Jannes Nys, Marius Zeinhofer, Hang Zhang, 2025
+
+- [**Central Path Proximal Policy Optimization**](https://arxiv.org/abs/2506.00700)  
+  Joint work with Nikola Milosevic and Nico Scherf, 2025
+
 - [**Optimal Rates of Convergence for Entropy Regularization in Discounted Markov Decision Processes**](https://arxiv.org/abs/2406.04163)  
-  Joint work with Semih Çaycı  
-  *arXiv preprint, 2024*
+  Joint work with Semih Çaycı, 2024
 
 - [**Non-Asymptotic Analysis of Projected Gradient Descent for Physics-Informed Neural Networks**](https://arxiv.org/abs/2505.07311)  
-  Joint work with Jonas Nießen  
-  *arXiv preprint, 2024*
+  Joint work with Jonas Nießen, 2024
 
 - [**Embedding Safety into RL: A New Take on Trust Region Methods**](https://arxiv.org/abs/2411.02957)  
-  Joint work with Nikola Milosevic and Nico Scherf  
-  *Accepted at ICML 2025*
+  Joint work with Nikola Milosevic and Nico Scherf, *Accepted at ICML 2025*
 
 ---
 
