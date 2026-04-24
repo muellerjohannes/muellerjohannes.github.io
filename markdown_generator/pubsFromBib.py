@@ -26,21 +26,13 @@ import re
 
 #todo: incorporate different collection types rather than a catch all publications, requires other changes to template
 publist = {
-    "proceeding": {
-        "file" : "proceedings.bib",
-        "venuekey": "booktitle",
-        "venue-pretext": "In the proceedings of ",
+    "publication": {
+        "file" : "publications.bib",
+        "venuekey": "journal",
+        "venue-pretext": "",
         "collection" : {"name":"publications",
                         "permalink":"/publication/"}
-        
-    },
-    "journal":{
-        "file": "pubs.bib",
-        "venuekey" : "journal",
-        "venue-pretext" : "",
-        "collection" : {"name":"publications",
-                        "permalink":"/publication/"}
-    } 
+    }
 }
 
 html_escape_table = {
@@ -106,7 +98,12 @@ for pubsource in publist:
             citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
 
             #add venue logic depending on citation type
-            venue = publist[pubsource]["venue-pretext"]+b[publist[pubsource]["venuekey"]].replace("{", "").replace("}","").replace("\\","")
+            # For @inproceedings, use booktitle; for @article, use journal
+            venue = ""
+            if "booktitle" in b.keys():
+                venue = publist[pubsource]["venue-pretext"]+b["booktitle"].replace("{", "").replace("}","").replace("\\","")
+            elif "journal" in b.keys():
+                venue = publist[pubsource]["venue-pretext"]+b["journal"].replace("{", "").replace("}","").replace("\\","")
 
             citation = citation + " " + html_escape(venue)
             citation = citation + ", " + pub_year + "."
@@ -128,11 +125,26 @@ for pubsource in publist:
             md += "\ndate: " + str(pub_date) 
 
             md += "\nvenue: '" + html_escape(venue) + "'"
-            
+
             url = False
             if "url" in b.keys():
                 if len(str(b["url"])) > 5:
                     md += "\npaperurl: '" + b["url"] + "'"
+                    url = True
+            elif "doi" in b.keys():
+                doi = b["doi"].replace("{", "").replace("}","").replace("\\","")
+                if len(doi) > 5:
+                    if not doi.startswith("http"):
+                        doi = "https://doi.org/" + doi
+                    md += "\npaperurl: '" + doi + "'"
+                    url = True
+            elif "journal" in b.keys() and "arXiv" in b["journal"]:
+                arxiv_id = b["journal"].replace("{", "").replace("}","").replace("\\","")
+                import re
+                match = re.search(r'arXiv:([0-9.]+)', arxiv_id)
+                if match:
+                    arxiv_url = "https://arxiv.org/abs/" + match.group(1)
+                    md += "\npaperurl: '" + arxiv_url + "'"
                     url = True
 
             md += "\ncitation: '" + html_escape(citation) + "'"
@@ -145,16 +157,26 @@ for pubsource in publist:
                 md += "\n" + html_escape(b["note"]) + "\n"
 
             if url:
-                md += "\n[Access paper here](" + b["url"] + "){:target=\"_blank\"}\n" 
+                paper_url = b.get("url", "")
+                if not paper_url and "doi" in b.keys():
+                    paper_url = "https://doi.org/" + b["doi"]
+                elif not paper_url and "journal" in b.keys() and "arXiv" in b["journal"]:
+                    arxiv_id = b["journal"]
+                    match = re.search(r'arXiv:([0-9.]+)', arxiv_id)
+                    if match:
+                        paper_url = "https://arxiv.org/abs/" + match.group(1)
+                md += "\n[Access paper here](" + paper_url + "){:target=\"_blank\"}\n" 
             else:
                 md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
 
             md_filename = os.path.basename(md_filename)
 
-            with open("../_publications/" + md_filename, 'w') as f:
-                f.write(md)
-            print(f'SUCESSFULLY PARSED {bib_id}: \"', b["title"][:60],"..."*(len(b['title'])>60),"\"")
-        # field may not exist for a reference
+            try:
+                with open("../_publications/" + md_filename, 'w') as f:
+                    f.write(md)
+                print(f'SUCESSFULLY PARSED {bib_id}: "', b["title"][:60],"..."*(len(b['title'])>60),"\"")
+            except IOError as e:
+                print(f'ERROR writing file for {bib_id}: {e}')
+
         except KeyError as e:
-            print(f'WARNING Missing Expected Field {e} from entry {bib_id}: \"', b["title"][:30],"..."*(len(b['title'])>30),"\"")
-            continue
+            print(f'WARNING Missing Expected Field {e} from entry {bib_id}: "', b.get("title", "")[:30],"...\"")
