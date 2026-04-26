@@ -178,7 +178,8 @@ for pubsource in publist:
             md += "\nvenue: \"" +venue + "\""
 
             # Determine publication type: arXiv vs published
-            # Only check journal field - if it contains "arXiv" it's a preprint
+            # arXiv only if journal field contains "arXiv preprint"
+            # All others (including workshop papers) are "published"
             pub_type = "published"
             if "journal" in b.keys() and "arXiv" in clean_bibtex(b["journal"]):
                 pub_type = "arxiv"

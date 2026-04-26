@@ -15,6 +15,7 @@ Prior, I was a PostDoc at the Junior Professorship for Mathematics of Machine Le
 
 ## News and upcoming events
 
-* I will give a talk and present a poster at the [Conference on Mathematics of Machine Learning 2025](https://www.tuhh.de/dsf/mml) at TU Hamburg-Harburg, September 22nd–25th
-* I will present a poster at the [Conference on Mathematical and Scientific Machine Learning 2025](https://sites.google.com/view/msml2025/) at the University of Naples, August 4th–8th
-* I am organizing a Mini-Symposium on *Geometric Optimization Methods for Scientific Machine Learning* at [ENUMATH 2025](https://enumath2025.eu/) in Heidelberg, September 1st–5th
+* On the April 30, I will give a talk at the [Workshop on Structured Learning: Constraints and Geometry in Reinforcement Learning and Scientific Machine Learning](https://www.syscop.de/event/workshop-structured-learning-constraints-and-geometry-reinforcement-learning-and-scientific) at University of Freiburg
+* On June 3rd, I will speak at the Minisymposium [Implicit Bias in Neural Network Optimization](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=87736) at SIOPT26 in Edinburgh
+* Together with Siddhartha Mishra and Marius Zeinhofer, we are organizing a Mini-Workshop on **Geometric Methods in Scientific Machine Learning** from August 3rd-7th at Mathematische Forschungsinstitut Oberwolfach. 
+
