@@ -46,6 +46,43 @@ def html_escape(text):
     return "".join(html_escape_table.get(c,c) for c in text)
 
 
+def clean_bibtex(text):
+    """Convert BibTeX escaped characters to Unicode"""
+    # Common BibTeX escapes - order matters (longer patterns first)
+    replacements = [
+        # Lowercase with umlauts
+        (r'{\"u}', 'ü'), (r'{\-"u}', 'ü'), (r'{\"o}', 'ö'), (r'{\"a}', 'ä'),
+        (r'{\ s}', 'ß'), (r'{\ss}', 'ß'),
+        # Uppercase
+        (r'{\"U}', 'Ü'), (r'{\"O}', 'Ö'), (r'{\"A}', 'Ä'),
+        # Accented
+        (r"{\'a}", 'á'), (r"{\'e}", 'é'), (r"{\'i}", 'í'), (r"{\'o}", 'ó'), (r"{\'u}", 'ú'),
+        (r'{\`a}', 'à'), (r'{\`e}', 'è'), (r'{\`i}', 'ì'), (r'{\`o}', 'ò'), (r'{\`u}', 'ù'),
+        # Other letters
+        (r'{\c{C}}', 'Ç'), (r'{\c{c}}', 'ç'),
+        (r'{\~n}', 'ñ'), (r'{\~a}', 'ã'), (r'{\~o}', 'õ'),
+        (r'{\.z}', 'ż'), (r'{\.a}', 'ą'),
+        (r'{\i}', 'ı'), (r'{\\i}', 'ı'),
+        # Ligatures
+        (r'{ff}', 'ff'), (r'{fi}', 'fi'), (r'{fl}', 'fl'), 
+        (r'{ffi}', 'ffi'), (r'{ffl}', 'ffl'),
+        # Dashes
+        ('--', '–'), ('---', '—'),
+    ]
+    result = text
+    for pattern, replacement in replacements:
+        result = result.replace(pattern, replacement)
+    # Remove remaining braces
+    result = result.replace('{', '').replace('}', '')
+    return result
+
+
+def escape_yaml_string(text):
+    """Escape string for YAML - avoid HTML entities breaking YAML"""
+    # Replace quotes that could break YAML
+    return text.replace('"', '\\"').replace("'", "\\'")
+
+
 for pubsource in publist:
     parser = bibtex.Parser()
     bibdata = parser.parse_file(publist[pubsource]["file"])
@@ -79,9 +116,9 @@ for pubsource in publist:
             pub_date = pub_year+"-"+pub_month+"-"+pub_day
             
             #strip out {} as needed (some bibtex entries that maintain formatting)
-            clean_title = b["title"].replace("{", "").replace("}","").replace("\\","").replace(" ","-")    
+            clean_title = clean_bibtex(b["title"]).replace(" ","-")    
 
-            url_slug = re.sub("\\[.*\\]|[^a-zA-Z0-9_-]", "", clean_title)
+            url_slug = re.sub("\[.*\]|[^a-zA-Z0-9_-]", "", clean_title)
             url_slug = url_slug.replace("--","-")
 
             md_filename = (str(pub_date) + "-" + url_slug + ".md").replace("--","-")
@@ -90,27 +127,43 @@ for pubsource in publist:
             #Build Citation from text
             citation = ""
 
-            #citation authors - todo - add highlighting for primary author?
+            #citation authors - format as Last, Initial.
+            authors_list = []
             for author in bibdata.entries[bib_id].persons["author"]:
-                citation = citation+" "+author.first_names[0]+" "+author.last_names[0]+", "
+                # Get raw name strings and clean them
+                raw_first = author.first_names[0] if author.first_names else ""
+                raw_last = author.last_names[0] if author.last_names else ""
+                first = clean_bibtex(raw_first)
+                last = clean_bibtex(raw_last)
+                # Get first initial
+                initial = first[0] + "." if first else ""
+                authors_list.append(last + ", " + initial)
+            
+            citation = ", ".join(authors_list)
 
-            #citation title
-            citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
+            title = clean_bibtex(b["title"])
+            citation = citation + " *" + title + "*"
 
             #add venue logic depending on citation type
             # For @inproceedings, use booktitle; for @article, use journal
             venue = ""
             if "booktitle" in b.keys():
-                venue = publist[pubsource]["venue-pretext"]+b["booktitle"].replace("{", "").replace("}","").replace("\\","")
+                venue = clean_bibtex(b["booktitle"])
             elif "journal" in b.keys():
-                venue = publist[pubsource]["venue-pretext"]+b["journal"].replace("{", "").replace("}","").replace("\\","")
+                venue = clean_bibtex(b["journal"])
 
-            citation = citation + " " + html_escape(venue)
-            citation = citation + ", " + pub_year + "."
+            if venue:
+                citation = citation + " " + venue
+            
+            citation = citation + " (" + pub_year + ")."
+            
+            # Escape for YAML
+            citation_yaml = escape_yaml_string(citation)
 
             
-            ## YAML variables
-            md = "---\ntitle: \""   + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + '"\n'
+            ## YAML variables - escape properly for YAML
+            title_yaml = clean_bibtex(b["title"])
+            md = "---\ntitle: \""   + title_yaml + '"' + "\n"
             
             md += """collection: """ +  publist[pubsource]["collection"]["name"]
 
@@ -119,49 +172,54 @@ for pubsource in publist:
             note = False
             if "note" in b.keys():
                 if len(str(b["note"])) > 5:
-                    md += "\nexcerpt: '" + html_escape(b["note"]) + "'"
+                    md += "\nexcerpt: \"" + clean_bibtex(b["note"]) + "\""
                     note = True
 
             md += "\ndate: " + str(pub_date) 
 
-            md += "\nvenue: '" + html_escape(venue) + "'"
+            md += "\nvenue: \"" +venue + "\""
 
+            # Determine publication type: arXiv vs published
+            pub_type = "published"
+            if "journal" in b.keys() and "arXiv" in clean_bibtex(b["journal"]):
+                pub_type = "arxiv"
+            md += "\ntype: '" + pub_type + "'"
+            
             url = False
             if "url" in b.keys():
                 if len(str(b["url"])) > 5:
                     md += "\npaperurl: '" + b["url"] + "'"
                     url = True
             elif "doi" in b.keys():
-                doi = b["doi"].replace("{", "").replace("}","").replace("\\","")
+                doi = clean_bibtex(b["doi"])
                 if len(doi) > 5:
                     if not doi.startswith("http"):
                         doi = "https://doi.org/" + doi
                     md += "\npaperurl: '" + doi + "'"
                     url = True
-            elif "journal" in b.keys() and "arXiv" in b["journal"]:
-                arxiv_id = b["journal"].replace("{", "").replace("}","").replace("\\","")
-                import re
+            elif "journal" in b.keys() and "arXiv" in clean_bibtex(b["journal"]):
+                arxiv_id = clean_bibtex(b["journal"])
                 match = re.search(r'arXiv:([0-9.]+)', arxiv_id)
                 if match:
                     arxiv_url = "https://arxiv.org/abs/" + match.group(1)
                     md += "\npaperurl: '" + arxiv_url + "'"
                     url = True
 
-            md += "\ncitation: '" + html_escape(citation) + "'"
+            md += "\ncitation: \"" + citation + "\""
 
             md += "\n---"
 
             
             ## Markdown description for individual page
             if note:
-                md += "\n" + html_escape(b["note"]) + "\n"
+                md += "\n" + html_escape(clean_bibtex(b["note"])) + "\n"
 
             if url:
                 paper_url = b.get("url", "")
                 if not paper_url and "doi" in b.keys():
-                    paper_url = "https://doi.org/" + b["doi"]
-                elif not paper_url and "journal" in b.keys() and "arXiv" in b["journal"]:
-                    arxiv_id = b["journal"]
+                    paper_url = "https://doi.org/" + clean_bibtex(b["doi"])
+                elif not paper_url and "journal" in b.keys() and "arXiv" in clean_bibtex(b["journal"]):
+                    arxiv_id = clean_bibtex(b["journal"])
                     match = re.search(r'arXiv:([0-9.]+)', arxiv_id)
                     if match:
                         paper_url = "https://arxiv.org/abs/" + match.group(1)
@@ -180,3 +238,4 @@ for pubsource in publist:
 
         except KeyError as e:
             print(f'WARNING Missing Expected Field {e} from entry {bib_id}: "', b.get("title", "")[:30],"...\"")
+            continue
