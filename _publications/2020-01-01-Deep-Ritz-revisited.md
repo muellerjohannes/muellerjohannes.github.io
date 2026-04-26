@@ -5,6 +5,7 @@ permalink: /publication/2020-01-01-Deep-Ritz-revisited
 date: 2020-01-01
 venue: "DeepDiffEq workshop at ICLR 2020"
 type: 'published'
-citation: "Müller, J., Zeinhofer, M. *Deep Ritz revisited* DeepDiffEq workshop at ICLR 2020 (2020)."
+paperurl: 'https://arxiv.org/abs/1912.03937'
+citation: "Johannes Müller, Marius Zeinhofer. *Deep Ritz revisited.* DeepDiffEq workshop at ICLR 2020 (2020)."
 ---
-Use [Google Scholar](https://scholar.google.com/scholar?q=Deep+Ritz+revisited){:target="_blank"} for full citation
+[Access paper here](https://arxiv.org/abs/1912.03937){:target="_blank"}

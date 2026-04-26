@@ -127,22 +127,20 @@ for pubsource in publist:
             #Build Citation from text
             citation = ""
 
-            #citation authors - format as Last, Initial.
+#citation authors - full name format: First Last
             authors_list = []
             for author in bibdata.entries[bib_id].persons["author"]:
-                # Get raw name strings and clean them
                 raw_first = author.first_names[0] if author.first_names else ""
                 raw_last = author.last_names[0] if author.last_names else ""
                 first = clean_bibtex(raw_first)
                 last = clean_bibtex(raw_last)
-                # Get first initial
-                initial = first[0] + "." if first else ""
-                authors_list.append(last + ", " + initial)
+                authors_list.append(first + " " + last)
             
-            citation = ", ".join(authors_list)
+            citation = ", ".join(authors_list) + ". "
 
+            #citation title - with period outside italics
             title = clean_bibtex(b["title"])
-            citation = citation + " *" + title + "*"
+            citation = citation + "*" + title + ".* "
 
             #add venue logic depending on citation type
             # For @inproceedings, use booktitle; for @article, use journal
@@ -153,9 +151,9 @@ for pubsource in publist:
                 venue = clean_bibtex(b["journal"])
 
             if venue:
-                citation = citation + " " + venue
+                citation = citation + venue + " "
             
-            citation = citation + " (" + pub_year + ")."
+            citation = citation + "(" + pub_year + ")."
             
             # Escape for YAML
             citation_yaml = escape_yaml_string(citation)

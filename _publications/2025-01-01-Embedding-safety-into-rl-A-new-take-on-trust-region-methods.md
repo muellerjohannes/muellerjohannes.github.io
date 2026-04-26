@@ -5,6 +5,7 @@ permalink: /publication/2025-01-01-Embedding-safety-into-rl-A-new-take-on-trust-
 date: 2025-01-01
 venue: "ICML 2025"
 type: 'published'
-citation: "Milosevic, N., Müller, J., Scherf, N. *Embedding safety into rl: A new take on trust region methods* ICML 2025 (2025)."
+paperurl: 'https://proceedings.mlr.press/v267/milosevic25a.html'
+citation: "Nikola Milosevic, Johannes Müller, Nico Scherf. *Embedding safety into rl: A new take on trust region methods.* ICML 2025 (2025)."
 ---
-Use [Google Scholar](https://scholar.google.com/scholar?q=Embedding+safety+into+rl:+A+new+take+on+trust+region+methods){:target="_blank"} for full citation
+[Access paper here](https://proceedings.mlr.press/v267/milosevic25a.html){:target="_blank"}

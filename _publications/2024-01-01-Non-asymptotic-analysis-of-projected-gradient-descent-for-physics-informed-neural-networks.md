@@ -5,6 +5,7 @@ permalink: /publication/2024-01-01-Non-asymptotic-analysis-of-projected-gradient
 date: 2024-01-01
 venue: "International Workshop of Scientific Machine Learning: Emerging Topics"
 type: 'published'
-citation: "Nießen, J., Müller, J. *Non-asymptotic analysis of projected gradient descent for physics-informed neural networks* International Workshop of Scientific Machine Learning: Emerging Topics (2024)."
+paperurl: 'https://doi.org/10.1007/978-3-032-11527-0_4'
+citation: "Jonas Nießen, Johannes Müller. *Non-asymptotic analysis of projected gradient descent for physics-informed neural networks.* International Workshop of Scientific Machine Learning: Emerging Topics (2024)."
 ---
-Use [Google Scholar](https://scholar.google.com/scholar?q=Non+asymptotic+analysis+of+projected+gradient+descent+for+physics+informed+neural+networks){:target="_blank"} for full citation
+[Access paper here](https://doi.org/10.1007/978-3-032-11527-0_4){:target="_blank"}
