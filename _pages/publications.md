@@ -12,9 +12,9 @@ You can find all of my works on [arXiv](http://arxiv.org/a/muller_j_3).
 ## Preprints
 
 <ol>
-{% for pub in sorted_pubs reversed %}
+{% for pub in sorted_pubs %}
 {% if pub.type == "arxiv" %}
-<li>{{ pub.citation | markdownify }}{% if pub.paperurl %} <a href="{{ pub.paperurl }}" target="_blank">Access paper</a>{% endif %}</li>
+<li>{{ pub.citation | markdownify }}{% if pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank">Access paper</a>{% endif %}</li>
 {% endif %}
 {% endfor %}
 </ol>
@@ -22,9 +22,9 @@ You can find all of my works on [arXiv](http://arxiv.org/a/muller_j_3).
 ## Publications
 
 <ol>
-{% for pub in sorted_pubs reversed %}
+{% for pub in sorted_pubs %}
 {% if pub.type == "published" %}
-<li>{{ pub.citation | markdownify }}{% if pub.paperurl %} <a href="{{ pub.paperurl }}" target="_blank">Access paper</a>{% endif %}</li>
+<li>{{ pub.citation | markdownify }}{% if pub.paperurl %}<a href="{{ pub.paperurl }}" target="_blank">Access paper</a>{% endif %}</li>
 {% endif %}
 {% endfor %}
 </ol>
