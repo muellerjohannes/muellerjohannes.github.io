@@ -6,7 +6,7 @@ date: 2022-01-01
 venue: "Mathematical and Scientific Machine Learning"
 type: 'published'
 paperurl: 'https://proceedings.mlr.press/v190/muller22b.html'
-citation: "Johannes Müller, Marius Zeinhofer. *Notes on Exact Boundary Values in Residual Minimisation.* Mathematical and Scientific Machine Learning (2022)."
+citation: "Johannes Müller, Marius Zeinhofer. <em>Notes on Exact Boundary Values in Residual Minimisation</em>. Mathematical and Scientific Machine Learning (2022)."
 link: 'https://proceedings.mlr.press/v190/muller22b.html'
 ---
 [Access paper here](https://proceedings.mlr.press/v190/muller22b.html){:target="_blank"}

@@ -140,7 +140,7 @@ for pubsource in publist:
 
             #citation title - with period outside italics
             title = clean_bibtex(b["title"])
-            citation = citation + "*" + title + ".* "
+            citation = citation + "<em>" + title + "</em>. "
 
             #add venue logic depending on citation type
             # For @inproceedings, use booktitle; for @article, use journal
