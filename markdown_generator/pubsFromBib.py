@@ -178,8 +178,11 @@ for pubsource in publist:
             md += "\nvenue: \"" +venue + "\""
 
             # Determine publication type: arXiv vs published
+            # Check both journal field AND url field for arXiv
             pub_type = "published"
-            if "journal" in b.keys() and "arXiv" in clean_bibtex(b["journal"]):
+            journal_val = b.get("journal", "")
+            url_val = b.get("url", "")
+            if ("arXiv" in clean_bibtex(journal_val)) or ("arxiv.org" in url_val.lower()):
                 pub_type = "arxiv"
             md += "\ntype: '" + pub_type + "'"
             
