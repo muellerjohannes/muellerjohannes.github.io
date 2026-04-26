@@ -178,11 +178,9 @@ for pubsource in publist:
             md += "\nvenue: \"" +venue + "\""
 
             # Determine publication type: arXiv vs published
-            # Check both journal field AND url field for arXiv
+            # Only check journal field - if it contains "arXiv" it's a preprint
             pub_type = "published"
-            journal_val = b.get("journal", "")
-            url_val = b.get("url", "")
-            if ("arXiv" in clean_bibtex(journal_val)) or ("arxiv.org" in url_val.lower()):
+            if "journal" in b.keys() and "arXiv" in clean_bibtex(b["journal"]):
                 pub_type = "arxiv"
             md += "\ntype: '" + pub_type + "'"
             
