@@ -7,5 +7,6 @@ venue: "Forty-first International Conference on Machine Learning"
 type: 'published'
 paperurl: 'https://proceedings.mlr.press/v235/muller24d.html'
 citation: "Johannes Müller, Marius Zeinhofer. *Position: Optimization in SciML Should Employ the Function Space Geometry.* Forty-first International Conference on Machine Learning (2024)."
+link: 'https://proceedings.mlr.press/v235/muller24d.html'
 ---
 [Access paper here](https://proceedings.mlr.press/v235/muller24d.html){:target="_blank"}

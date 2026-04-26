@@ -7,5 +7,6 @@ venue: "Information geometry"
 type: 'published'
 paperurl: 'https://doi.org/10.1007/s41884-022-00067-9'
 citation: "Jesse Oostrum, Johannes Müller, Nihat Ay. *Invariance properties of the natural gradient in overparametrised systems.* Information geometry (2023)."
+link: 'https://doi.org/10.1007/s41884-022-00067-9'
 ---
 [Access paper here](https://doi.org/10.1007/s41884-022-00067-9){:target="_blank"}

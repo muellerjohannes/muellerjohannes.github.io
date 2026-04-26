@@ -7,5 +7,6 @@ venue: "Advances in Neural Information Processing Systems (NeurIPS)"
 type: 'published'
 paperurl: 'https://doi.org/10.52202/079017-1091'
 citation: "Felix Dangel, Johannes Müller, Marius Zeinhofer. *Kronecker-factored approximate curvature for physics-informed neural networks.* Advances in Neural Information Processing Systems (NeurIPS) (2024)."
+link: 'https://doi.org/10.52202/079017-1091'
 ---
 [Access paper here](https://doi.org/10.52202/079017-1091){:target="_blank"}

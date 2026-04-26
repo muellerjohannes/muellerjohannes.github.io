@@ -7,5 +7,6 @@ venue: "DeepDiffEq workshop at ICLR 2020"
 type: 'published'
 paperurl: 'https://arxiv.org/abs/1910.09599'
 citation: "Johannes Müller. *On the space-time expressivity of ResNets.* DeepDiffEq workshop at ICLR 2020 (2020)."
+link: 'https://arxiv.org/abs/1910.09599'
 ---
 [Access paper here](https://arxiv.org/abs/1910.09599){:target="_blank"}

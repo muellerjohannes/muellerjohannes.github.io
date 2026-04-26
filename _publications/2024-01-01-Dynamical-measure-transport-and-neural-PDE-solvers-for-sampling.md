@@ -7,5 +7,6 @@ venue: "arXiv preprint arXiv:2407.07873"
 type: 'arxiv'
 paperurl: 'https://arxiv.org/abs/2407.07873'
 citation: "Jingtong Sun, Julius Berner, Lorenz Richter, Marius Zeinhofer, Johannes Müller, Kamyar Azizzadenesheli, Anima Anandkumar. *Dynamical measure transport and neural PDE solvers for sampling.* arXiv preprint arXiv:2407.07873 (2024)."
+link: 'https://arxiv.org/abs/2407.07873'
 ---
 [Access paper here](https://arxiv.org/abs/2407.07873){:target="_blank"}

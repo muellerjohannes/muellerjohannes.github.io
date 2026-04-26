@@ -7,5 +7,6 @@ venue: "Mathematical and Scientific Machine Learning"
 type: 'published'
 paperurl: 'https://proceedings.mlr.press/v190/muller22a.html'
 citation: "Johannes Müller, Marius Zeinhofer. *Error estimates for the deep Ritz method with boundary penalty.* Mathematical and Scientific Machine Learning (2022)."
+link: 'https://proceedings.mlr.press/v190/muller22a.html'
 ---
 [Access paper here](https://proceedings.mlr.press/v190/muller22a.html){:target="_blank"}

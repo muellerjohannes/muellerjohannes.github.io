@@ -207,6 +207,19 @@ for pubsource in publist:
 
             md += "\ncitation: \"" + citation + "\""
 
+            # Add link directly in citation if exists
+            if url:
+                paper_url = b.get("url", "")
+                if not paper_url and "doi" in b.keys():
+                    paper_url = "https://doi.org/" + clean_bibtex(b["doi"])
+                elif not paper_url and "journal" in b.keys() and "arXiv" in clean_bibtex(b["journal"]):
+                    match = re.search(r'arXiv:([0-9.]+)', clean_bibtex(b["journal"]))
+                    if match:
+                        paper_url = "https://arxiv.org/abs/" + match.group(1)
+                if paper_url:
+                    # Note: citation already has period, add link after
+                    md += "\nlink: '" + paper_url + "'"
+
             md += "\n---"
 
             

@@ -7,5 +7,6 @@ venue: "International Conference on Machine Learning"
 type: 'published'
 paperurl: 'https://proceedings.mlr.press/v202/muller23b.html'
 citation: "Johannes Müller, Marius Zeinhofer. *Achieving High Accuracy with PINNs via Energy Natural Gradients.* International Conference on Machine Learning (2023)."
+link: 'https://proceedings.mlr.press/v202/muller23b.html'
 ---
 [Access paper here](https://proceedings.mlr.press/v202/muller23b.html){:target="_blank"}

@@ -7,5 +7,6 @@ venue: "DeepDiffEq workshop at ICLR 2020"
 type: 'published'
 paperurl: 'https://arxiv.org/abs/1912.03937'
 citation: "Johannes Müller, Marius Zeinhofer. *Deep Ritz revisited.* DeepDiffEq workshop at ICLR 2020 (2020)."
+link: 'https://arxiv.org/abs/1912.03937'
 ---
 [Access paper here](https://arxiv.org/abs/1912.03937){:target="_blank"}

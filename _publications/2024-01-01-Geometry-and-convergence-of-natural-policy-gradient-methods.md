@@ -7,5 +7,6 @@ venue: "Information Geometry"
 type: 'published'
 paperurl: 'https://doi.org/10.1007/s41884-023-00106-z'
 citation: "Johannes Müller, Guido Montúfar. *Geometry and convergence of natural policy gradient methods.* Information Geometry (2024)."
+link: 'https://doi.org/10.1007/s41884-023-00106-z'
 ---
 [Access paper here](https://doi.org/10.1007/s41884-023-00106-z){:target="_blank"}
