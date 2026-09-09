@@ -3,10 +3,10 @@ title: "Curvature-Aware Optimization for High-Accuracy Physics-Informed Neural N
 collection: publications
 permalink: /publication/2026-01-01-Curvature-Aware-Optimization-for-High-Accuracy-Physics-Informed-Neural-Networks
 date: 2026-01-01
-venue: "arXiv preprint arXiv:2604.05230"
-type: 'arxiv'
-paperurl: 'https://arxiv.org/abs/2604.05230'
-citation: "Anas Jnini, Elham Kiyani, Khemraj Shukla, Jorge Urban, Nazanin Daryakenari, Johannes Muller, Marius Zeinhofer, George Karniadakis. <em>Curvature-Aware Optimization for High-Accuracy Physics-Informed Neural Networks</em>. arXiv preprint arXiv:2604.05230 (2026)."
-link: 'https://arxiv.org/abs/2604.05230'
+venue: "Computer Methods in Applied Mechanics and Engineering"
+type: 'published'
+paperurl: 'https://doi.org/10.1016/j.cma.2026.119289'
+citation: "Anas Jnini, Elham Kiyani, Khemraj Shukla, Jorge Urban, Nazanin Daryakenari, Johannes Muller, Marius Zeinhofer, George Karniadakis. <em>Curvature-Aware Optimization for High-Accuracy Physics-Informed Neural Networks</em>. Computer Methods in Applied Mechanics and Engineering (2026)."
+link: 'https://doi.org/10.1016/j.cma.2026.119289'
 ---
-[Access paper here](https://arxiv.org/abs/2604.05230){:target="_blank"}
+[Access paper here](https://doi.org/10.1016/j.cma.2026.119289){:target="_blank"}

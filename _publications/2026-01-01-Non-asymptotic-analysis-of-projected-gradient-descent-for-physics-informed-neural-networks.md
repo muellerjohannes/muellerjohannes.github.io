@@ -1,12 +1,12 @@
 ---
-title: "Non-asymptotic analysis of projected gradient descent for physics-informed neural networks"
+title: "Non-Asymptotic Analysis of Projected Gradient Descent for Physics-Informed Neural Networks"
 collection: publications
-permalink: /publication/2026-01-01-Non-asymptotic-analysis-of-projected-gradient-descent-for-physics-informed-neural-networks
+permalink: /publication/2026-01-01-Non-Asymptotic-Analysis-of-Projected-Gradient-Descent-for-Physics-Informed-Neural-Networks
 date: 2026-01-01
-venue: "International Workshop of Scientific Machine Learning: Emerging Topics"
+venue: "SEMA SIMAI Springer Series"
 type: 'published'
-paperurl: 'https://doi.org/10.1007/978-3-032-11527-0_4'
-citation: "Jonas Nießen, Johannes Müller. <em>Non-asymptotic analysis of projected gradient descent for physics-informed neural networks</em>. International Workshop of Scientific Machine Learning: Emerging Topics (2026)."
-link: 'https://doi.org/10.1007/978-3-032-11527-0_4'
+paperurl: 'https://doi.org/10.1007/978-3-032-11527-0\_4'
+citation: "Jonas Nießen, Johannes Müller. <em>Non-Asymptotic Analysis of Projected Gradient Descent for Physics-Informed Neural Networks</em>. SEMA SIMAI Springer Series (2026)."
+link: 'https://doi.org/10.1007/978-3-032-11527-0\_4'
 ---
-[Access paper here](https://doi.org/10.1007/978-3-032-11527-0_4){:target="_blank"}
+[Access paper here](https://doi.org/10.1007/978-3-032-11527-0\_4){:target="_blank"}

@@ -1,0 +1,65 @@
+name: Publications Pipeline
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-publications:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip requests pyyaml pybtex
+
+      - name: Update publication sources and merge
+        run: python3 markdown_generator/update_publications.py
+
+      - name: Regenerate publication markdown files
+        run: python3 markdown_generator/pubsFromBib.py
+
+      - name: Update about-page publication news
+        run: python3 markdown_generator/update_about_news.py
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: publication-pipeline
+          path: |
+            markdown_generator/publications.bib
+            _data/publication_updates.yml
+            _pages/about.md
+            _publications
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: bot/publications-pipeline
+          title: "chore: update publications and publication news"
+          commit-message: "chore: update publications and publication news"
+          body: |
+            Automated publications pipeline update.
+
+            Includes:
+            - refreshed `markdown_generator/publications.bib`
+            - regenerated `_publications/*.md`
+            - updated `_data/publication_updates.yml`
+            - updated publication items under `## News` in `_pages/about.md`
+
+            Review checklist:
+            - Verify new publications and arXiv -> published transitions.
+            - Verify generated news bullets are correct.
+            - Merge only if updates are accurate.
