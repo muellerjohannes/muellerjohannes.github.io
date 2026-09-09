@@ -15,8 +15,10 @@ import datetime as dt
 import json
 import re
 import unicodedata
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
+from urllib.parse import quote
 
 import requests
 import yaml
@@ -102,6 +104,117 @@ def request_text(url: str, timeout: int = 30) -> str:
 def parse_arxiv_author_page(author_id: str) -> List[str]:
     html = request_text(f"https://arxiv.org/a/{author_id}.html")
     ids = set(re.findall(r"/abs/([0-9]{4}\.[0-9]{4,5}(?:v\d+)?)", html))
+    return sorted(ids)
+
+
+def parse_arxiv_api_by_author(author_name: str, max_results: int = 200) -> List[Dict[str, Any]]:
+    query = quote(f'au:"{author_name}"')
+    xml_text = request_text(
+        f"https://export.arxiv.org/api/query?search_query={query}&start=0&max_results={max_results}"
+    )
+    try:
+        root = ET.fromstring(xml_text)
+    except ET.ParseError:
+        return []
+
+    entries: List[Dict[str, Any]] = []
+    ns = {"atom": "http://www.w3.org/2005/Atom"}
+    for entry in root.findall("atom:entry", ns):
+        id_text = entry.findtext("atom:id", default="", namespaces=ns)
+        abs_id = ""
+        m = re.search(r"/abs/([0-9]{4}\.[0-9]{4,5})(v\d+)?", id_text)
+        if m:
+            abs_id = m.group(1)
+        if not abs_id:
+            continue
+
+        authors = [
+            (node.findtext("atom:name", default="", namespaces=ns) or "").strip()
+            for node in entry.findall("atom:author", ns)
+        ]
+        title = (entry.findtext("atom:title", default="", namespaces=ns) or "").strip()
+        entries.append({"arxiv_id": abs_id, "authors": authors, "title": title})
+    return entries
+
+
+def author_matches_variants(authors: Iterable[str], variants: Iterable[str]) -> bool:
+    variant_norm = {normalize_text(v) for v in variants if v}
+    author_norm = [normalize_text(a) for a in authors if a]
+    if not variant_norm or not author_norm:
+        return False
+
+    if any(a in variant_norm for a in author_norm):
+        return True
+
+    first_last_pairs = []
+    for v in variant_norm:
+        parts = v.split()
+        if len(parts) < 2:
+            continue
+        first_last_pairs.append((parts[0], parts[-1]))
+
+    for author in author_norm:
+        parts = author.split()
+        if len(parts) < 2:
+            continue
+        a_first = parts[0]
+        a_last = parts[-1]
+        for v_first, v_last in first_last_pairs:
+            if a_last == v_last and a_first and v_first and a_first[0] == v_first[0]:
+                return True
+    return False
+
+
+def parse_author_last_name(author_name: str) -> str:
+    parts = normalize_text(author_name).split()
+    return parts[-1] if parts else ""
+
+
+def known_coauthor_last_names(db: BibliographyData, variants: List[str]) -> set[str]:
+    self_last_names = {normalize_text(v).split()[-1] for v in variants if normalize_text(v).split()}
+    out: set[str] = set()
+    for entry in db.entries.values():
+        for person in entry.persons.get("author", []):
+            if not person.last_names:
+                continue
+            last = normalize_text(person.last_names[0])
+            if not last or last in self_last_names:
+                continue
+            out.add(last)
+    return out
+
+
+def is_high_confidence_author_hit(
+    authors: Iterable[str], variants: List[str], known_coauthors: set[str]
+) -> bool:
+    normalized_variants = {normalize_text(v) for v in variants if v}
+    normalized_authors = [normalize_text(a) for a in authors if a]
+    if not normalized_authors:
+        return False
+
+    has_target_author = any(author in normalized_variants for author in normalized_authors)
+    if not has_target_author:
+        return False
+
+    co_last_names = {parse_author_last_name(a) for a in normalized_authors}
+    variant_last_names = {v.split()[-1] for v in normalized_variants if v.split()}
+    co_last_names = {x for x in co_last_names if x and x not in variant_last_names}
+    return bool(co_last_names.intersection(known_coauthors))
+
+
+def collect_arxiv_ids(arxiv_author_id: str, name_variants: List[str], db: BibliographyData) -> List[str]:
+    ids = set(parse_arxiv_author_page(arxiv_author_id))
+    coauthors = known_coauthor_last_names(db, name_variants)
+    for name in name_variants:
+        try:
+            candidates = parse_arxiv_api_by_author(name, max_results=200)
+        except Exception:
+            continue
+        for item in candidates:
+            if is_high_confidence_author_hit(item.get("authors", []), name_variants, coauthors):
+                aid = parse_arxiv_id(item.get("arxiv_id", ""))
+                if aid:
+                    ids.add(aid)
     return sorted(ids)
 
 
@@ -263,6 +376,76 @@ def crossref_to_fields(item: Dict[str, Any]) -> Optional[Dict[str, str]]:
         "venue": venue,
     }
     return out
+
+
+def dblp_search_by_title(title: str, last_names: List[str]) -> Optional[Dict[str, str]]:
+    if not title:
+        return None
+    try:
+        response = SESSION.get(
+            "https://dblp.org/search/publ/api",
+            params={"q": title, "h": 8, "format": "json"},
+            timeout=30,
+        )
+        response.raise_for_status()
+        payload = response.json()
+    except Exception:
+        return None
+
+    hits = payload.get("result", {}).get("hits", {}).get("hit", [])
+    if isinstance(hits, dict):
+        hits = [hits]
+
+    target = title_fingerprint(title)
+    for hit in hits:
+        info = hit.get("info", {})
+        cand_title = str(info.get("title", "")).strip()
+        cand_fp = title_fingerprint(cand_title)
+        if not cand_fp:
+            continue
+        if target != cand_fp and target not in cand_fp and cand_fp not in target:
+            continue
+
+        authors_blob = ""
+        author_info = info.get("authors", {}).get("author", [])
+        if isinstance(author_info, dict):
+            author_info = [author_info]
+        author_names: List[str] = []
+        for author in author_info:
+            if isinstance(author, dict):
+                name = str(author.get("text", "")).strip()
+            else:
+                name = str(author).strip()
+            if name:
+                author_names.append(name)
+        if author_names:
+            authors_blob = " ".join(normalize_text(a) for a in author_names)
+            if last_names and not any(normalize_text(x) in authors_blob for x in last_names):
+                continue
+
+        doi = normalize_doi(clean_latex_escapes(str(info.get("doi", ""))))
+        year = str(info.get("year", "") or "")
+        venue = str(info.get("venue", "") or "")
+        url = str(info.get("url", "") or "")
+        if doi and not url:
+            url = f"https://doi.org/{doi}"
+
+        kind = "journal-article"
+        type_hint = normalize_text(str(info.get("type", "") or ""))
+        venue_hint = normalize_text(venue)
+        if "conference and workshop" in type_hint or "conference" in venue_hint or "workshop" in venue_hint:
+            kind = "proceedings-article"
+
+        out = {
+            "doi": doi,
+            "year": year,
+            "url": url,
+            "title": cand_title,
+            "kind": kind,
+            "venue": venue,
+        }
+        return out
+    return None
 
 
 def canonicalize_title(title: str) -> str:
@@ -440,6 +623,8 @@ def ingest_arxiv(db: BibliographyData, arxiv_items: List[Dict[str, Any]]) -> Tup
         doi = normalize_doi(entry.fields.get("doi", ""))
         if doi:
             meta = crossref_lookup_by_doi(doi)
+        if not meta:
+            meta = dblp_search_by_title(title, author_last_names_from_entry(entry))
         if not meta:
             meta = crossref_search_by_title(title, author_last_names_from_entry(entry))
         if not meta:
@@ -703,6 +888,67 @@ def deduplicate(db: BibliographyData) -> Tuple[int, int]:
     return merged, removed
 
 
+def deduplicate_title_author_groups(db: BibliographyData) -> Tuple[int, int]:
+    """Merge remaining near-duplicates that escaped DOI/arXiv grouping.
+
+    This catches pairs where one entry is an arXiv variant and the other is a
+    workshop/conference/journal variant with missing shared identifiers.
+    """
+
+    groups: Dict[str, List[str]] = {}
+    for key, entry in db.entries.items():
+        title = title_fingerprint(entry.fields.get("title", ""))
+        authors = author_last_names_from_entry(entry)
+        first_author = authors[0] if authors else ""
+        if not title or not first_author:
+            continue
+        gid = f"title_author:{title}|{first_author}"
+        groups.setdefault(gid, []).append(key)
+
+    merged = 0
+    removed = 0
+    for keys in groups.values():
+        if len(keys) < 2:
+            continue
+
+        keeper_key = keys[0]
+        keeper = db.entries.get(keeper_key)
+        if keeper is None:
+            continue
+
+        for other_key in keys[1:]:
+            other = db.entries.get(other_key)
+            if other is None:
+                continue
+
+            # Safety: keep entries separate when publication years are far apart.
+            y_keep = int(keeper.fields.get("year", "0") or "0")
+            y_other = int(other.fields.get("year", "0") or "0")
+            if y_keep and y_other and abs(y_keep - y_other) > 1:
+                continue
+
+            # Require strong title and author agreement.
+            tscore = title_match_score(keeper.fields.get("title", ""), other.fields.get("title", ""))
+            if tscore < 90:
+                continue
+            keep_auth = set(author_last_names_from_entry(keeper))
+            other_auth = set(author_last_names_from_entry(other))
+            if keep_auth and other_auth and len(keep_auth.intersection(other_auth)) == 0:
+                continue
+
+            best_key, best_entry, loser_key, loser_entry = choose_better_entry(
+                keeper_key, keeper, other_key, other
+            )
+            merge_entry_fields(best_entry, loser_entry)
+            if loser_key in db.entries:
+                del db.entries[loser_key]
+                merged += 1
+                removed += 1
+            keeper_key, keeper = best_key, best_entry
+
+    return merged, removed
+
+
 def build_state(entries: Dict[str, Entry]) -> Dict[str, Dict[str, str]]:
     out: Dict[str, Dict[str, str]] = {}
     for key, entry in entries.items():
@@ -746,13 +992,18 @@ def write_bib(db: BibliographyData) -> None:
 def main() -> int:
     config = load_config()
     arxiv_author_id = config.get("arxiv_author_id", "")
+    name_variants = config.get("name_variants", [])
     if not arxiv_author_id:
         raise SystemExit("Missing arxiv_author_id in _data/publication_sources.yml")
+    if not isinstance(name_variants, list):
+        name_variants = []
+    if not name_variants:
+        name_variants = ["Johannes Muller", "Johannes Mueller"]
 
     db = load_bib()
     old_state = build_state(db.entries)
 
-    arxiv_ids = parse_arxiv_author_page(arxiv_author_id)
+    arxiv_ids = collect_arxiv_ids(arxiv_author_id, name_variants, db)
     arxiv_items = []
     for abs_id in arxiv_ids:
         item = parse_arxiv_abs(abs_id)
@@ -763,6 +1014,7 @@ def main() -> int:
     added, upgraded = ingest_arxiv(db, arxiv_items)
     reconciled, reconciled_removed = reconcile_preprint_published_pairs(db)
     merged, removed = deduplicate(db)
+    title_author_merged, title_author_removed = deduplicate_title_author_groups(db)
     title_updates = normalize_titles_from_trusted_sources(db)
     write_bib(db)
 
@@ -776,6 +1028,8 @@ def main() -> int:
         "reconciled_removed": reconciled_removed,
         "merged_duplicates": merged,
         "removed_entries": removed,
+        "merged_title_author_duplicates": title_author_merged,
+        "removed_title_author_entries": title_author_removed,
         "title_updates_from_trusted_sources": title_updates,
         "sanitized_fields": sanitized,
         "changes_total": len(updates.get("changes", [])),

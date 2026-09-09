@@ -129,6 +129,7 @@ for pubsource in publist:
     parser = bibtex.Parser()
     bibdata = parser.parse_file(publist[pubsource]["file"])
     generated_files = set()
+    used_html_filenames_casefold = set()
     output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "_publications"))
 
     #loop through the individual references in a given bibtex file
@@ -165,8 +166,17 @@ for pubsource in publist:
             url_slug = re.sub(r"\[.*\]|[^a-zA-Z0-9_-]", "", clean_title)
             url_slug = url_slug.replace("--","-")
 
-            md_filename = (str(pub_date) + "-" + url_slug + ".md").replace("--","-")
-            html_filename = (str(pub_date) + "-" + url_slug).replace("--","-")
+            base_html_filename = (str(pub_date) + "-" + url_slug).replace("--","-")
+            html_filename = base_html_filename
+            if html_filename.casefold() in used_html_filenames_casefold:
+                key_suffix = re.sub(r"[^a-zA-Z0-9_-]", "", bib_id).lower()
+                if not key_suffix:
+                    key_suffix = "entry"
+                html_filename = f"{base_html_filename}-{key_suffix}".replace("--", "-")
+                while html_filename.casefold() in used_html_filenames_casefold:
+                    html_filename = f"{html_filename}-x"
+            used_html_filenames_casefold.add(html_filename.casefold())
+            md_filename = f"{html_filename}.md"
 
             #Build Citation from text
             citation = ""

@@ -1,2 +1,45 @@
-generated_at: '2026-09-09T21:25:55+00:00'
-changes: []
+generated_at: '2026-09-09T22:19:23+00:00'
+changes:
+- key: dondl2022uniform
+  title: Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems
+  state: published
+  venue: Advances in Continuous and Discrete Models
+  year: '2022'
+  url: https://arxiv.org/abs/2111.05637
+  change: new_published
+- key: van2023invariance
+  title: Invariance properties of the natural gradient in overparametrised systems
+  state: published
+  venue: Information geometry
+  year: '2023'
+  url: https://arxiv.org/abs/2206.15273
+  change: new_published
+- key: muller2023achieving
+  title: Achieving High Accuracy with PINNs via Energy Natural Gradients
+  state: published
+  venue: International Conference on Machine Learning
+  year: '2023'
+  url: https://proceedings.mlr.press/v202/muller23b.html
+  change: new_published
+- key: milosevic2025central
+  title: Central path proximal policy optimization
+  state: published
+  venue: arXiv preprint arXiv:2506.00700
+  year: '2025'
+  url: https://openreview.net/forum?id=2cvUHCgZbF
+  change: arxiv_to_published
+- key: jm2026curvatureawareoptimizati26040523
+  title: Curvature-Aware Optimization for High-Accuracy Physics-Informed Neural Networks
+  state: published
+  venue: Computer Methods in Applied Mechanics and Engineering
+  year: '2026'
+  url: https://doi.org/10.1016/j.cma.2026.119289
+  change: new_published
+- key: jm2026projectedinverseiteratio26060782
+  title: 'Projected Inverse Iteration: An Eigenvalue Approach to Ground-State Computation
+    with Neural Quantum States'
+  state: arxiv
+  venue: arXiv preprint arXiv:2606.07825
+  year: '2026'
+  url: https://arxiv.org/abs/2606.07825
+  change: new_arxiv

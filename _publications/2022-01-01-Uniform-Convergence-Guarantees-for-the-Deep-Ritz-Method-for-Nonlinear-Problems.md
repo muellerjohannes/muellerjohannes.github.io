@@ -5,8 +5,8 @@ permalink: /publication/2022-01-01-Uniform-Convergence-Guarantees-for-the-Deep-R
 date: 2022-01-01
 venue: "Advances in Continuous and Discrete Models"
 type: 'published'
-paperurl: 'https://doi.org/10.1186/s13662-022-03722-8'
+paperurl: 'https://arxiv.org/abs/2111.05637'
 citation: "Patrick Dondl, Johannes Müller, Marius Zeinhofer. <em>Uniform Convergence Guarantees for the Deep Ritz Method for Nonlinear Problems</em>. Advances in Continuous and Discrete Models (2022)."
-link: 'https://doi.org/10.1186/s13662-022-03722-8'
+link: 'https://arxiv.org/abs/2111.05637'
 ---
-[Access paper here](https://doi.org/10.1186/s13662-022-03722-8){:target="_blank"}
+[Access paper here](https://arxiv.org/abs/2111.05637){:target="_blank"}
