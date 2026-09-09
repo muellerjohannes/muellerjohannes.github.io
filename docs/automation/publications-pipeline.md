@@ -14,10 +14,30 @@ This pipeline updates `markdown_generator/publications.bib`, regenerates publica
 - Preprints are added from arXiv.
 - When publication metadata is found (DOI + venue), preprint records are upgraded in place.
 - Duplicate visible entries are not kept for preprint/published variants.
+- Exactly one canonical record is kept per work.
+- Classification used for site sections:
+  - `published`: journal papers and proper ML main-track conference papers (ICML/NeurIPS/ICLR).
+  - `workshop`: workshop-style venues.
+  - `preprint`: arXiv-only entries.
+- Deduplication keys are resolved in this order: DOI, arXiv id, then title+author overlap.
 - `About` page news gets auto-generated bullets for:
   - `arxiv_to_published`
   - `new_published`
 - About-page news list is trimmed to the latest 12 items.
+
+## Metadata quality
+
+- Discovery uses arXiv author page.
+- Published metadata enrichment currently uses Crossref.
+- If a URL points to trusted sources (`proceedings.mlr.press`, `openreview.net`, `dblp.org`),
+  the pipeline can use page metadata to improve title capitalization while preserving identity matching.
+
+Planned next source priority for ML conference metadata:
+
+1. DBLP
+2. PMLR / OpenReview
+3. Crossref
+4. arXiv
 
 ## Local Run
 

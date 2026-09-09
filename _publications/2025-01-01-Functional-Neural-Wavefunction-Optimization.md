@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2025-01-01-Functional-Neural-Wavefunction-Optimization
 date: 2025-01-01
 venue: "arXiv preprint arXiv:2507.10835"
-type: 'arxiv'
+type: 'preprint'
 paperurl: 'https://arxiv.org/abs/2507.10835'
 citation: "Victor Armegioiu, Juan Carrasquilla, Siddhartha Mishra, Johannes Müller, Jannes Nys, Marius Zeinhofer, Hang Zhang. <em>Functional Neural Wavefunction Optimization</em>. arXiv preprint arXiv:2507.10835 (2025)."
 link: 'https://arxiv.org/abs/2507.10835'

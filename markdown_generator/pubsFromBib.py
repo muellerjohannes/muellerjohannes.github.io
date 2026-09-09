@@ -24,6 +24,48 @@ import html
 import os
 import re
 
+
+def is_ml_main_conference(venue):
+    venue_lower = venue.lower()
+    main_markers = [
+        "international conference on machine learning",
+        "icml",
+        "conference on neural information processing systems",
+        "advances in neural information processing systems",
+        "neurips",
+        "international conference on learning representations",
+        "iclr",
+    ]
+    return any(marker in venue_lower for marker in main_markers)
+
+
+def is_workshop_venue(venue):
+    venue_lower = venue.lower()
+    workshop_markers = ["workshop", "symposium", "satellite"]
+    return any(marker in venue_lower for marker in workshop_markers)
+
+
+def classify_publication_type(fields):
+    journal = clean_bibtex(fields.get("journal", ""))
+    venue_booktitle = clean_bibtex(fields.get("booktitle", ""))
+    has_doi = bool(fields.get("doi", "").strip())
+    has_booktitle = bool(venue_booktitle)
+
+    if has_booktitle:
+        if is_ml_main_conference(venue_booktitle):
+            return "published"
+        if is_workshop_venue(venue_booktitle):
+            return "workshop"
+        return "published"
+
+    if has_doi and (journal and "arXiv" not in journal):
+        return "published"
+
+    if journal and "arXiv" in journal:
+        return "preprint"
+
+    return "published"
+
 #todo: incorporate different collection types rather than a catch all publications, requires other changes to template
 publist = {
     "publication": {
@@ -86,6 +128,8 @@ def escape_yaml_string(text):
 for pubsource in publist:
     parser = bibtex.Parser()
     bibdata = parser.parse_file(publist[pubsource]["file"])
+    generated_files = set()
+    output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "_publications"))
 
     #loop through the individual references in a given bibtex file
     for bib_id in bibdata.entries:
@@ -118,7 +162,7 @@ for pubsource in publist:
             #strip out {} as needed (some bibtex entries that maintain formatting)
             clean_title = clean_bibtex(b["title"]).replace(" ","-")    
 
-            url_slug = re.sub("\[.*\]|[^a-zA-Z0-9_-]", "", clean_title)
+            url_slug = re.sub(r"\[.*\]|[^a-zA-Z0-9_-]", "", clean_title)
             url_slug = url_slug.replace("--","-")
 
             md_filename = (str(pub_date) + "-" + url_slug + ".md").replace("--","-")
@@ -180,9 +224,7 @@ for pubsource in publist:
             # Determine publication type: arXiv vs published
             # arXiv only if journal field contains "arXiv preprint"
             # All others (including workshop papers) are "published"
-            pub_type = "published"
-            if "journal" in b.keys() and "arXiv" in clean_bibtex(b["journal"]):
-                pub_type = "arxiv"
+            pub_type = classify_publication_type(b)
             md += "\ntype: '" + pub_type + "'"
             
             url = False
@@ -241,6 +283,7 @@ for pubsource in publist:
                 md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
 
             md_filename = os.path.basename(md_filename)
+            generated_files.add(md_filename)
 
             try:
                 with open("../_publications/" + md_filename, 'w') as f:
@@ -252,3 +295,18 @@ for pubsource in publist:
         except KeyError as e:
             print(f'WARNING Missing Expected Field {e} from entry {bib_id}: "', b.get("title", "")[:30],"...\"")
             continue
+
+    for existing_name in os.listdir(output_dir):
+        if not existing_name.endswith(".md"):
+            continue
+        if existing_name in generated_files:
+            continue
+        existing_path = os.path.join(output_dir, existing_name)
+        try:
+            with open(existing_path, "r", encoding="utf-8") as f:
+                content = f.read()
+            if "collection: publications" in content:
+                os.remove(existing_path)
+                print(f"REMOVED stale publication file: {existing_name}")
+        except OSError as e:
+            print(f"WARNING could not inspect/remove stale file {existing_name}: {e}")
