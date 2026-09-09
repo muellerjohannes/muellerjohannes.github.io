@@ -1,0 +1,47 @@
+generated_at: '2026-09-09T13:55:04+00:00'
+scope: europe-us
+source_stats:
+- source_id: mis-mpg
+  enabled: true
+  seed_urls: 3
+  pages_seen: 3
+  fetch_ok: 0
+  fetch_failed: 3
+  candidates_found: 0
+- source_id: siam-meetings
+  enabled: true
+  seed_urls: 2
+  pages_seen: 2
+  fetch_ok: 0
+  fetch_failed: 2
+  candidates_found: 0
+- source_id: tuhh
+  enabled: true
+  seed_urls: 3
+  pages_seen: 3
+  fetch_ok: 0
+  fetch_failed: 3
+  candidates_found: 0
+- source_id: tu-berlin
+  enabled: true
+  seed_urls: 3
+  pages_seen: 3
+  fetch_ok: 0
+  fetch_failed: 3
+  candidates_found: 0
+- source_id: zib-seminars
+  enabled: true
+  seed_urls: 2
+  pages_seen: 2
+  fetch_ok: 0
+  fetch_failed: 2
+  candidates_found: 0
+- source_id: dida
+  enabled: true
+  seed_urls: 2
+  pages_seen: 2
+  fetch_ok: 0
+  fetch_failed: 2
+  candidates_found: 0
+candidates: []
+duplicates: []

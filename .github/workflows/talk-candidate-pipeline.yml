@@ -1,0 +1,58 @@
+name: Talk Candidate Pipeline
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 5 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  fetch-score-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pyyaml
+
+      - name: Fetch talk candidates
+        run: python3 markdown_generator/fetch_talk_candidates.py --max-pages 20 --max-links-per-page 25
+
+      - name: Score candidates and write report
+        run: python3 markdown_generator/score_talk_candidates.py --write-candidates
+
+      - name: Upload review artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: talk-candidate-review
+          path: |
+            _data/talk_candidates.yml
+            docs/automation/talk-candidate-review.md
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: bot/talk-candidate-pipeline
+          title: "chore: update talk candidates and review report"
+          commit-message: "chore: update talk candidates and review report"
+          body: |
+            Automated talk candidate pipeline update.
+
+            Includes:
+            - refreshed `_data/talk_candidates.yml`
+            - updated `docs/automation/talk-candidate-review.md`
+
+            Review checklist:
+            - Verify medium-confidence candidates.
+            - Confirm no false positives from common-name collisions.
+            - Merge only if changes are correct.

@@ -1,0 +1,75 @@
+sources:
+  - id: "mis-mpg"
+    domain: "mis.mpg.de"
+    region_scope: "europe"
+    seed_urls:
+      - "https://www.mis.mpg.de/"
+      - "https://www.mis.mpg.de/events"
+      - "https://www.mis.mpg.de/calendar"
+    enabled: true
+    source_type: "institute"
+    parser: "generic-html"
+    trust_level: "trusted"
+    notes: "Broad domain seed. Add specific seminar/event URLs when identified."
+
+  - id: "siam-meetings"
+    domain: "meetings.siam.org"
+    region_scope: "us"
+    seed_urls:
+      - "https://meetings.siam.org/"
+      - "https://meetings.siam.org/program.cfm"
+    enabled: true
+    source_type: "conference"
+    parser: "generic-html"
+    trust_level: "trusted"
+    notes: "Broad domain seed. Narrow to concrete SIAM event pages over time."
+
+  - id: "tuhh"
+    domain: "tuhh.de"
+    region_scope: "europe"
+    seed_urls:
+      - "https://www.tuhh.de/"
+      - "https://www.tuhh.de/dsf/"
+      - "https://www.tuhh.de/dsf/events"
+    enabled: true
+    source_type: "university"
+    parser: "generic-html"
+    trust_level: "trusted"
+    notes: "Broad domain seed. Prefer lecture/seminar pages."
+
+  - id: "tu-berlin"
+    domain: "tu.berlin"
+    region_scope: "europe"
+    seed_urls:
+      - "https://www.tu.berlin/"
+      - "https://www.tu.berlin/en/math"
+      - "https://www.tu.berlin/en/math/events"
+    enabled: true
+    source_type: "university"
+    parser: "generic-html"
+    trust_level: "trusted"
+    notes: "Broad domain seed. Add department seminar pages for better precision."
+
+  - id: "zib-seminars"
+    domain: "seminars.zib.de"
+    region_scope: "europe"
+    seed_urls:
+      - "https://seminars.zib.de/"
+      - "https://seminars.zib.de/all-events"
+    enabled: true
+    source_type: "seminar"
+    parser: "generic-html"
+    trust_level: "trusted"
+    notes: "High-value source for targeted seminar announcements."
+
+  - id: "dida"
+    domain: "dida.do"
+    region_scope: "europe"
+    seed_urls:
+      - "https://dida.do/"
+      - "https://dida.do/events"
+    enabled: true
+    source_type: "organization"
+    parser: "generic-html"
+    trust_level: "trusted"
+    notes: "Broad domain seed. Add exact event pages when available."

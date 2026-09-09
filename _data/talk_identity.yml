@@ -1,0 +1,44 @@
+names:
+  exact:
+    - "Johannes Muller"
+    - "Johannes Mueller"
+    - "Johannes Christoph Muller"
+    - "Johannes C. Muller"
+  weak:
+    - "J. Muller"
+    - "J C Muller"
+
+affiliations:
+  - "MPI MiS"
+  - "Max Planck Institute for Mathematics in the Sciences"
+  - "RWTH Aachen"
+  - "TU Berlin"
+  - "Technische Universitat Berlin"
+
+coauthors:
+  - "Marius Zeinhofer"
+  - "Guido Montufar"
+  - "Benjamin Gess"
+
+topics:
+  - "natural gradient"
+  - "natural gradients"
+  - "fisher rao"
+  - "scientific machine learning"
+  - "policy gradient"
+  - "pinn"
+  - "physics informed neural network"
+  - "reinforcement learning"
+
+negative_topics:
+  - "medicine"
+  - "law"
+  - "biology"
+  - "finance"
+  - "math bio"
+
+red_flags:
+  - "tum"
+
+manual_review_only_if_contains:
+  - "tum"

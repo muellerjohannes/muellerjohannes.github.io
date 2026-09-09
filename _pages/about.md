@@ -13,11 +13,12 @@ I am a PostDoc at the Institute of Mathematics at TU Berlin in the group of [*Be
 Prior, I was a PostDoc at the Junior Professorship for Mathematics of Machine Learning, RWTH Aachen University held by [Semih Çaycı](https://www.mathc.rwth-aachen.de/~cayci/home/) and a PhD student at the [International Max Planck Research School *Mathematics in the Sciences*](https://www.imprs-mis.mpg.de/) in Leipzig where I was jointly supervised by [Nihat Ay](https://www.tuhh.de/dsf/team/prof-dr-nihat-ay) and [Guido Montúfar](https://www.math.ucla.edu/~montufar/). 
 
 
-## News and upcoming events
+## News 
 
-* On the April 30, I will give a talk at the [Workshop on Structured Learning: Constraints and Geometry in Reinforcement Learning and Scientific Machine Learning](https://www.syscop.de/event/workshop-structured-learning-constraints-and-geometry-reinforcement-learning-and-scientific) at University of Freiburg
-* On June 3rd, I will speak at the Minisymposium [Implicit Bias in Neural Network Optimization](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=87736) at SIAM Conference on Optimization (OP26) in Edinburgh
-* Together with Martin Holler, Erion Morina, and Konstantin Riedl, I am organizing a Mini-Workshop on **Scientific Machine Learning** at SIAM Conference on Optimization (OP26) in Edinburgh. 
+* On October 2nd I 
 * Together with Siddhartha Mishra and Marius Zeinhofer, I am organizing a Mini-Workshop on **Geometric Methods in Scientific Machine Learning** from August 3rd-7th at Mathematische Forschungsinstitut Oberwolfach. 
+* Together with Martin Holler, Erion Morina, and Konstantin Riedl, I am organizing a Mini-Workshop on **Scientific Machine Learning** at SIAM Conference on Optimization (OP26) in Edinburgh. 
+* On June 3rd, I will speak at the Minisymposium [Implicit Bias in Neural Network Optimization](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=87736) at SIAM Conference on Optimization (OP26) in Edinburgh
+* On the April 30, I will give a talk at the [Workshop on Structured Learning: Constraints and Geometry in Reinforcement Learning and Scientific Machine Learning](https://www.syscop.de/event/workshop-structured-learning-constraints-and-geometry-reinforcement-learning-and-scientific) at University of Freiburg
 
 
