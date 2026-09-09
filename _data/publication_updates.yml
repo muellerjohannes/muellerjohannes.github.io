@@ -1,2 +1,9 @@
-generated_at: '2026-09-09T21:25:55+00:00'
-changes: []
+generated_at: '2026-09-09T21:45:10+00:00'
+changes:
+- key: milosevic2025central
+  title: Central path proximal policy optimization
+  state: published
+  venue: arXiv preprint arXiv:2506.00700
+  year: '2025'
+  url: https://openreview.net/forum?id=2cvUHCgZbF
+  change: arxiv_to_published
