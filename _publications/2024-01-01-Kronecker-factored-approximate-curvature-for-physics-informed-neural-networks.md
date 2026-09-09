@@ -3,10 +3,10 @@ title: "Kronecker-Factored Approximate Curvature for Physics-Informed Neural Net
 collection: publications
 permalink: /publication/2024-01-01-Kronecker-Factored-Approximate-Curvature-for-Physics-Informed-Neural-Networks
 date: 2024-01-01
-venue: "arXiv preprint arXiv:2405.15603"
+venue: "Advances in Neural Information Processing Systems 37"
 type: 'arxiv'
-paperurl: 'https://arxiv.org/abs/2405.15603'
-citation: "Felix Dangel, Johannes Müller, Marius Zeinhofer. <em>Kronecker-Factored Approximate Curvature for Physics-Informed Neural Networks</em>. arXiv preprint arXiv:2405.15603 (2024)."
-link: 'https://arxiv.org/abs/2405.15603'
+paperurl: 'https://doi.org/10.52202/079017-1091'
+citation: "Felix Dangel, Johannes Müller, Marius Zeinhofer. <em>Kronecker-Factored Approximate Curvature for Physics-Informed Neural Networks</em>. Advances in Neural Information Processing Systems 37 (2024)."
+link: 'https://doi.org/10.52202/079017-1091'
 ---
-[Access paper here](https://arxiv.org/abs/2405.15603){:target="_blank"}
+[Access paper here](https://doi.org/10.52202/079017-1091){:target="_blank"}

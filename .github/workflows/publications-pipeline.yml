@@ -15,10 +15,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
@@ -29,7 +29,8 @@ jobs:
         run: python3 markdown_generator/update_publications.py
 
       - name: Regenerate publication markdown files
-        run: python3 markdown_generator/pubsFromBib.py
+        run: python3 pubsFromBib.py
+        working-directory: markdown_generator
 
       - name: Update about-page publication news
         run: python3 markdown_generator/update_about_news.py
