@@ -114,7 +114,7 @@ Workshop on [Workshop on Mathematics of deep learning](https://www.newton.ac.uk/
 * Engineering Applications of Artificial Intelligence
 
 ## Organization
-* August 2026: Co-organizer of the Mini-Workshop *Geometric Methods in Scientific Machine Learning* at [MFO Oberwolfach](https://www.mfo.de/www/activity/2632b), Oberwolfach
+* August 2026: Co-organizer of the Mini-Workshop [*Geometric Methods in Scientific Machine Learning*](https://www.mfo.de/www/activity/2632b) at MFO Oberwolfach, Oberwolfach
 * June 2026: Co-organizer of the Mini-Workshop *Scientific Machine Learning* at SIAM Conference on Optimization (OP26), Edinburgh
 * September 2025: Mini-Symposium on *Geometric Optimization Methods for Scientific Machine Learning*, *Geometric Optimization Methods for Scientific Machine Learning* at [ENUMATH 2025](https://enumath2025.eu/), Heidelberg
 * August 2022: Workshop *Algebraic Geometry, Combinatorics and Machine Learning*, Max-Planck Institut für Mathematik in den Naturwissenschaften, Leipzig
