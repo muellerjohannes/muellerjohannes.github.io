@@ -88,7 +88,7 @@ author:
   pubmed           :  # example: "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.de/citations?user=Wfww-P8AAAAJ&hl=en"
   email            : "johannes.christoph.mueller@tu-berlin.de"
-  researchgate     :  "https://www.researchgate.net/profile/Johannes_Mueller"
+  researchgate     :  # "https://www.researchgate.net/profile/Johannes_Mueller"
   uri              :
   bitbucket        :
   codepen          :
@@ -103,7 +103,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "johannes-m%C3%BCller-266698150/"
-  orcid            : "https://orcid.org/0000-0001-8729-0466"
+  orcid            : # "https://orcid.org/0000-0001-8729-0466"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
