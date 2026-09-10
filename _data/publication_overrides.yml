@@ -1,0 +1,63 @@
+# Editorial overrides for the publication list.
+#
+# This file has the LAST word: it beats the hand-maintained
+# `markdown_generator/publications_manual.bib` and the bot-harvested
+# `markdown_generator/publications.bib`. The bot never writes here.
+#
+# Key each entry by arXiv id (preferred), by `doi:<doi>` or by `title:<title>`.
+#
+# Recognised fields (all optional):
+#   type:   preprint | published | workshop   -- which section the work appears in
+#   venue:  string                            -- venue as printed in the citation
+#   title:  string                            -- corrected title
+#   year:   number                            -- year used for sorting and citation
+#   url:    string                            -- link target
+#   note:   string                            -- shown as excerpt on the detail page
+#   hide:   true                              -- drop the work from the site
+#
+# Sections on /publications/ are, in order: Preprints, Publications,
+# Workshop Papers. "published" covers journals, book chapters and main-track
+# conferences (ICML, NeurIPS, ICLR, MSML, ...).
+
+overrides:
+
+  # Springer volume of the SciML workshop: peer-reviewed book chapter with a
+  # publisher DOI, so it belongs under Publications and not under Workshop
+  # Papers -- the venue name alone would suggest otherwise.
+  "2505.07311":
+    type: published
+    venue: "Scientific Machine Learning: Emerging Topics (SEMA SIMAI Springer Series)"
+
+  # ICML 2025 workshop paper: no publisher DOI, stays a workshop contribution.
+  "2506.00700":
+    type: workshop
+    venue: "Exploration in AI Today Workshop at ICML 2025"
+
+  # --- non-archival workshop contributions --------------------------------
+  # These have no proceedings entry anywhere, so no automatic source can ever
+  # find them: the venue is recorded here by hand.
+
+  # On the space-time expressivity of ResNets
+  "1910.09599":
+    type: workshop
+    venue: "Workshop on Integration of Deep Neural Models and Differential Equations at ICLR 2020"
+    year: 2020
+
+  # Deep Ritz revisited
+  "1912.03937":
+    type: workshop
+    venue: "Workshop on Integration of Deep Neural Models and Differential Equations at ICLR 2020"
+    year: 2020
+
+  # Solving infinite-horizon POMDPs with memoryless stochastic policies
+  "2205.14098":
+    type: workshop
+    venue: "Multi-disciplinary Conference on Reinforcement Learning and Decision Making (RLDM) 2022"
+    year: 2022
+
+  # --- please confirm or delete -------------------------------------------
+  # Currently listed as a preprint; add the venue here if it has appeared.
+  #
+  # "2507.10835":   # Functional Neural Wavefunction Optimization
+  #   type: published
+  #   venue: ""

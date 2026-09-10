@@ -1,322 +1,253 @@
 #!/usr/bin/env python
 # coding: utf-8
+"""Generate `_publications/*.md` from the bibliographies.
 
-# # Publications markdown generator for academicpages
-# 
-# Takes a set of bibtex of publications and converts them for use with [academicpages.github.io](academicpages.github.io). This is an interactive Jupyter notebook ([see more info here](http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html)). 
-# 
-# The core python code is also in `pubsFromBibs.py`. 
-# Run either from the `markdown_generator` folder after replacing updating the publist dictionary with:
-# * bib file names
-# * specific venue keys based on your bib file preferences
-# * any specific pre-text for specific files
-# * Collection Name (future feature)
-# 
-# TODO: Make this work with other databases of citations, 
-# TODO: Merge this with the existing TSV parsing solution
+Inputs
+------
+* ``markdown_generator/publications.bib``        -- bot-harvested (rewritten by the bot)
+* ``markdown_generator/publications_manual.bib`` -- hand-maintained (never touched by the bot)
+* ``_data/publication_overrides.yml``            -- your editorial decisions, highest precedence
 
+The classification (preprint / published / workshop) comes from
+``publications_model`` and is written into the ``type:`` front-matter field.
+The Liquid template groups on that field only -- it must not re-derive anything
+from venue strings.
 
-from pybtex.database.input import bibtex
-import pybtex.database.input.bibtex 
-from time import strptime
-import string
+Run from anywhere:  ``python3 markdown_generator/pubsFromBib.py``
+"""
+
+from __future__ import annotations
+
 import html
 import os
 import re
+import sys
+from pathlib import Path
+from time import strptime
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import publications_model as model  # noqa: E402
+
+OUTPUT_DIR = model.ROOT / "_publications"
+COLLECTION = "publications"
+PERMALINK_PREFIX = "/publication/"
+
+html_escape_table = {"&": "&amp;", '"': "&quot;", "'": "&apos;"}
 
 
-def is_ml_main_conference(venue):
-    venue_lower = venue.lower()
-    main_markers = [
-        "international conference on machine learning",
-        "icml",
-        "conference on neural information processing systems",
-        "advances in neural information processing systems",
-        "neurips",
-        "international conference on learning representations",
-        "iclr",
-    ]
-    return any(marker in venue_lower for marker in main_markers)
+def html_escape(text: str) -> str:
+    return "".join(html_escape_table.get(c, c) for c in text)
 
 
-def is_workshop_venue(venue):
-    venue_lower = venue.lower()
-    workshop_markers = ["workshop", "symposium", "satellite"]
-    return any(marker in venue_lower for marker in workshop_markers)
+def clean_bibtex(text: str) -> str:
+    """Convert BibTeX escapes to Unicode."""
 
-
-def classify_publication_type(fields):
-    journal = clean_bibtex(fields.get("journal", ""))
-    venue_booktitle = clean_bibtex(fields.get("booktitle", ""))
-    has_doi = bool(fields.get("doi", "").strip())
-    has_booktitle = bool(venue_booktitle)
-
-    if has_booktitle:
-        if is_ml_main_conference(venue_booktitle):
-            return "published"
-        if is_workshop_venue(venue_booktitle):
-            return "workshop"
-        return "published"
-
-    if has_doi and (journal and "arXiv" not in journal):
-        return "published"
-
-    if journal and "arXiv" in journal:
-        return "preprint"
-
-    return "published"
-
-#todo: incorporate different collection types rather than a catch all publications, requires other changes to template
-publist = {
-    "publication": {
-        "file" : "publications.bib",
-        "venuekey": "journal",
-        "venue-pretext": "",
-        "collection" : {"name":"publications",
-                        "permalink":"/publication/"}
-    }
-}
-
-html_escape_table = {
-    "&": "&amp;",
-    '"': "&quot;",
-    "'": "&apos;"
-    }
-
-def html_escape(text):
-    """Produce entities within text."""
-    return "".join(html_escape_table.get(c,c) for c in text)
-
-
-def clean_bibtex(text):
-    """Convert BibTeX escaped characters to Unicode"""
-    # Common BibTeX escapes - order matters (longer patterns first)
     replacements = [
-        # Lowercase with umlauts
-        (r'{\"u}', 'ü'), (r'{\-"u}', 'ü'), (r'{\"o}', 'ö'), (r'{\"a}', 'ä'),
-        (r'{\ s}', 'ß'), (r'{\ss}', 'ß'),
-        # Uppercase
-        (r'{\"U}', 'Ü'), (r'{\"O}', 'Ö'), (r'{\"A}', 'Ä'),
-        # Accented
-        (r"{\'a}", 'á'), (r"{\'e}", 'é'), (r"{\'i}", 'í'), (r"{\'o}", 'ó'), (r"{\'u}", 'ú'),
-        (r'{\`a}', 'à'), (r'{\`e}', 'è'), (r'{\`i}', 'ì'), (r'{\`o}', 'ò'), (r'{\`u}', 'ù'),
-        # Other letters
-        (r'{\c{C}}', 'Ç'), (r'{\c{c}}', 'ç'),
-        (r'{\~n}', 'ñ'), (r'{\~a}', 'ã'), (r'{\~o}', 'õ'),
-        (r'{\.z}', 'ż'), (r'{\.a}', 'ą'),
-        (r'{\i}', 'ı'), (r'{\\i}', 'ı'),
-        # Ligatures
-        (r'{ff}', 'ff'), (r'{fi}', 'fi'), (r'{fl}', 'fl'), 
-        (r'{ffi}', 'ffi'), (r'{ffl}', 'ffl'),
-        # Dashes
-        ('--', '–'), ('---', '—'),
+        (r'{\"u}', "ü"), (r'{\"{u}}', "ü"), (r'{\-"u}', "ü"),
+        (r'{\"o}', "ö"), (r'{\"{o}}', "ö"),
+        (r'{\"a}', "ä"), (r'{\"{a}}', "ä"),
+        (r"{\ss}", "ß"), (r"{\ s}", "ß"), (r"{\ss{}}", "ß"),
+        (r'{\"U}', "Ü"), (r'{\"{U}}', "Ü"),
+        (r'{\"O}', "Ö"), (r'{\"{O}}', "Ö"),
+        (r'{\"A}', "Ä"), (r'{\"{A}}', "Ä"),
+        (r"{\'a}", "á"), (r"{\'e}", "é"), (r"{\'i}", "í"), (r"{\'o}", "ó"), (r"{\'u}", "ú"),
+        (r"{\'{a}}", "á"), (r"{\'{e}}", "é"), (r"{\'{i}}", "í"), (r"{\'{o}}", "ó"), (r"{\'{u}}", "ú"),
+        (r"{\`a}", "à"), (r"{\`e}", "è"), (r"{\`i}", "ì"), (r"{\`o}", "ò"), (r"{\`u}", "ù"),
+        (r"{\c{C}}", "Ç"), (r"{\c{c}}", "ç"),
+        (r"{\~n}", "ñ"), (r"{\~a}", "ã"), (r"{\~o}", "õ"),
+        (r"{\.z}", "ż"), (r"{\.a}", "ą"),
+        (r"{\i}", "ı"), (r"{\\i}", "ı"),
+        (r"{ff}", "ff"), (r"{fi}", "fi"), (r"{fl}", "fl"), (r"{ffi}", "ffi"), (r"{ffl}", "ffl"),
+        ("---", "—"), ("--", "–"),
+        (r"\_", "_"), (r"\&", "&"), (r"\%", "%"),
     ]
-    result = text
+    result = text or ""
     for pattern, replacement in replacements:
         result = result.replace(pattern, replacement)
-    # Remove remaining braces
-    result = result.replace('{', '').replace('}', '')
-    return result
+    return result.replace("{", "").replace("}", "")
 
 
-def escape_yaml_string(text):
-    """Escape string for YAML - avoid HTML entities breaking YAML"""
-    # Replace quotes that could break YAML
-    return text.replace('"', '\\"').replace("'", "\\'")
+def escape_yaml_string(text: str) -> str:
+    return text.replace('"', '\\"')
 
 
-for pubsource in publist:
-    parser = bibtex.Parser()
-    bibdata = parser.parse_file(publist[pubsource]["file"])
-    generated_files = set()
-    used_html_filenames_casefold = set()
-    output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "_publications"))
-
-    #loop through the individual references in a given bibtex file
-    for bib_id in bibdata.entries:
-        #reset default date
-        pub_year = "1900"
-        pub_month = "01"
-        pub_day = "01"
-        
-        b = bibdata.entries[bib_id].fields
-        
-        try:
-            pub_year = f'{b["year"]}'
-
-            #todo: this hack for month and day needs some cleanup
-            if "month" in b.keys(): 
-                if(len(b["month"])<3):
-                    pub_month = "0"+b["month"]
-                    pub_month = pub_month[-2:]
-                elif(b["month"] not in range(12)):
-                    tmnth = strptime(b["month"][:3],'%b').tm_mon   
-                    pub_month = "{:02d}".format(tmnth) 
-                else:
-                    pub_month = str(b["month"])
-            if "day" in b.keys(): 
-                pub_day = str(b["day"])
-
-                
-            pub_date = pub_year+"-"+pub_month+"-"+pub_day
-            
-            #strip out {} as needed (some bibtex entries that maintain formatting)
-            clean_title = clean_bibtex(b["title"]).replace(" ","-")    
-
-            url_slug = re.sub(r"\[.*\]|[^a-zA-Z0-9_-]", "", clean_title)
-            url_slug = url_slug.replace("--","-")
-
-            base_html_filename = (str(pub_date) + "-" + url_slug).replace("--","-")
-            html_filename = base_html_filename
-            if html_filename.casefold() in used_html_filenames_casefold:
-                key_suffix = re.sub(r"[^a-zA-Z0-9_-]", "", bib_id).lower()
-                if not key_suffix:
-                    key_suffix = "entry"
-                html_filename = f"{base_html_filename}-{key_suffix}".replace("--", "-")
-                while html_filename.casefold() in used_html_filenames_casefold:
-                    html_filename = f"{html_filename}-x"
-            used_html_filenames_casefold.add(html_filename.casefold())
-            md_filename = f"{html_filename}.md"
-
-            #Build Citation from text
-            citation = ""
-
-#citation authors - full name format: First Last
-            authors_list = []
-            for author in bibdata.entries[bib_id].persons["author"]:
-                raw_first = author.first_names[0] if author.first_names else ""
-                raw_last = author.last_names[0] if author.last_names else ""
-                first = clean_bibtex(raw_first)
-                last = clean_bibtex(raw_last)
-                authors_list.append(first + " " + last)
-            
-            citation = ", ".join(authors_list) + ". "
-
-            #citation title - with period outside italics
-            title = clean_bibtex(b["title"])
-            citation = citation + "<em>" + title + "</em>. "
-
-            #add venue logic depending on citation type
-            # For @inproceedings, use booktitle; for @article, use journal
-            venue = ""
-            if "booktitle" in b.keys():
-                venue = clean_bibtex(b["booktitle"])
-            elif "journal" in b.keys():
-                venue = clean_bibtex(b["journal"])
-
-            if venue:
-                citation = citation + venue + " "
-            
-            citation = citation + "(" + pub_year + ")."
-            
-            # Escape for YAML
-            citation_yaml = escape_yaml_string(citation)
-
-            
-            ## YAML variables - escape properly for YAML
-            title_yaml = clean_bibtex(b["title"])
-            md = "---\ntitle: \""   + title_yaml + '"' + "\n"
-            
-            md += """collection: """ +  publist[pubsource]["collection"]["name"]
-
-            md += """\npermalink: """ + publist[pubsource]["collection"]["permalink"]  + html_filename
-            
-            note = False
-            if "note" in b.keys():
-                if len(str(b["note"])) > 5:
-                    md += "\nexcerpt: \"" + clean_bibtex(b["note"]) + "\""
-                    note = True
-
-            md += "\ndate: " + str(pub_date) 
-
-            md += "\nvenue: \"" +venue + "\""
-
-            # Determine publication type: arXiv vs published
-            # arXiv only if journal field contains "arXiv preprint"
-            # All others (including workshop papers) are "published"
-            pub_type = classify_publication_type(b)
-            md += "\ntype: '" + pub_type + "'"
-            
-            url = False
-            if "url" in b.keys():
-                if len(str(b["url"])) > 5:
-                    md += "\npaperurl: '" + b["url"] + "'"
-                    url = True
-            elif "doi" in b.keys():
-                doi = clean_bibtex(b["doi"])
-                if len(doi) > 5:
-                    if not doi.startswith("http"):
-                        doi = "https://doi.org/" + doi
-                    md += "\npaperurl: '" + doi + "'"
-                    url = True
-            elif "journal" in b.keys() and "arXiv" in clean_bibtex(b["journal"]):
-                arxiv_id = clean_bibtex(b["journal"])
-                match = re.search(r'arXiv:([0-9.]+)', arxiv_id)
-                if match:
-                    arxiv_url = "https://arxiv.org/abs/" + match.group(1)
-                    md += "\npaperurl: '" + arxiv_url + "'"
-                    url = True
-
-            md += "\ncitation: \"" + citation + "\""
-
-            # Add link directly in citation if exists
-            if url:
-                paper_url = b.get("url", "")
-                if not paper_url and "doi" in b.keys():
-                    paper_url = "https://doi.org/" + clean_bibtex(b["doi"])
-                elif not paper_url and "journal" in b.keys() and "arXiv" in clean_bibtex(b["journal"]):
-                    match = re.search(r'arXiv:([0-9.]+)', clean_bibtex(b["journal"]))
-                    if match:
-                        paper_url = "https://arxiv.org/abs/" + match.group(1)
-                if paper_url:
-                    # Note: citation already has period, add link after
-                    md += "\nlink: '" + paper_url + "'"
-
-            md += "\n---"
-
-            
-            ## Markdown description for individual page
-            if note:
-                md += "\n" + html_escape(clean_bibtex(b["note"])) + "\n"
-
-            if url:
-                paper_url = b.get("url", "")
-                if not paper_url and "doi" in b.keys():
-                    paper_url = "https://doi.org/" + clean_bibtex(b["doi"])
-                elif not paper_url and "journal" in b.keys() and "arXiv" in clean_bibtex(b["journal"]):
-                    arxiv_id = clean_bibtex(b["journal"])
-                    match = re.search(r'arXiv:([0-9.]+)', arxiv_id)
-                    if match:
-                        paper_url = "https://arxiv.org/abs/" + match.group(1)
-                md += "\n[Access paper here](" + paper_url + "){:target=\"_blank\"}\n" 
-            else:
-                md += "\nUse [Google Scholar](https://scholar.google.com/scholar?q="+html.escape(clean_title.replace("-","+"))+"){:target=\"_blank\"} for full citation"
-
-            md_filename = os.path.basename(md_filename)
-            generated_files.add(md_filename)
-
+def pub_date_from(fields) -> str:
+    year = str(fields.get("year", "") or "1900")
+    month = "01"
+    day = "01"
+    raw_month = str(fields.get("month", "") or "")
+    if raw_month:
+        if raw_month.isdigit():
+            month = f"{int(raw_month):02d}"
+        else:
             try:
-                with open("../_publications/" + md_filename, 'w') as f:
-                    f.write(md)
-                print(f'SUCESSFULLY PARSED {bib_id}: "', b["title"][:60],"..."*(len(b['title'])>60),"\"")
-            except IOError as e:
-                print(f'ERROR writing file for {bib_id}: {e}')
+                month = "{:02d}".format(strptime(raw_month[:3], "%b").tm_mon)
+            except ValueError:
+                month = "01"
+    raw_day = str(fields.get("day", "") or "")
+    if raw_day.isdigit():
+        day = f"{int(raw_day):02d}"
+    return f"{year}-{month}-{day}"
 
-        except KeyError as e:
-            print(f'WARNING Missing Expected Field {e} from entry {bib_id}: "', b.get("title", "")[:30],"...\"")
-            continue
 
-    for existing_name in os.listdir(output_dir):
-        if not existing_name.endswith(".md"):
+def author_names(persons, name_fixes=None) -> list:
+    """Author list for the citation, with configured display-name fixes."""
+
+    name_fixes = name_fixes or {}
+    names = []
+    for person in persons.get("author", []):
+        name = clean_bibtex(person.full_name()).strip()
+        if not name:
             continue
-        if existing_name in generated_files:
-            continue
-        existing_path = os.path.join(output_dir, existing_name)
+        names.append(name_fixes.get(model.normalize(name), name))
+    return names
+
+
+def load_name_fixes(config) -> dict:
+    raw = (config or {}).get("author_name_fixes") or {}
+    return {model.normalize(str(k)): str(v) for k, v in raw.items()}
+
+
+def paper_url(fields) -> str:
+    url = str(fields.get("url", "") or "").strip()
+    if len(url) > 5:
+        return clean_bibtex(url)
+    doi = clean_bibtex(str(fields.get("doi", "") or "")).strip()
+    if len(doi) > 5:
+        return doi if doi.startswith("http") else f"https://doi.org/{doi}"
+    arxiv_id = model.entry_arxiv_id(fields)
+    if arxiv_id:
+        return f"https://arxiv.org/abs/{arxiv_id}"
+    return ""
+
+
+def slug_for(title: str, pub_date: str) -> str:
+    clean_title = clean_bibtex(title).replace(" ", "-")
+    url_slug = re.sub(r"\[.*\]|[^a-zA-Z0-9_-]", "", clean_title)
+    url_slug = url_slug.replace("--", "-")
+    return f"{pub_date}-{url_slug}".replace("--", "-")
+
+
+def build_markdown(record, overrides, config, name_fixes=None) -> tuple:
+    fields = model.resolved_fields(record["fields"], overrides, config)
+    if fields.get("hide") == "true":
+        return "", ""
+
+    title = clean_bibtex(fields.get("title", "")).strip()
+    if not title:
+        raise KeyError("title")
+    pub_date = pub_date_from(fields)
+    pub_year = pub_date.split("-")[0]
+    filename_stem = slug_for(fields.get("title", ""), pub_date)
+
+    venue = clean_bibtex(fields.get("venue", "")).strip()
+    pub_type = fields.get("type", model.PREPRINT)
+    url = paper_url(fields)
+
+    citation = ", ".join(author_names(record["persons"], name_fixes)) + ". "
+    citation += f"<em>{title}</em>. "
+    if venue:
+        citation += f"{venue} "
+    citation += f"({pub_year})."
+
+    md = f'---\ntitle: "{escape_yaml_string(title)}"\n'
+    md += f"collection: {COLLECTION}\n"
+    md += f"permalink: {PERMALINK_PREFIX}{filename_stem}\n"
+
+    note = clean_bibtex(str(fields.get("note", "") or ""))
+    has_note = len(note) > 5
+    if has_note:
+        md += f'excerpt: "{escape_yaml_string(note)}"\n'
+
+    md += f"date: {pub_date}\n"
+    md += f'venue: "{escape_yaml_string(venue)}"\n'
+    md += f"type: '{pub_type}'\n"
+    if url:
+        md += f"paperurl: '{url}'\n"
+    md += f'citation: "{escape_yaml_string(citation)}"\n'
+    if url:
+        md += f"link: '{url}'\n"
+    md += "---"
+
+    if has_note:
+        md += "\n" + html_escape(note) + "\n"
+    if url:
+        md += f'\n[Access paper here]({url}){{:target="_blank"}}\n'
+    else:
+        query = html.escape(clean_bibtex(fields.get("title", "")).replace(" ", "+"))
+        md += (
+            f'\nUse [Google Scholar](https://scholar.google.com/scholar?q={query})'
+            '{:target="_blank"} for full citation'
+        )
+
+    return f"{filename_stem}.md", md
+
+
+def main() -> int:
+    overrides = model.load_overrides()
+    config = model.load_yaml(model.SOURCES_PATH)
+    records = model.load_works()
+    name_fixes = load_name_fixes(config)
+
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    generated = {}
+    for record in records:
         try:
-            with open(existing_path, "r", encoding="utf-8") as f:
-                content = f.read()
-            if "collection: publications" in content:
-                os.remove(existing_path)
-                print(f"REMOVED stale publication file: {existing_name}")
-        except OSError as e:
-            print(f"WARNING could not inspect/remove stale file {existing_name}: {e}")
+            filename, md = build_markdown(record, overrides, config, name_fixes)
+        except KeyError as exc:
+            print(f"WARNING missing field {exc} in entry {record['key']}")
+            continue
+        if not filename:
+            print(f"SKIPPED (hidden by override): {record['key']}")
+            continue
+        if filename in generated:
+            print(f"WARNING duplicate output file {filename} from {record['key']} -- skipped")
+            continue
+        generated[filename] = md
+
+    for filename, md in generated.items():
+        (OUTPUT_DIR / filename).write_text(md, encoding="utf-8")
+        print(f"WROTE {filename}")
+
+    # Case-insensitive filesystems (macOS) report the OLD spelling of a file
+    # that was just rewritten under a new capitalisation -- deleting it as
+    # "stale" would delete the fresh file. Rename it instead.
+    canonical_by_casefold = {name.casefold(): name for name in generated}
+    for existing in sorted(os.listdir(OUTPUT_DIR)):
+        if not existing.endswith(".md") or existing in generated:
+            continue
+        path = OUTPUT_DIR / existing
+        canonical = canonical_by_casefold.get(existing.casefold())
+        if canonical:
+            target = OUTPUT_DIR / canonical
+            try:
+                if target.exists() and not os.path.samefile(path, target):
+                    path.unlink()
+                    print(f"REMOVED stale publication file: {existing}")
+                    continue
+                staging = OUTPUT_DIR / f"{canonical}.rename-tmp"
+                path.rename(staging)
+                staging.rename(target)
+                print(f"RENAMED {existing} -> {canonical}")
+            except OSError as exc:
+                print(f"WARNING could not rename {existing}: {exc}")
+            continue
+        try:
+            if f"collection: {COLLECTION}" in path.read_text(encoding="utf-8"):
+                path.unlink()
+                print(f"REMOVED stale publication file: {existing}")
+        except OSError as exc:
+            print(f"WARNING could not inspect/remove {existing}: {exc}")
+
+    counts = {}
+    for md in generated.values():
+        match = re.search(r"^type: '(\w+)'$", md, re.MULTILINE)
+        if match:
+            counts[match.group(1)] = counts.get(match.group(1), 0) + 1
+    print(f"\n{len(generated)} works: " + ", ".join(f"{k}={v}" for k, v in sorted(counts.items())))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

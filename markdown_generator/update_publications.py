@@ -22,9 +22,14 @@ from urllib.parse import quote
 
 import requests
 import yaml
-from pybtex.database import BibliographyData, Entry, Person
-from pybtex.database.input import bibtex
-from pybtex.database.output import bibtex as bibtex_writer
+
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import bibio  # noqa: E402
+import publications_model as model  # noqa: E402
+from bibio import BibliographyData, Entry, Person  # noqa: E402
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,6 +38,8 @@ GEN_DIR = ROOT / "markdown_generator"
 
 CONFIG_PATH = DATA_DIR / "publication_sources.yml"
 BIB_PATH = GEN_DIR / "publications.bib"
+# Hand-maintained records. Read for matching, NEVER written to.
+MANUAL_BIB_PATH = GEN_DIR / "publications_manual.bib"
 UPDATES_PATH = DATA_DIR / "publication_updates.yml"
 
 SESSION = requests.Session()
@@ -303,9 +310,16 @@ def load_config() -> Dict[str, Any]:
         return yaml.safe_load(handle) or {}
 
 
-def load_bib() -> BibliographyData:
-    parser = bibtex.Parser()
-    return parser.parse_file(str(BIB_PATH))
+def load_bib(path: Path = BIB_PATH) -> BibliographyData:
+    if not Path(path).exists():
+        return BibliographyData()
+    return bibio.parse_file(str(path))
+
+
+def load_manual_bib() -> BibliographyData:
+    """Hand-curated records; used for matching only, never rewritten."""
+
+    return load_bib(MANUAL_BIB_PATH)
 
 
 def crossref_lookup_by_doi(doi: str) -> Optional[Dict[str, str]]:
@@ -950,6 +964,8 @@ def deduplicate_title_author_groups(db: BibliographyData) -> Tuple[int, int]:
 
 
 def build_state(entries: Dict[str, Entry]) -> Dict[str, Dict[str, str]]:
+    overrides = model.load_overrides()
+    config = load_config()
     out: Dict[str, Dict[str, str]] = {}
     for key, entry in entries.items():
         doi = normalize_doi(entry.fields.get("doi", ""))
@@ -958,23 +974,60 @@ def build_state(entries: Dict[str, Entry]) -> Dict[str, Dict[str, str]]:
         out[ident] = {
             "key": key,
             "title": entry.fields.get("title", ""),
-            "state": "published" if is_published_entry(entry) else "arxiv",
-            "venue": entry.fields.get("journal", entry.fields.get("booktitle", "")),
+            "state": _state_label(entry, overrides, config),
+            "venue": model.venue_of(entry.fields),
             "year": entry.fields.get("year", ""),
             "url": entry.fields.get("url", ""),
         }
     return out
 
 
+def merged_state() -> Dict[str, Dict[str, str]]:
+    """State of the *published site*: auto bib + manual bib + overrides.
+
+    Used for the transition report so that a work already curated by hand is
+    never announced as a new preprint.
+    """
+
+    overrides = model.load_overrides()
+    config = load_config()
+    out: Dict[str, Dict[str, str]] = {}
+    for work in model.load_works():
+        fields = model.resolved_fields(work["fields"], overrides, config)
+        ident = (
+            model.entry_arxiv_id(work["fields"])
+            or model.entry_doi(work["fields"])
+            or model.title_fingerprint(fields.get("title", ""))
+        )
+        kind = fields.get("type", model.PREPRINT)
+        out[ident] = {
+            "key": work["key"],
+            "title": fields.get("title", ""),
+            "state": "arxiv" if kind == model.PREPRINT else kind,
+            "venue": fields.get("venue", ""),
+            "year": fields.get("year", ""),
+            "url": fields.get("url", ""),
+        }
+    return out
+
+
+def _state_label(entry: Entry, overrides, config) -> str:
+    """published / workshop / arxiv -- the same classification the site uses."""
+
+    kind = model.classify(entry.fields, overrides, config)
+    return "arxiv" if kind == model.PREPRINT else kind
+
+
 def write_updates(old_state: Dict[str, Dict[str, str]], new_state: Dict[str, Dict[str, str]]) -> Dict[str, Any]:
     changes: List[Dict[str, str]] = []
     for ident, item in new_state.items():
         prev = old_state.get(ident)
+        state = item["state"]
         if prev is None:
-            changes.append({**item, "change": "new_published" if item["state"] == "published" else "new_arxiv"})
+            changes.append({**item, "change": f"new_{state}"})
             continue
-        if prev["state"] == "arxiv" and item["state"] == "published":
-            changes.append({**item, "change": "arxiv_to_published"})
+        if prev["state"] == "arxiv" and state != "arxiv":
+            changes.append({**item, "change": f"arxiv_to_{state}"})
 
     payload = {
         "generated_at": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(),
@@ -985,8 +1038,7 @@ def write_updates(old_state: Dict[str, Dict[str, str]], new_state: Dict[str, Dic
 
 
 def write_bib(db: BibliographyData) -> None:
-    content = bibtex_writer.Writer().to_string(db)
-    BIB_PATH.write_text(content, encoding="utf-8")
+    BIB_PATH.write_text(bibio.to_string(db), encoding="utf-8")
 
 
 def main() -> int:
@@ -1001,7 +1053,7 @@ def main() -> int:
         name_variants = ["Johannes Muller", "Johannes Mueller"]
 
     db = load_bib()
-    old_state = build_state(db.entries)
+    old_state = merged_state()
 
     arxiv_ids = collect_arxiv_ids(arxiv_author_id, name_variants, db)
     arxiv_items = []
@@ -1018,7 +1070,7 @@ def main() -> int:
     title_updates = normalize_titles_from_trusted_sources(db)
     write_bib(db)
 
-    new_state = build_state(db.entries)
+    new_state = merged_state()
     updates = write_updates(old_state, new_state)
 
     summary = {

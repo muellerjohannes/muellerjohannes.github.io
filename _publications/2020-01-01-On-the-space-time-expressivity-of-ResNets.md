@@ -1,0 +1,12 @@
+---
+title: "On the space-time expressivity of ResNets"
+collection: publications
+permalink: /publication/2020-01-01-On-the-space-time-expressivity-of-ResNets
+date: 2020-01-01
+venue: "Workshop on Integration of Deep Neural Models and Differential Equations at ICLR 2020"
+type: 'workshop'
+paperurl: 'https://arxiv.org/abs/1910.09599'
+citation: "Johannes Müller. <em>On the space-time expressivity of ResNets</em>. Workshop on Integration of Deep Neural Models and Differential Equations at ICLR 2020 (2020)."
+link: 'https://arxiv.org/abs/1910.09599'
+---
+[Access paper here](https://arxiv.org/abs/1910.09599){:target="_blank"}

@@ -1,0 +1,12 @@
+---
+title: "Notes on Exact Boundary Values in Residual Minimisation"
+collection: publications
+permalink: /publication/2022-01-01-Notes-on-Exact-Boundary-Values-in-Residual-Minimisation
+date: 2022-01-01
+venue: "Mathematical and Scientific Machine Learning (MSML)"
+type: 'published'
+paperurl: 'https://proceedings.mlr.press/v190/muller22b.html'
+citation: "Johannes Müller, Marius Zeinhofer. <em>Notes on Exact Boundary Values in Residual Minimisation</em>. Mathematical and Scientific Machine Learning (MSML) (2022)."
+link: 'https://proceedings.mlr.press/v190/muller22b.html'
+---
+[Access paper here](https://proceedings.mlr.press/v190/muller22b.html){:target="_blank"}

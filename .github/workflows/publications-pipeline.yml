@@ -23,17 +23,22 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: python -m pip install --upgrade pip requests pyyaml pybtex
+        run: python -m pip install --upgrade pip requests pyyaml
+
+      - name: Run publication tests
+        run: python3 markdown_generator/test_publications.py
 
       - name: Update publication sources and merge
         run: python3 markdown_generator/update_publications.py
 
       - name: Regenerate publication markdown files
-        run: python3 pubsFromBib.py
-        working-directory: markdown_generator
+        run: python3 markdown_generator/pubsFromBib.py
 
       - name: Update about-page publication news
         run: python3 markdown_generator/update_about_news.py
+
+      - name: Re-run tests against the regenerated data
+        run: python3 markdown_generator/test_publications.py
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -55,12 +60,17 @@ jobs:
             Automated publications pipeline update.
 
             Includes:
-            - refreshed `markdown_generator/publications.bib`
+            - refreshed `markdown_generator/publications.bib` (bot-owned file)
             - regenerated `_publications/*.md`
             - updated `_data/publication_updates.yml`
             - updated publication items under `## News` in `_pages/about.md`
 
+            Not touched by the bot: `markdown_generator/publications_manual.bib`
+            and `_data/publication_overrides.yml`.
+
             Review checklist:
             - Verify new publications and arXiv -> published transitions.
+            - Check that nothing landed in the wrong section; correct it in
+              `_data/publication_overrides.yml` rather than in the generated files.
             - Verify generated news bullets are correct.
             - Merge only if updates are accurate.
