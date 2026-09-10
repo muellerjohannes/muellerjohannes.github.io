@@ -3,3 +3,6 @@ _site/
 __pycache__/
 *.pyc
 Claude outputs/
+
+.DS_Store
+**/.DS_Store
