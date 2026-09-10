@@ -24,10 +24,10 @@ author_profile: true
 * February 2023: *Geometry of Sequential Decision Problems*, [Optimization and Data Science Seminar](https://mathweb.ucsd.edu/~njw/Teaching/OptimSeminar/OptSeminar_sp23.html), University of California, San Diego, online
 * November 2022: *Geometry of Markov decision processes*, [Annual meeting of the Priority Programme Theoretical Foundations of Deep Learning (SPP 2298)](https://www.foundationsofdl.de/), Evangelische Akademie Tutzing, Germany
 * October 2022: *Geometry of Natural Policy Gradient Methods*, [Applied Math Colloquium](https://secure.math.ucla.edu/seminars/show_quarter.php?type=Applied%20Colloquium), University of California, Los Angeles, USA
-* September 2022: *Algebraic Geometry and Machine Learning*, [Minisymposium at the SIAM Conference on Mathematics of Data Science (MDS22)](https://www.siam.org/conferences/cm/conference/mds22), Town and Country Resort, San Diego, California, USA
-* August 2022: [Workshop on Algebraic Geometry, Combinatorics, and Machine Learning](https://www.mis.mpg.de/calendar/conferences/2022/caml.html), Max Planck Institute for Mathematics in the Sciences, Leipzig, Germany
-* May 2022: [Algebraic Statistics 2022](https://sites.google.com/iit.edu/as2022), University of Hawai'i at Manoa, Honolulu, HI, USA
-* April 2020: [Math Machine Learning seminar MPI MiS + UCLA](https://www.mis.mpg.de/montufar/seminars/math-ml-seminar.html), online
+* September 2022: *The Geometry of Memoryless Stochastic Policy Optimization in Infinite-Horizon POMDPs*, [Minisymposium Algebraic Geometry and Machine Learning at the SIAM Conference on Mathematics of Data Science (MDS22)](https://www.siam.org/conferences/cm/conference/mds22), Town and Country Resort, San Diego, California, USA
+* August 2022: *From Markov decision processes to algebraic statistics*, [Workshop on Algebraic Geometry, Combinatorics, and Machine Learning](https://www.mis.mpg.de/calendar/conferences/2022/caml.html), Max Planck Institute for Mathematics in the Sciences, Leipzig, Germany
+* May 2022: *The Geometry of Sequential Decision Problems with State Uncertainty*, [Algebraic Statistics 2022](https://sites.google.com/iit.edu/as2022), University of Hawai'i at Manoa, Honolulu, HI, USA
+* April 2020: *Deep Ritz Revisited*, [Math Machine Learning seminar MPI MiS + UCLA](https://www.mis.mpg.de/montufar/seminars/math-ml-seminar.html), online
 <!-- talks:end -->
 
 ## Poster presentations
