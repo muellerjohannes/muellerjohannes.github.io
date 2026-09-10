@@ -42,7 +42,11 @@ html[data-theme="dark"] {
 /* Base
    ========================================================================== */
 
-html[data-theme="dark"] body {
+/* The theme uses floats, so <body> collapses to zero height and its
+   background is not propagated to the canvas; paint <html> as well. */
+html[data-theme="dark"],
+html[data-theme="dark"] body,
+html[data-theme="dark"] .site-wrapper {
   background-color: var(--jm-bg);
   color: var(--jm-text);
 }
