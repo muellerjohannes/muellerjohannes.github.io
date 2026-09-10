@@ -74,3 +74,13 @@ jobs:
               `_data/publication_overrides.yml` rather than in the generated files.
             - Verify generated news bullets are correct.
             - Merge only if updates are accurate.
+# Display name fixes: applied to the author list in generated citations, keyed
+# by the accent-free lowercase form of the name as it appears in BibTeX.
+author_name_fixes:
+  "semih cayci": "Semih Çayci"
+  "johannes muller": "Johannes Müller"
+
+# Extra venue rules for the classifier in markdown_generator/publications_model.py.
+main_venue_markers: []
+main_venue_acronyms: []
+workshop_patterns: []
