@@ -183,6 +183,12 @@ html[data-theme="dark"] .author__urls li a {
   color: var(--jm-text);
 }
 
+/* Legacy `.fa` icons (the location marker) are pinned to black in
+   _utilities.scss; brand icons use `.fab` and keep their own colors. */
+html[data-theme="dark"] .social-icons .fa {
+  color: var(--jm-text);
+}
+
 html[data-theme="dark"] .author__urls li a:hover {
   color: var(--jm-link-hover);
 }
