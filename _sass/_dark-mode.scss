@@ -155,8 +155,10 @@ html[data-theme="dark"] .author__urls-wrapper .author__urls {
   color: var(--jm-text);
 }
 
+/* Same treatment as in light mode: the box sits flush with the page
+   background, with only a faint border. */
 html[data-theme="dark"] .author__urls-wrapper .author__urls {
-  background: var(--jm-surface);
+  background: var(--jm-bg);
   border-color: var(--jm-border);
 }
 
@@ -165,7 +167,7 @@ html[data-theme="dark"] .author__urls-wrapper .author__urls:before {
 }
 
 html[data-theme="dark"] .author__urls-wrapper .author__urls:after {
-  border-bottom-color: var(--jm-surface);
+  border-bottom-color: var(--jm-bg);
 }
 
 html[data-theme="dark"] .author__avatar img {
