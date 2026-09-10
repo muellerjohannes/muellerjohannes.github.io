@@ -6,19 +6,29 @@ author_profile: true
 ---
 
 ## Talks
-* September 2025: *Functional Optimization in Scientific Machine Learning*, [Conference on Mathematics of Machine Learning 2025](https://www.tuhh.de/dsf/mml), TU Hamburg-Harburg 
-* February 2025: *Geometry of Natural Policy Gradient Methods and Entropy Regularization in Reinforcement Learning*, Seminar für Angewandte Matheamtik, ETH Zurich
+<!-- talks:begin -->
+<!-- generated from _data/talks.yml by markdown_generator/render_talks.py -- do not edit by hand -->
+* October 2026: *The Advective Fisher-Rao Geometry of Deterministic Measure Transport*, [AG Analysis-Probability, MPI MiS](https://www.mis.mpg.de/events/event/the-advective-fisher-rao-geometry-of-deterministic-measure-transport), Leipzig, Germany
+* August 2026: *The Advective Fisher-Rao Geometry of Deterministic Measure Transport*, [Mini-Workshop on Geometric Methods in Scientific Machine Learning, MFO Oberwolfach](https://www.mfo.de/www/activity/2632b), Oberwolfach, Germany
+* August 2026: *The Advective Fisher-Rao Geometry on Deterministic Flows of Measures*, [Institute for Data Science Foundations (DSF), TUHH](https://www.tuhh.de/dsf/), Hamburg, Germany
+* July 2026: *Resolving Ill-Conditioning in Scientific Machine Learning*, [Fluid Dynamics, Singularities, and AI-Driven Discovery](https://speinshart.ai/pulse/e/fluid-dynamics-singularities-and-ai-driven-discovery/), Speinshart Scientific Center for AI and SuperTech, Germany
+* June 2026: *Resolving Ill-Conditioning in Scientific Machine Learning*, [dida conference 2026](https://dida.do/conference), Berlin, Germany
+* June 2026: *Natural Policy Gradients and Entropy Regularization: Geometry, Convergence, and Implicit Bias*, [SIAM Conference on Optimization (OP26), Minisymposium MS186](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=87736), Edinburgh, United Kingdom
+* April 2026: *Natural policy gradient methods: From geometric foundations towards safe RL*, [Workshop on Structured Learning: Constraints and Geometry in Reinforcement Learning and Scientific Machine Learning](https://www.syscop.de/event/workshop-structured-learning-constraints-and-geometry-reinforcement-learning-and-scientific), University of Freiburg, Germany
+* September 2025: *Functional Optimization in Scientific Machine Learning*, [Conference on Mathematics of Machine Learning 2025](https://www.tuhh.de/dsf/mml), TU Hamburg-Harburg
+* February 2025: *Geometry of Natural Policy Gradient Methods and Entropy Regularization in Reinforcement Learning*, Seminar für Angewandte Mathematik, ETH Zurich
 * June 2024: *Geometry and Convergence of Natural Policy Gradient Methods*, [Seminar on Learning Theory and Statistical Optimization](https://github.com/oxcsml/ML_bazaar/wiki/Learning-Theory-and-Statistical-Optimization), University of Oxford
 * June 2024: *Geometry of Optimization in Scientific Machine Learning and Reinforcement Learning*, Invited talk, [Geometric Deep Learning workshop](https://maths4dl.ac.uk/newsevents/geometric-deep-learning-workshop-university-of-cambridge-10-12-june-2024), University of Cambridge
-* January 2024: *Natural Gradients for Scientific Machine Learning*, [Post Graduate Seminar](https://www.mathc.rwth-aachen.de/news/passed_talks/), Chair of Mathematics of Information Processing, RWTH Aachen
+* January 2024: *Natural Gradients for Scientific Machine Learning*, [Post Graduate Seminar, Chair of Mathematics of Information Processing](https://www.mathc.rwth-aachen.de/news/passed_talks/), RWTH Aachen
 * April 2023: *Theoretical Analysis of Boundary Penalties for NN-based PDE Solvers*, [Machine Learning + X Seminars 2023](https://sites.brown.edu/crunch-group/seminars/machine-learning-x-seminars/machine-learning-x-seminars-2023/), Brown University, Providence, online
 * February 2023: *Geometry of Sequential Decision Problems*, [Optimization and Data Science Seminar](https://mathweb.ucsd.edu/~njw/Teaching/OptimSeminar/OptSeminar_sp23.html), University of California, San Diego, online
-* November 2022: *Geometry of Markov decision processes*, Annual meeting of the Priority Programme [*Theoretical Foundations of Deep Learning (SPP 2298)*](https://www.foundationsofdl.de/), Evangelische Akademie Tutzing, Germany
+* November 2022: *Geometry of Markov decision processes*, [Annual meeting of the Priority Programme Theoretical Foundations of Deep Learning (SPP 2298)](https://www.foundationsofdl.de/), Evangelische Akademie Tutzing, Germany
 * October 2022: *Geometry of Natural Policy Gradient Methods*, [Applied Math Colloquium](https://secure.math.ucla.edu/seminars/show_quarter.php?type=Applied%20Colloquium), University of California, Los Angeles, USA
-* September 2022: Minisyposium  *Algebraic Geometry and Machine Learning* at the [SIAM Conference on Mathematics of Data Science (MDS22)](https://www.siam.org/conferences/cm/conference/mds22), Town and Country Resort, San Diego, California, USA
+* September 2022: *Algebraic Geometry and Machine Learning*, [Minisymposium at the SIAM Conference on Mathematics of Data Science (MDS22)](https://www.siam.org/conferences/cm/conference/mds22), Town and Country Resort, San Diego, California, USA
 * August 2022: [Workshop on Algebraic Geometry, Combinatorics, and Machine Learning](https://www.mis.mpg.de/calendar/conferences/2022/caml.html), Max Planck Institute for Mathematics in the Sciences, Leipzig, Germany
 * May 2022: [Algebraic Statistics 2022](https://sites.google.com/iit.edu/as2022), University of Hawai'i at Manoa, Honolulu, HI, USA
-* April 2020: [Math Machine Learning seminar MPI MIS + UCLA](https://www.mis.mpg.de/montufar/seminars/math-ml-seminar.html)
+* April 2020: [Math Machine Learning seminar MPI MiS + UCLA](https://www.mis.mpg.de/montufar/seminars/math-ml-seminar.html), online
+<!-- talks:end -->
 
 ## Poster presentations
 

@@ -25,11 +25,20 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade pip pyyaml
 
+      - name: Run talk tests
+        run: python3 markdown_generator/test_talks.py
+
       - name: Fetch talk candidates
         run: python3 markdown_generator/fetch_talk_candidates.py --max-pages 20 --max-links-per-page 25
 
       - name: Score candidates and write report
         run: python3 markdown_generator/score_talk_candidates.py --write-candidates
+
+      - name: Render talks into the activities page
+        run: python3 markdown_generator/render_talks.py
+
+      - name: Re-run talk tests against the rendered page
+        run: python3 markdown_generator/test_talks.py
 
       - name: Upload review artifacts
         uses: actions/upload-artifact@v4
@@ -37,6 +46,8 @@ jobs:
           name: talk-candidate-review
           path: |
             _data/talk_candidates.yml
+            _data/talks.yml
+            _pages/activities.md
             docs/automation/talk-candidate-review.md
 
       - name: Create pull request
@@ -51,8 +62,11 @@ jobs:
             Includes:
             - refreshed `_data/talk_candidates.yml`
             - updated `docs/automation/talk-candidate-review.md`
+            - re-rendered the Talks section of `_pages/activities.md` from `_data/talks.yml`
 
             Review checklist:
             - Verify medium-confidence candidates.
             - Confirm no false positives from common-name collisions.
+            - Promote a candidate by adding it to `_data/talks.yml` with `status: verified`;
+              the Talks section on the activities page is generated from that file.
             - Merge only if changes are correct.

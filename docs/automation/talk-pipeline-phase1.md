@@ -135,3 +135,30 @@ python3 markdown_generator/score_talk_candidates.py --write-candidates
 - Some websites block simple crawlers; this may produce `fetch_failed` stats.
 - Broad source domains can be noisy; precision improves as source registry gets more specific.
 - Candidate-only mode is enabled. No public talks pages are generated yet from this pipeline.
+
+## Rendering talks onto the website
+
+`_data/talks.yml` is the single source of truth for the Talks section of
+`_pages/activities.md`. The section is generated:
+
+```bash
+python3 markdown_generator/render_talks.py          # write
+python3 markdown_generator/render_talks.py --check  # fail if out of date
+python3 markdown_generator/test_talks.py            # offline tests
+```
+
+Everything between `<!-- talks:begin -->` and `<!-- talks:end -->` on the
+activities page is overwritten on every run -- edit `_data/talks.yml`, never the
+block. The rest of the page (poster presentations, conferences, reviewing,
+organization) stays hand-written.
+
+Rendered entry: `* <Month Year>: *<title>*, [<venue>](<url>), <location>`.
+Title, url, location and note are optional; only entries with
+`status: verified` or `status: published` appear. Sorting is newest first; a
+month-precision date sorts after the dated talks of the same month.
+
+To publish a discovered candidate: copy it from `_data/talk_candidates.yml`
+into `_data/talks.yml`, set `status: verified`, run the renderer.
+
+The CI workflow `.github/workflows/talk-candidate-pipeline.yml` runs the tests,
+fetches and scores candidates, re-renders the page and opens a PR.
