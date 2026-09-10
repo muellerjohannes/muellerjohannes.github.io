@@ -1,0 +1,300 @@
+/* ==========================================================================
+   Dark mode
+   Activated via the `data-theme="dark"` attribute on <html>, which is set by
+   a small inline script in _includes/head.html (system preference by default,
+   overridable through the toggle in the masthead).
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --jm-bg: #17191c;
+  --jm-surface: #1f2226;
+  --jm-surface-alt: #262a2f;
+  --jm-text: #d9dcdf;
+  --jm-text-strong: #f0f2f4;
+  --jm-muted: #9aa2a9;
+  --jm-border: #343a40;
+  --jm-link: #6cc4e0;
+  --jm-link-hover: #a3dcef;
+  --jm-code-bg: #22262a;
+}
+
+/* Toggle button
+   ========================================================================== */
+
+.theme-toggle {
+  cursor: pointer;
+}
+
+.theme-toggle__label {
+  display: none;
+}
+
+.hidden-links .theme-toggle__label {
+  display: inline;
+}
+
+/* Base
+   ========================================================================== */
+
+html[data-theme="dark"] body {
+  background-color: var(--jm-bg);
+  color: var(--jm-text);
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+html[data-theme="dark"] .page__title,
+html[data-theme="dark"] .archive__item-title {
+  color: var(--jm-text-strong);
+}
+
+html[data-theme="dark"] a {
+  color: var(--jm-link);
+}
+
+html[data-theme="dark"] a:hover,
+html[data-theme="dark"] a:focus {
+  color: var(--jm-link-hover);
+}
+
+html[data-theme="dark"] a:visited {
+  color: var(--jm-link);
+}
+
+html[data-theme="dark"] hr {
+  border-top-color: var(--jm-border);
+}
+
+html[data-theme="dark"] blockquote {
+  border-left-color: var(--jm-border);
+  color: var(--jm-muted);
+}
+
+html[data-theme="dark"] abbr[title],
+html[data-theme="dark"] abbr[data-original-title] {
+  border-bottom-color: var(--jm-muted);
+}
+
+html[data-theme="dark"] ::selection {
+  background-color: #3a4750;
+  color: var(--jm-text-strong);
+}
+
+/* Masthead and navigation
+   ========================================================================== */
+
+html[data-theme="dark"] .masthead {
+  border-bottom-color: var(--jm-border);
+}
+
+html[data-theme="dark"] .greedy-nav {
+  background: var(--jm-bg);
+}
+
+html[data-theme="dark"] .greedy-nav a {
+  color: var(--jm-text);
+}
+
+html[data-theme="dark"] .greedy-nav a:hover {
+  color: var(--jm-link);
+}
+
+html[data-theme="dark"] .greedy-nav button {
+  background-color: var(--jm-surface-alt);
+  color: var(--jm-text);
+}
+
+html[data-theme="dark"] .greedy-nav .hidden-links {
+  background: var(--jm-surface);
+  border-color: var(--jm-border);
+}
+
+html[data-theme="dark"] .greedy-nav .hidden-links:before {
+  border-bottom-color: var(--jm-border);
+}
+
+html[data-theme="dark"] .greedy-nav .hidden-links:after {
+  border-bottom-color: var(--jm-surface);
+}
+
+html[data-theme="dark"] .greedy-nav .hidden-links li {
+  border-bottom-color: var(--jm-border);
+}
+
+html[data-theme="dark"] .greedy-nav .hidden-links a:hover {
+  color: var(--jm-link-hover);
+  background: var(--jm-surface-alt);
+}
+
+html[data-theme="dark"] .navicon,
+html[data-theme="dark"] .navicon:before,
+html[data-theme="dark"] .navicon:after {
+  background: var(--jm-text);
+}
+
+/* Sidebar and author profile
+   ========================================================================== */
+
+html[data-theme="dark"] .sidebar,
+html[data-theme="dark"] .author__urls-wrapper .author__urls {
+  background: transparent;
+  color: var(--jm-text);
+}
+
+html[data-theme="dark"] .author__urls-wrapper .author__urls {
+  background: var(--jm-surface);
+  border-color: var(--jm-border);
+}
+
+html[data-theme="dark"] .author__urls-wrapper .author__urls:before {
+  border-bottom-color: var(--jm-border);
+}
+
+html[data-theme="dark"] .author__urls-wrapper .author__urls:after {
+  border-bottom-color: var(--jm-surface);
+}
+
+html[data-theme="dark"] .author__avatar img {
+  border-color: var(--jm-border);
+}
+
+html[data-theme="dark"] .author__bio,
+html[data-theme="dark"] .author__urls li {
+  color: var(--jm-text);
+}
+
+html[data-theme="dark"] .author__urls li a {
+  color: var(--jm-text);
+}
+
+html[data-theme="dark"] .author__urls li a:hover {
+  color: var(--jm-link-hover);
+}
+
+/* Page content
+   ========================================================================== */
+
+html[data-theme="dark"] .page__meta,
+html[data-theme="dark"] .page__date,
+html[data-theme="dark"] .page__taxonomy,
+html[data-theme="dark"] .page__footer-follow,
+html[data-theme="dark"] .archive__item-excerpt,
+html[data-theme="dark"] .archive__subtitle,
+html[data-theme="dark"] .breadcrumbs,
+html[data-theme="dark"] figcaption,
+html[data-theme="dark"] .page__content figcaption {
+  color: var(--jm-muted);
+}
+
+html[data-theme="dark"] .archive__subtitle,
+html[data-theme="dark"] .page__content + .pagination,
+html[data-theme="dark"] .page__meta + .pagination,
+html[data-theme="dark"] .page__share + .pagination,
+html[data-theme="dark"] .page__comments + .pagination {
+  border-color: var(--jm-border);
+}
+
+html[data-theme="dark"] .taxonomy__section {
+  border-color: var(--jm-border);
+}
+
+/* Footer
+   ========================================================================== */
+
+html[data-theme="dark"] .page__footer {
+  background-color: var(--jm-surface);
+  border-top-color: var(--jm-border);
+  color: var(--jm-muted);
+}
+
+html[data-theme="dark"] .page__footer a,
+html[data-theme="dark"] .page__footer footer {
+  color: var(--jm-muted);
+}
+
+html[data-theme="dark"] .page__footer a:hover {
+  color: var(--jm-link-hover);
+}
+
+/* Code and tables
+   ========================================================================== */
+
+html[data-theme="dark"] code,
+html[data-theme="dark"] pre,
+html[data-theme="dark"] .highlight,
+html[data-theme="dark"] .highlight pre,
+html[data-theme="dark"] div.highlighter-rouge,
+html[data-theme="dark"] figure.highlight {
+  background-color: var(--jm-code-bg);
+  color: var(--jm-text);
+}
+
+html[data-theme="dark"] pre,
+html[data-theme="dark"] .highlight,
+html[data-theme="dark"] div.highlighter-rouge,
+html[data-theme="dark"] figure.highlight {
+  border-color: var(--jm-border);
+}
+
+html[data-theme="dark"] table {
+  color: var(--jm-text);
+}
+
+html[data-theme="dark"] th,
+html[data-theme="dark"] td {
+  border-color: var(--jm-border);
+}
+
+html[data-theme="dark"] thead,
+html[data-theme="dark"] th {
+  background-color: var(--jm-surface-alt);
+  color: var(--jm-text-strong);
+}
+
+html[data-theme="dark"] tr:nth-child(even) {
+  background-color: var(--jm-surface);
+}
+
+/* Forms, buttons, notices, collapsible boxes
+   ========================================================================== */
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select {
+  background-color: var(--jm-surface);
+  border-color: var(--jm-border);
+  color: var(--jm-text);
+}
+
+html[data-theme="dark"] .btn {
+  color: #fff;
+}
+
+html[data-theme="dark"] .notice,
+html[data-theme="dark"] .notice--primary,
+html[data-theme="dark"] .notice--info,
+html[data-theme="dark"] .notice--warning,
+html[data-theme="dark"] .notice--success,
+html[data-theme="dark"] .notice--danger {
+  background-color: var(--jm-surface-alt);
+  color: var(--jm-text);
+}
+
+html[data-theme="dark"] .container {
+  border-color: var(--jm-border);
+}
+
+html[data-theme="dark"] .container .header {
+  background-color: var(--jm-surface-alt);
+  color: var(--jm-text);
+}

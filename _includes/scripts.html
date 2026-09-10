@@ -1,4 +1,48 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
 
+<script>
+  (function () {
+    var root = document.documentElement;
+    function apply(theme) {
+      root.setAttribute('data-theme', theme);
+      var dark = theme === 'dark';
+      var toggles = document.querySelectorAll('.theme-toggle');
+      for (var i = 0; i < toggles.length; i++) {
+        var el = toggles[i];
+        el.setAttribute('aria-pressed', dark ? 'true' : 'false');
+        el.setAttribute('title', dark ? 'Switch to light mode' : 'Switch to dark mode');
+        var icon = el.querySelector('i');
+        if (icon) { icon.className = dark ? 'fas fa-fw fa-sun' : 'fas fa-fw fa-moon'; }
+        var label = el.querySelector('.theme-toggle__label');
+        if (label) { label.textContent = dark ? 'Light mode' : 'Dark mode'; }
+      }
+    }
+    apply(root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+    document.addEventListener('click', function (e) {
+      var el = e.target;
+      while (el && el !== document) {
+        if (el.classList && el.classList.contains('theme-toggle')) { break; }
+        el = el.parentNode;
+      }
+      if (!el || el === document) { return; }
+      e.preventDefault();
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      try { window.localStorage.setItem('theme', next); } catch (err) {}
+      apply(next);
+    });
+    if (window.matchMedia) {
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      var onChange = function (e) {
+        var stored = null;
+        try { stored = window.localStorage.getItem('theme'); } catch (err) {}
+        if (stored !== 'dark' && stored !== 'light') { apply(e.matches ? 'dark' : 'light'); }
+      };
+      if (mq.addEventListener) { mq.addEventListener('change', onChange); }
+      else if (mq.addListener) { mq.addListener(onChange); }
+    }
+  })();
+</script>
+
+
 {% include analytics.html %}
 {% include /comments-providers/scripts.html %}
