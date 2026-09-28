@@ -1,47 +1,225 @@
-generated_at: '2026-09-09T13:55:04+00:00'
+generated_at: '2026-09-28T11:52:19+00:00'
 scope: europe-us
 source_stats:
 - source_id: mis-mpg
   enabled: true
   seed_urls: 3
-  pages_seen: 3
-  fetch_ok: 0
+  pages_seen: 20
+  fetch_ok: 17
   fetch_failed: 3
   candidates_found: 0
 - source_id: siam-meetings
   enabled: true
   seed_urls: 2
-  pages_seen: 2
-  fetch_ok: 0
-  fetch_failed: 2
+  pages_seen: 20
+  fetch_ok: 20
+  fetch_failed: 0
   candidates_found: 0
 - source_id: tuhh
   enabled: true
   seed_urls: 3
-  pages_seen: 3
-  fetch_ok: 0
+  pages_seen: 20
+  fetch_ok: 17
   fetch_failed: 3
-  candidates_found: 0
+  candidates_found: 2
 - source_id: tu-berlin
   enabled: true
   seed_urls: 3
-  pages_seen: 3
-  fetch_ok: 0
-  fetch_failed: 3
+  pages_seen: 20
+  fetch_ok: 19
+  fetch_failed: 1
   candidates_found: 0
 - source_id: zib-seminars
   enabled: true
   seed_urls: 2
-  pages_seen: 2
-  fetch_ok: 0
-  fetch_failed: 2
+  pages_seen: 20
+  fetch_ok: 19
+  fetch_failed: 1
   candidates_found: 0
 - source_id: dida
   enabled: true
   seed_urls: 2
-  pages_seen: 2
-  fetch_ok: 0
+  pages_seen: 20
+  fetch_ok: 18
   fetch_failed: 2
-  candidates_found: 0
-candidates: []
-duplicates: []
+  candidates_found: 6
+candidates:
+- status: candidate
+  source_id: dida
+  source_domain: dida.do
+  source_url: https://dida.do/conference
+  url: https://dida.do/conference
+  title: dida conference 2026
+  speaker: Johannes Muller
+  date: 2026-06
+  date_precision: month
+  venue: dida.do
+  location: ''
+  description: "Johannes M\xFCller"
+  fetched_at: '2026-09-28T11:51:52+00:00'
+  score: 70
+  bucket: high
+  reasons:
+  - +60 exact speaker name match
+  - +10 trusted source domain
+  topic_hits: []
+  negative_hits: []
+  manual_review_only: false
+  manual_review_reason: ''
+- status: candidate
+  source_id: tuhh
+  source_domain: www.tuhh.de
+  source_url: https://www.tuhh.de/dsf/research/seminars
+  url: https://www.tuhh.de/dsf/research/seminars
+  title: "by Johannes M\xFCller, Institute of Mathematics at TU Berlin"
+  speaker: Johannes Muller
+  date: ''
+  date_precision: ''
+  venue: www.tuhh.de
+  location: ''
+  description: "by Johannes M\xFCller, Institute of Mathematics at TU Berlin"
+  fetched_at: '2026-09-28T11:50:22+00:00'
+  score: 88
+  bucket: high
+  reasons:
+  - +60 exact speaker name match
+  - +18 affiliation match
+  - +10 trusted source domain
+  topic_hits: []
+  negative_hits: []
+  manual_review_only: false
+  manual_review_reason: ''
+duplicates:
+- status: candidate
+  source_id: dida
+  source_domain: dida.do
+  source_url: https://dida.do/conference#content
+  url: https://dida.do/conference#content
+  title: dida conference 2026
+  speaker: Johannes Muller
+  date: 2026-06
+  date_precision: month
+  venue: dida.do
+  location: ''
+  description: "Johannes M\xFCller"
+  fetched_at: '2026-09-28T11:52:08+00:00'
+  score: 70
+  bucket: high
+  reasons:
+  - +60 exact speaker name match
+  - +10 trusted source domain
+  topic_hits: []
+  negative_hits: []
+  manual_review_only: false
+  manual_review_reason: ''
+- status: candidate
+  source_id: dida
+  source_domain: dida.do
+  source_url: https://dida.do/de/conference
+  url: https://dida.do/de/conference
+  title: dida conference 2026
+  speaker: Johannes Muller
+  date: 2026-06
+  date_precision: month
+  venue: dida.do
+  location: ''
+  description: "Johannes M\xFCller"
+  fetched_at: '2026-09-28T11:52:10+00:00'
+  score: 70
+  bucket: high
+  reasons:
+  - +60 exact speaker name match
+  - +10 trusted source domain
+  topic_hits: []
+  negative_hits: []
+  manual_review_only: false
+  manual_review_reason: ''
+- status: candidate
+  source_id: dida
+  source_domain: dida.do
+  source_url: https://dida.do/conference#main-content
+  url: https://dida.do/conference#main-content
+  title: dida conference 2026
+  speaker: Johannes Muller
+  date: 2026-06
+  date_precision: month
+  venue: dida.do
+  location: ''
+  description: "Johannes M\xFCller"
+  fetched_at: '2026-09-28T11:52:12+00:00'
+  score: 70
+  bucket: high
+  reasons:
+  - +60 exact speaker name match
+  - +10 trusted source domain
+  topic_hits: []
+  negative_hits: []
+  manual_review_only: false
+  manual_review_reason: ''
+- status: candidate
+  source_id: dida
+  source_domain: dida.do
+  source_url: https://dida.do/conference#register
+  url: https://dida.do/conference#register
+  title: dida conference 2026
+  speaker: Johannes Muller
+  date: 2026-06
+  date_precision: month
+  venue: dida.do
+  location: ''
+  description: "Johannes M\xFCller"
+  fetched_at: '2026-09-28T11:52:14+00:00'
+  score: 70
+  bucket: high
+  reasons:
+  - +60 exact speaker name match
+  - +10 trusted source domain
+  topic_hits: []
+  negative_hits: []
+  manual_review_only: false
+  manual_review_reason: ''
+- status: candidate
+  source_id: dida
+  source_domain: dida.do
+  source_url: https://dida.do/conference#agenda
+  url: https://dida.do/conference#agenda
+  title: dida conference 2026
+  speaker: Johannes Muller
+  date: 2026-06
+  date_precision: month
+  venue: dida.do
+  location: ''
+  description: "Johannes M\xFCller"
+  fetched_at: '2026-09-28T11:52:16+00:00'
+  score: 70
+  bucket: high
+  reasons:
+  - +60 exact speaker name match
+  - +10 trusted source domain
+  topic_hits: []
+  negative_hits: []
+  manual_review_only: false
+  manual_review_reason: ''
+- status: candidate
+  source_id: tuhh
+  source_domain: www.tuhh.de
+  source_url: https://www.tuhh.de/dsf/news-archive/2026-08-13-talk-the-advective-fisher-rao-geometry-on-deterministic-flows-of-measures
+  url: https://www.tuhh.de/dsf/news-archive/2026-08-13-talk-the-advective-fisher-rao-geometry-on-deterministic-flows-of-measures
+  title: "by Johannes M\xFCller, Institute of Mathematics at TU Berlin"
+  speaker: Johannes Muller
+  date: ''
+  date_precision: ''
+  venue: www.tuhh.de
+  location: ''
+  description: "by Johannes M\xFCller, Institute of Mathematics at TU Berlin"
+  fetched_at: '2026-09-28T11:50:26+00:00'
+  score: 88
+  bucket: high
+  reasons:
+  - +60 exact speaker name match
+  - +18 affiliation match
+  - +10 trusted source domain
+  topic_hits: []
+  negative_hits: []
+  manual_review_only: false
+  manual_review_reason: ''
