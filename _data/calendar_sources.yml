@@ -4,3 +4,11 @@
 # Only tagged events starting on or after this date are imported. Earlier events
 # are assumed to be already listed by hand on the activities page.
 include_from: "2026-09-01"
+
+# Rules for the About-page News list (see markdown_generator/update_about_news.py).
+# Only bullets written by the bots (they end with an invisible date marker) are ever
+# removed; bullets you wrote by hand stay until you delete them yourself.
+news:
+  max_age_days: 183   # past items older than this are dropped (about 6 months)
+  max_items: 12       # above this, the oldest past items are dropped
+  min_items: 5        # the list is never pruned below this many items

@@ -2,7 +2,7 @@ name: Calendar Events
 
 # Imports events tagged [talk], [poster], [organizer], [chair] or [attend] from the
 # private calendar feed (GitHub secret TALK_CALENDAR_URL) and re-renders the
-# activities page. Quick (well under a minute).
+# activities page and the News list on the About page. Quick (well under a minute).
 
 on:
   workflow_dispatch:
@@ -33,6 +33,7 @@ jobs:
         run: |
           python3 markdown_generator/test_talks.py
           python3 markdown_generator/test_calendar.py
+          python3 markdown_generator/test_news.py
 
       - name: Import tagged events from the private calendar
         env:
@@ -42,10 +43,14 @@ jobs:
       - name: Render the activities page
         run: python3 markdown_generator/render_talks.py
 
+      - name: Update About-page news (talks and organized events, pruning)
+        run: python3 markdown_generator/update_about_news.py --events
+
       - name: Re-run tests against the rendered page
         run: |
           python3 markdown_generator/test_talks.py
           python3 markdown_generator/test_calendar.py
+          python3 markdown_generator/test_news.py
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v8
@@ -60,8 +65,11 @@ jobs:
             - refreshed `_data/calendar_events.yml` (only events tagged `[talk]`, `[poster]`,
               `[organizer]`, `[chair]`, `[attend]`; public fields only)
             - re-rendered talk, poster, conference and organization blocks of `_pages/activities.md`
+            - News on `_pages/about.md`: bullets for upcoming/past `[talk]` and `[organizer]` events,
+              and removal of old bot-written items (hand-written bullets are never touched)
 
             Review checklist:
             - Titles, dates, venues and links look right.
             - Nothing private slipped into a title or location.
+            - News bullets read well (check tense, links and the "organize" wording).
             - Merge only if changes are correct.
