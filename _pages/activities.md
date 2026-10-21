@@ -31,6 +31,9 @@ author_profile: true
 <!-- talks:end -->
 
 ## Poster presentations
+<!-- calendar-poster:begin -->
+<!-- generated from _data/calendar_events.yml by markdown_generator/render_talks.py -- do not edit by hand -->
+<!-- calendar-poster:end -->
 
 * March 2025: **Kronecker-Factored Approximate Curvature for Physics-Informed Neural Networks**,
 [Annual Meeting of EMS activity group on Scientific Machine Learning](https://www.mate.polimi.it/events/EMS-TAG-SciML-25/index.php?cn-reloaded=1), Politecnico di Milano
@@ -84,6 +87,9 @@ Workshop on [Workshop on Mathematics of deep learning](https://www.newton.ac.uk/
 [fulltext available](https://arxiv.org/abs/1910.09599) | [ICLR workshop DeepDiffEq](http://iclr2020deepdiffeq.rice.edu/)
 
 ## Conferences and meetings
+<!-- calendar-attend:begin -->
+<!-- generated from _data/calendar_events.yml by markdown_generator/render_talks.py -- do not edit by hand -->
+<!-- calendar-attend:end -->
 * June 2024: Mathematical and Scientific Machine Learning, Rome, Italy
 * June 2024: Geometric Deep Learning workshop, University of Cambridge, UK
 * February 2024: Symposium on Sparsity and Singular Structures 2024, RWTH Aachen University, Germany
@@ -124,6 +130,9 @@ Workshop on [Workshop on Mathematics of deep learning](https://www.newton.ac.uk/
 * Engineering Applications of Artificial Intelligence
 
 ## Organization
+<!-- calendar-organizer:begin -->
+<!-- generated from _data/calendar_events.yml by markdown_generator/render_talks.py -- do not edit by hand -->
+<!-- calendar-organizer:end -->
 * August 2026: Co-organizer of the Mini-Workshop [*Geometric Methods in Scientific Machine Learning*](https://www.mfo.de/www/activity/2632b) at MFO Oberwolfach, Oberwolfach
 * June 2026: Co-organizer of the Mini-Workshop *Scientific Machine Learning* at SIAM Conference on Optimization (OP26), Edinburgh
 * September 2025: Mini-Symposium on *Geometric Optimization Methods for Scientific Machine Learning*, *Geometric Optimization Methods for Scientific Machine Learning* at [ENUMATH 2025](https://enumath2025.eu/), Heidelberg

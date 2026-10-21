@@ -58,10 +58,9 @@ class RenderingTests(unittest.TestCase):
 
 class RepositoryConsistencyTests(unittest.TestCase):
     def test_activities_page_matches_talks_yaml(self):
-        talks = rt.load_talks()
         current = rt.ACTIVITIES_PATH.read_text(encoding="utf-8")
         self.assertEqual(
-            rt.replace_block(current, rt.render_block(talks)),
+            rt.render_page(current),
             current,
             "activities.md is out of date -- run markdown_generator/render_talks.py",
         )

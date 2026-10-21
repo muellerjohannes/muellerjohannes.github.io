@@ -12,11 +12,21 @@ is generated -- do not edit it by hand, it is overwritten on every run.
 
 Only entries with `status: verified` (or `published`) are rendered.
 
+Tagged events imported from the private calendar (`_data/calendar_events.yml`,
+see fetch_calendar_events.py) are rendered too: `[talk]` events are merged into
+the Talks block (skipping ones already in talks.yml), the others go into their
+own marked blocks:
+
+    calendar-poster     -> "Poster presentations"
+    calendar-attend     -> "Conferences and meetings"
+    calendar-organizer  -> "Organization"   ([organizer] and [chair])
+
 Run:  python3 markdown_generator/render_talks.py [--check]
 """
 
 from __future__ import annotations
 
+import re
 import sys
 from pathlib import Path
 from typing import Any, Dict, List
@@ -25,13 +35,22 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 TALKS_PATH = ROOT / "_data" / "talks.yml"
+CALENDAR_PATH = ROOT / "_data" / "calendar_events.yml"
 ACTIVITIES_PATH = ROOT / "_pages" / "activities.md"
 
 BEGIN = "<!-- talks:begin -->"
 END = "<!-- talks:end -->"
 GENERATED_NOTE = "<!-- generated from _data/talks.yml by markdown_generator/render_talks.py -- do not edit by hand -->"
 
+CALENDAR_BLOCKS = {
+    "calendar-poster": {"poster"},
+    "calendar-attend": {"attend"},
+    "calendar-organizer": {"organizer", "chair"},
+}
+
 PUBLISHABLE = {"verified", "published"}
+
+CAL_NOTE = "<!-- generated from _data/calendar_events.yml by markdown_generator/render_talks.py -- do not edit by hand -->"
 
 MONTHS = [
     "January", "February", "March", "April", "May", "June",
@@ -111,11 +130,93 @@ def replace_block(text: str, block: str) -> str:
     return head + block + tail
 
 
+def load_calendar_events() -> List[Dict[str, Any]]:
+    if not CALENDAR_PATH.exists():
+        return []
+    data = yaml.safe_load(CALENDAR_PATH.read_text(encoding="utf-8")) or {}
+    return list(data.get("events") or [])
+
+
+def _norm(text: Any) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", str(text or "").lower()).strip()
+
+
+def merge_calendar_talks(talks: List[Dict[str, Any]], events: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Add calendar [talk] events that are not already in talks.yml (same day and title)."""
+
+    seen = {(str(t.get("date", ""))[:10], _norm(t.get("title"))) for t in talks}
+    merged = list(talks)
+    for event in events:
+        if event.get("kind") != "talk":
+            continue
+        key = (str(event.get("date", ""))[:10], _norm(event.get("title")))
+        if key in seen:
+            continue
+        seen.add(key)
+        merged.append(event)
+    return merged
+
+
+def _place(event: Dict[str, Any]) -> str:
+    venue = str(event.get("venue", "") or "").strip()
+    url = str(event.get("url", "") or "").strip()
+    return f"[{venue}]({url})" if venue and url else venue
+
+
+def render_calendar_event(event: Dict[str, Any]) -> str:
+    kind = event.get("kind")
+    title = str(event.get("title", "") or "").strip()
+    location = str(event.get("location", "") or "").strip()
+    url = str(event.get("url", "") or "").strip()
+    label = month_label(event)
+    place = _place(event)
+    if kind == "poster":
+        pieces = [f"**{title}**" if title else "", place or (url if not title else ""), location]
+    elif kind == "attend":
+        name = title or str(event.get("venue", "") or "").strip()
+        pieces = [f"[{name}]({url})" if url and name else name, location]
+    elif kind == "chair":
+        pieces = [f"Session chair: *{title}*" if title else "Session chair", place, location]
+    else:  # organizer
+        pieces = [f"Organizer of *{title}*" if title else "Organizer", place, location]
+    body = ", ".join(p for p in pieces if p)
+    return f"* {label}: {body}" if label else f"* {body}"
+
+
+def render_calendar_block(name: str, events: List[Dict[str, Any]]) -> str:
+    kinds = CALENDAR_BLOCKS[name]
+    chosen = sorted((e for e in events if e.get("kind") in kinds), key=sort_key, reverse=True)
+    lines = [f"<!-- {name}:begin -->", CAL_NOTE]
+    lines.extend(render_calendar_event(e) for e in chosen)
+    lines.append(f"<!-- {name}:end -->")
+    return "\n".join(lines)
+
+
+def replace_named_block(text: str, name: str, block: str) -> str:
+    begin, end = f"<!-- {name}:begin -->", f"<!-- {name}:end -->"
+    if begin not in text or end not in text:
+        raise SystemExit(f"markers {begin} / {end} not found in {ACTIVITIES_PATH.name}")
+    head, rest = text.split(begin, 1)
+    _, tail = rest.split(end, 1)
+    return head + block + tail
+
+
+def render_page(text: str) -> str:
+    """Return `text` with every generated block replaced by freshly rendered content."""
+
+    events = load_calendar_events()
+    talks = merge_calendar_talks(load_talks(), events)
+    text = replace_block(text, render_block(talks))
+    for name in CALENDAR_BLOCKS:
+        text = replace_named_block(text, name, render_calendar_block(name, events))
+    return text
+
+
 def main() -> int:
     check_only = "--check" in sys.argv
-    talks = load_talks()
+    talks = merge_calendar_talks(load_talks(), load_calendar_events())
     current = ACTIVITIES_PATH.read_text(encoding="utf-8")
-    updated = replace_block(current, render_block(talks))
+    updated = render_page(current)
 
     if check_only:
         if updated != current:

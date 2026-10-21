@@ -1,0 +1,6 @@
+# Settings for markdown_generator/fetch_calendar_events.py.
+# The calendar URL itself is NOT stored here: it lives in the GitHub secret TALK_CALENDAR_URL.
+
+# Only tagged events starting on or after this date are imported. Earlier events
+# are assumed to be already listed by hand on the activities page.
+include_from: "2026-09-01"
