@@ -123,6 +123,20 @@ class RenderingTests(unittest.TestCase):
             "* November 2026: C, L",
         )
 
+    def test_url_without_venue_links_the_title(self):
+        self.assertEqual(
+            rt.render_talk({"title": "T", "date": "2026-11-05", "url": "https://u", "location": "L"}),
+            "* November 2026: [*T*](https://u), L",
+        )
+        self.assertEqual(
+            rt.render_calendar_event({"kind": "poster", "title": "P", "date": "2026-12-01", "url": "https://u"}),
+            "* December 2026: [**P**](https://u)",
+        )
+        self.assertEqual(
+            rt.render_calendar_event({"kind": "organizer", "title": "W", "date": "2027-01-10", "url": "https://u"}),
+            "* January 2027: Organizer of [*W*](https://u)",
+        )
+
     def test_blocks_are_split_by_kind(self):
         events = [{"kind": "poster", "title": "P", "date": "2026-12-02"}, {"kind": "attend", "title": "C", "date": "2026-12-03"}]
         self.assertIn("**P**", rt.render_calendar_block("calendar-poster", events))

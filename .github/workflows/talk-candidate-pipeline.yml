@@ -1,9 +1,9 @@
 name: Talk Candidate Pipeline
 
+# Manual only: the web crawl is slow (3-4 minutes) and only proposes candidates.
+# Calendar events are imported by the "Calendar Events" workflow instead.
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "23 5 * * 1"
 
 permissions:
   contents: write
@@ -11,19 +11,19 @@ permissions:
 
 jobs:
   fetch-score-report:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: python -m pip install --upgrade pip pyyaml requests
+        run: python -m pip install --upgrade pip pyyaml
 
       - name: Run talk tests
         run: |
@@ -36,11 +36,6 @@ jobs:
       - name: Score candidates and write report
         run: python3 markdown_generator/score_talk_candidates.py --write-candidates
 
-      - name: Import tagged events from the private calendar
-        env:
-          TALK_CALENDAR_URL: ${{ secrets.TALK_CALENDAR_URL }}
-        run: python3 markdown_generator/fetch_calendar_events.py
-
       - name: Render talks into the activities page
         run: python3 markdown_generator/render_talks.py
 
@@ -50,18 +45,17 @@ jobs:
           python3 markdown_generator/test_calendar.py
 
       - name: Upload review artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: talk-candidate-review
           path: |
             _data/talk_candidates.yml
             _data/talks.yml
-            _data/calendar_events.yml
             _pages/activities.md
             docs/automation/talk-candidate-review.md
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           branch: bot/talk-candidate-pipeline
           title: "chore: update talk candidates and review report"
@@ -71,7 +65,6 @@ jobs:
 
             Includes:
             - refreshed `_data/talk_candidates.yml`
-            - tagged events (`[talk]`, `[poster]`, `[organizer]`, `[chair]`, `[attend]`) imported from the private calendar into `_data/calendar_events.yml`
             - updated `docs/automation/talk-candidate-review.md`
             - re-rendered the Talks section of `_pages/activities.md` from `_data/talks.yml`
 

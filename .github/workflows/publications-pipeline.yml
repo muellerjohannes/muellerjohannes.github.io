@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   update-publications:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
@@ -41,7 +41,7 @@ jobs:
         run: python3 markdown_generator/test_publications.py
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: publication-pipeline
           path: |
@@ -51,7 +51,7 @@ jobs:
             _publications
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           branch: bot/publications-pipeline
           title: "chore: update publications and publication news"

@@ -97,7 +97,8 @@ def render_talk(talk: Dict[str, Any]) -> str:
     note = str(talk.get("note", "") or "").strip()
 
     if title:
-        pieces.append(f"*{title}*")
+        # without a venue to carry the link, the title carries it
+        pieces.append(f"[*{title}*]({url})" if url and not venue else f"*{title}*")
     if note:
         pieces.append(note)
     if venue:
@@ -170,15 +171,25 @@ def render_calendar_event(event: Dict[str, Any]) -> str:
     url = str(event.get("url", "") or "").strip()
     label = month_label(event)
     place = _place(event)
+    linked = bool(url) and not place  # no venue to carry the link: the title carries it
     if kind == "poster":
-        pieces = [f"**{title}**" if title else "", place or (url if not title else ""), location]
+        shown = f"**{title}**" if title else ""
+        if shown and linked:
+            shown = f"[{shown}]({url})"
+        pieces = [shown, place or (url if not title else ""), location]
     elif kind == "attend":
         name = title or str(event.get("venue", "") or "").strip()
         pieces = [f"[{name}]({url})" if url and name else name, location]
     elif kind == "chair":
-        pieces = [f"Session chair: *{title}*" if title else "Session chair", place, location]
+        shown = f"*{title}*" if title else ""
+        if shown and linked:
+            shown = f"[{shown}]({url})"
+        pieces = [f"Session chair: {shown}" if shown else "Session chair", place, location]
     else:  # organizer
-        pieces = [f"Organizer of *{title}*" if title else "Organizer", place, location]
+        shown = f"*{title}*" if title else ""
+        if shown and linked:
+            shown = f"[{shown}]({url})"
+        pieces = [f"Organizer of {shown}" if shown else "Organizer", place, location]
     body = ", ".join(p for p in pieces if p)
     return f"* {label}: {body}" if label else f"* {body}"
 
