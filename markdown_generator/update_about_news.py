@@ -160,11 +160,13 @@ def day_label(d: dt.date) -> str:
 
 
 def span_label(start: dt.date, end: Optional[dt.date]) -> str:
+    """Date phrase for the end of a sentence: 'on May 5th', 'from May 3rd-7th', 'from May 31st to June 2nd'."""
+
     if not end or end <= start:
-        return f"On {day_label(start)}"
+        return f"on {day_label(start)}"
     if (end.year, end.month) == (start.year, start.month):
-        return f"From {day_label(start)}-{ordinal(end.day)}"
-    return f"From {day_label(start)} to {day_label(end)}"
+        return f"from {day_label(start)}-{ordinal(end.day)}"
+    return f"from {day_label(start)} to {day_label(end)}"
 
 
 def norm(text: Any) -> str:
@@ -206,9 +208,9 @@ def event_bullet(event: Dict[str, Any], today: dt.date) -> str:
         what = f"the talk {title_md}" if title_md else "a talk"
         sentence = f"On {day_label(start)}, I {verb} {what}{place}."
     else:
-        verb = "will organize" if upcoming else "organized"
+        verb = "organized" if last < today else "am organizing"
         what = title_md or "a workshop"
-        sentence = f"{span_label(start, end)}, I {verb} {what}{place}."
+        sentence = f"I {verb} {what}{place} {span_label(start, end)}."
     return f"* {sentence} {event_marker(event)}"
 
 

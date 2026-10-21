@@ -36,10 +36,16 @@ class FormattingTests(unittest.TestCase):
         self.assertIn("will give", un.event_bullet(talk("2026-10-21"), TODAY))
 
     def test_organizer_span_and_tense(self):
-        ev = {"kind": "organizer", "title": "Workshop", "date": "2026-11-03", "end_date": "2026-11-07"}
-        self.assertIn("From November 3rd-7th, I will organize *Workshop*.", un.event_bullet(ev, TODAY))
+        ev = {"kind": "organizer", "title": "Workshop", "date": "2026-11-03", "end_date": "2026-11-07", "venue": "MFO"}
+        self.assertIn("* I am organizing *Workshop* at MFO from November 3rd-7th.", un.event_bullet(ev, TODAY))
         ev = {"kind": "organizer", "title": "W", "date": "2026-08-31", "end_date": "2026-09-02"}
-        self.assertIn("From August 31st to September 2nd, I organized *W*.", un.event_bullet(ev, TODAY))
+        self.assertIn("* I organized *W* from August 31st to September 2nd.", un.event_bullet(ev, TODAY))
+        ev = {"kind": "organizer", "title": "W", "date": "2026-11-05"}
+        self.assertIn("* I am organizing *W* on November 5th.", un.event_bullet(ev, TODAY))
+
+    def test_running_organizer_event_is_present_tense(self):
+        ev = {"kind": "organizer", "title": "W", "date": "2026-10-19", "end_date": "2026-10-23"}
+        self.assertIn("I am organizing *W* from October 19th-23rd.", un.event_bullet(ev, TODAY))
 
     def test_ordinals(self):
         self.assertEqual([un.ordinal(d) for d in (1, 2, 3, 4, 11, 12, 13, 21, 22, 23, 31)],
