@@ -3,6 +3,7 @@ name: Calendar Events
 # Imports events tagged [talk], [poster], [organizer], [chair] or [attend] from the
 # private calendar feed (GitHub secret TALK_CALENDAR_URL) and re-renders the
 # activities page and the News list on the About page. Quick (well under a minute).
+# Run it by hand from the Actions tab ("Run workflow"); it also runs every Monday.
 
 on:
   workflow_dispatch:
