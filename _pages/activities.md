@@ -8,7 +8,7 @@ author_profile: true
 ## Talks
 <!-- talks:begin -->
 <!-- generated from _data/talks.yml by markdown_generator/render_talks.py -- do not edit by hand -->
-* November 2026: [*SIMODS*](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89619), Salt Lake City, UT, Vereinigte Staaten
+* November 2026: *Geometry-Aware Preconditioning in Scientific Machine Learning*, [Minisymposium Model-Based Geometry-Aware Preconditioning for Scientific Machine Learning, SIAM Conference on Mathematics of Data Science](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89619), Salt Lake City, UT, Vereinigte Staaten
 * October 2026: *The Advective Fisher-Rao Geometry of Deterministic Measure Transport*, [AG Analysis-Probability, MPI MiS](https://www.mis.mpg.de/events/event/the-advective-fisher-rao-geometry-of-deterministic-measure-transport), Leipzig, Germany
 * August 2026: *The Advective Fisher-Rao Geometry of Deterministic Measure Transport*, [Mini-Workshop on Geometric Methods in Scientific Machine Learning, MFO Oberwolfach](https://www.mfo.de/www/activity/2632b), Oberwolfach, Germany
 * August 2026: *The Advective Fisher-Rao Geometry on Deterministic Flows of Measures*, [Institute for Data Science Foundations (DSF), TUHH](https://www.tuhh.de/dsf/), Hamburg, Germany
