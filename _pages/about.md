@@ -15,6 +15,7 @@ Prior, I was a PostDoc at the Junior Professorship for Mathematics of Machine Le
 
 ## News 
 
+* On November 15th, I will give the talk [*SIMODS*](https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89619) in Salt Lake City, UT, Vereinigte Staaten. <!-- news:talk:2026-11-15:110ae03e:2026-11-20 -->
 * On September 9, a new publication [*Curvature-Aware Optimization for High-Accuracy Physics-Informed Neural Networks*](https://doi.org/10.1016/j.cma.2026.119289) appeared in Computer Methods in Applied Mechanics and Engineering (2026).
 * On October 2nd, I will give the talk [*The Advective Fisher-Rao Geometry of Deterministic Measure Transport*](https://www.mis.mpg.de/events/event/the-advective-fisher-rao-geometry-of-deterministic-measure-transport) at AG Analysis-Probability, MPI MiS.
 * On August 13th, I gave the talk *The Advective Fisher-Rao Geometry on Deterministic Flows of Measures* at the [Institute for Data Science Foundations (TUHH)](https://www.tuhh.de/dsf/).
