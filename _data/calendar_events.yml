@@ -2,8 +2,8 @@
 # Contains only events tagged [talk]/[poster]/[organizer]/[chair]/[attend]. Do not edit by hand.
 events:
 - kind: talk
-  title: SIMODS
-  date: '2026-11-15'
-  end_date: '2026-11-20'
+  title: Geometry-Aware Preconditioning in Scientific Machine Learning
+  date: '2026-11-18'
+  venue: Minisymposium Model-Based Geometry-Aware Preconditioning for Scientific Machine Learning, SIAM Conference on Mathematics of Data Science
   location: Salt Lake City, UT, Vereinigte Staaten
   url: https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=89619
